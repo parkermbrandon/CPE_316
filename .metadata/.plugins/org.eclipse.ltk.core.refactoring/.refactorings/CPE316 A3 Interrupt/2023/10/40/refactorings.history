@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Move &apos;main_partA.c&apos; to &apos;Src&apos;" description="Move &apos;main_partA.c&apos; to &apos;Src&apos;" destination="Core/Src" element1="/LedWorld/Core/Src/main_partA.c" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1696622148927" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;CPE316 A3 Interrupt/Core/Src/main_partA.c&apos; to &apos;partA.c&apos;" description="Rename resource &apos;main_partA.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Src/main_partA.c" name="partA.c" stamp="1696622805278" updateReferences="true"/>
+</session>

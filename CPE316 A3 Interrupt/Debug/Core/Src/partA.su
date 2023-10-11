@@ -1,0 +1,2 @@
+../Core/Src/partA.c:5:5:main_part1	8	static
+../Core/Src/partA.c:33:6:TIM2_IRQHandler_part1	4	static
