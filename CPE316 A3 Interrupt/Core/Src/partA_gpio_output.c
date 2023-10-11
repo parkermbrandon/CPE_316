@@ -2,9 +2,9 @@
 
 void TIM2_IRQHandler(void);
 
-volatile uint8_t flag = 0;
+volatile uint8_t flagA2outpu = 0;
 
-int main(void)
+int mainA2output(void)
 {
     // Enable clock for GPIOA and TIM2
     RCC->AHB2ENR |= RCC_AHB2ENR_GPIOAEN;
@@ -35,7 +35,7 @@ int main(void)
     }
 }
 
-void TIM2_IRQHandler(void)
+void TIM2_IRQHandlerA2output(void)
 {
     // Check if the Capture/Compare 1 interrupt flag is set
     if (TIM2->SR & TIM_SR_CC1IF)
@@ -43,19 +43,19 @@ void TIM2_IRQHandler(void)
         // Clear the Capture/Compare 1 interrupt flag
         TIM2->SR &= ~TIM_SR_CC1IF;
 
-        if (flag == 0)
+        if (flagA2outpu == 0)
         {
             // Set PA0 high
             GPIOA->BSRR = GPIO_BSRR_BS0;
             TIM2->CCR1 = 199;  // 25% of the period
-            flag = 1;
+            flagA2outpu = 1;
         }
         else
         {
             // Set PA0 low
             GPIOA->BSRR = GPIO_BSRR_BR0;
             TIM2->CCR1 = 799;  // Reset to 100% of the period
-            flag = 0;
+            flagA2outpu = 0;
         }
     }
 }
