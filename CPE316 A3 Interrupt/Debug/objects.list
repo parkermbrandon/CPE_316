@@ -1,5 +1,6 @@
 "./Core/Src/main.o"
 "./Core/Src/partA.o"
+"./Core/Src/partA_gpio_output.o"
 "./Core/Src/partb1.o"
 "./Core/Src/stm32l4xx_hal_msp.o"
 "./Core/Src/stm32l4xx_it.o"

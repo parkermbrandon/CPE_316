@@ -10,14 +10,14 @@ int main(void)
     RCC->AHB2ENR |= RCC_AHB2ENR_GPIOAEN;
     RCC->APB1ENR1 |= RCC_APB1ENR1_TIM2EN;
 
-    // Configure PA0 as output
-    GPIOA->MODER &= ~GPIO_MODER_MODE0;
-    GPIOA->MODER |= GPIO_MODER_MODE0_0;
+    // Configure PA0 and PA1 as output
+    GPIOA->MODER &= ~(GPIO_MODER_MODE0 | GPIO_MODER_MODE1);
+    GPIOA->MODER |= GPIO_MODER_MODE0_0 | GPIO_MODER_MODE1_0;
 
     // Set up TIM2
     TIM2->PSC = 0;  // No prescaling
-    TIM2->ARR = 799;  // Auto-reload value for 5 kHz
-    TIM2->CCR1 = 199;  // 25% duty cycle
+    TIM2->ARR = 0xFFFFFFFF;  // Run continuously
+    TIM2->CCR1 = 400;  // 50% duty cycle
     TIM2->DIER |= TIM_DIER_CC1IE;  // Enable Capture/Compare 1 interrupt
 
     // Enable TIM2
@@ -25,6 +25,18 @@ int main(void)
 
     // Enable TIM2 interrupt
     NVIC_EnableIRQ(TIM2_IRQn);
+
+    // Enable MCO, select MSI (4 MHz source)
+    RCC->CFGR = ((RCC->CFGR & ~(RCC_CFGR_MCOSEL)) | (RCC_CFGR_MCOSEL_0));
+
+    // Configure MCO output on PA8
+    RCC->AHB2ENR |= RCC_AHB2ENR_GPIOAEN;
+    GPIOA->MODER &= ~GPIO_MODER_MODE8;
+    GPIOA->MODER |= (2 << GPIO_MODER_MODE8_Pos);
+    GPIOA->OTYPER &= ~GPIO_OTYPER_OT8;
+    GPIOA->PUPDR &= ~GPIO_PUPDR_PUPD8;
+    GPIOA->OSPEEDR |= GPIO_OSPEEDR_OSPEED8;
+    GPIOA->AFR[1] &= ~GPIO_AFRH_AFSEL8;
 
     // Enable global interrupts
     __enable_irq();
@@ -37,25 +49,22 @@ int main(void)
 
 void TIM2_IRQHandler(void)
 {
+    // Set PA1 high at ISR entry
+    GPIOA->BSRR = GPIO_BSRR_BS1;
+
     // Check if the Capture/Compare 1 interrupt flag is set
     if (TIM2->SR & TIM_SR_CC1IF)
     {
         // Clear the Capture/Compare 1 interrupt flag
         TIM2->SR &= ~TIM_SR_CC1IF;
 
-        if (flag == 0)
-        {
-            // Set PA0 high
-            GPIOA->BSRR = GPIO_BSRR_BS0;
-            TIM2->CCR1 = 199;  // 25% of the period
-            flag = 1;
-        }
-        else
-        {
-            // Set PA0 low
-            GPIOA->BSRR = GPIO_BSRR_BR0;
-            TIM2->CCR1 = 799;  // Reset to 100% of the period
-            flag = 0;
-        }
+        // Toggle PA0
+        GPIOA->ODR ^= GPIO_ODR_OD0;
+
+        // Reset the counter
+        TIM2->CNT = 0;
     }
+
+    // Set PA1 low at ISR exit
+    GPIOA->BSRR = GPIO_BSRR_BR1;
 }
