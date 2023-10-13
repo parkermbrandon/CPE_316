@@ -38,7 +38,7 @@
 
  // Write a 12-bit value to the DAC
  void DAC_write(uint16_t value) {
-     uint16_t spi_data = (value & 0x0FFF) | 0x3000;  // 12-bit value with control bits
+     uint16_t spi_data = (value & 0x0FFF) | 0x3000;  // 12-bit value, OR 0x3000 sets the Gain and buffer in the DAC see page 18 of datasheet
      while(!(SPI1->SR & SPI_SR_TXE));  // Wait for TXE (Transmit buffer empty)
      SPI1->DR = spi_data;  // Send the data
  }
