@@ -41,6 +41,8 @@
      uint16_t spi_data = (value & 0x0FFF) | 0x3000;  // 12-bit value with control bits
      while(!(SPI1->SR & SPI_SR_TXE));  // Wait for TXE (Transmit buffer empty)
      SPI1->DR = spi_data;  // Send the data
+     while(!(SPI1->SR & SPI_SR_RXNE));  // Wait for RXNE (Receive buffer not empty)
+     uint16_t temp = SPI1->DR;  // Clear RX FIFO
  }
 
 // Convert a voltage value into a 12-bit value to control the DAC
