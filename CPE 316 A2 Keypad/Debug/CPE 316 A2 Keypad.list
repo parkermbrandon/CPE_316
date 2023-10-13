@@ -79,7 +79,7 @@ Disassembly of section .text:
  80001c4:	08001618 	.word	0x08001618
 
 080001c8 <_Z9Init_GPIOv>:
-uint8_t colPins[COLS] = {0 , 4, 1};  // PA2, PA10, PA3
+uint8_t colPins[COLS] = {0 , 12, 1};  // PA0, PA4, PA1
 
 volatile uint8_t keystates[ROWS * COLS] = {0};
 
@@ -151,19 +151,19 @@ void Init_GPIO(void)
  8000248:	60d3      	str	r3, [r2, #12]
 
     // Configure COLs as output
-    GPIOA->MODER &= ~(GPIO_MODER_MODER4 | GPIO_MODER_MODER0 | GPIO_MODER_MODER1);
+    GPIOA->MODER &= ~(GPIO_MODER_MODER12 | GPIO_MODER_MODER0 | GPIO_MODER_MODER1);
  800024a:	f04f 4390 	mov.w	r3, #1207959552	; 0x48000000
  800024e:	681b      	ldr	r3, [r3, #0]
  8000250:	f04f 4290 	mov.w	r2, #1207959552	; 0x48000000
- 8000254:	f423 7343 	bic.w	r3, r3, #780	; 0x30c
- 8000258:	f023 0303 	bic.w	r3, r3, #3
+ 8000254:	f023 7340 	bic.w	r3, r3, #50331648	; 0x3000000
+ 8000258:	f023 030f 	bic.w	r3, r3, #15
  800025c:	6013      	str	r3, [r2, #0]
-    GPIOA->MODER |= (GPIO_MODER_MODER4_0 | GPIO_MODER_MODER0_0 | GPIO_MODER_MODER1_0);
+    GPIOA->MODER |= (GPIO_MODER_MODER12_0 | GPIO_MODER_MODER0_0 | GPIO_MODER_MODER1_0);
  800025e:	f04f 4390 	mov.w	r3, #1207959552	; 0x48000000
  8000262:	681b      	ldr	r3, [r3, #0]
  8000264:	f04f 4290 	mov.w	r2, #1207959552	; 0x48000000
- 8000268:	f443 7382 	orr.w	r3, r3, #260	; 0x104
- 800026c:	f043 0301 	orr.w	r3, r3, #1
+ 8000268:	f043 7380 	orr.w	r3, r3, #16777216	; 0x1000000
+ 800026c:	f043 0305 	orr.w	r3, r3, #5
  8000270:	6013      	str	r3, [r2, #0]
 
     // Initialize columns to high

@@ -16,7 +16,7 @@ char keys[ROWS][COLS] = {
 };
 
 uint8_t rowPins[ROWS] = {10, 3, 5, 4};  // PB10, PB3, PB5, PB4
-uint8_t colPins[COLS] = {0 , 4, 1};  // PA2, PA10, PA3
+uint8_t colPins[COLS] = {0 , 12, 1};  // PA0, PA4, PA1
 
 volatile uint8_t keystates[ROWS * COLS] = {0};
 
@@ -38,8 +38,8 @@ void Init_GPIO(void)
     GPIOB->PUPDR |= (GPIO_PUPDR_PUPDR10_0 | GPIO_PUPDR_PUPDR3_0 | GPIO_PUPDR_PUPDR5_0 | GPIO_PUPDR_PUPDR4_0);
 
     // Configure COLs as output
-    GPIOA->MODER &= ~(GPIO_MODER_MODER4 | GPIO_MODER_MODER0 | GPIO_MODER_MODER1);
-    GPIOA->MODER |= (GPIO_MODER_MODER4_0 | GPIO_MODER_MODER0_0 | GPIO_MODER_MODER1_0);
+    GPIOA->MODER &= ~(GPIO_MODER_MODER12 | GPIO_MODER_MODER0 | GPIO_MODER_MODER1);
+    GPIOA->MODER |= (GPIO_MODER_MODER12_0 | GPIO_MODER_MODER0_0 | GPIO_MODER_MODER1_0);
 
     // Initialize columns to high
     for (int c = 0; c < COLS; c++) {
