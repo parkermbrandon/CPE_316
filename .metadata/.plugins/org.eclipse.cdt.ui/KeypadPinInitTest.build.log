@@ -1,4 +1,4 @@
-13:26:19 **** Incremental Build of configuration Debug for project KeypadPinInitTest ****
+22:22:01 **** Incremental Build of configuration Debug for project KeypadPinInitTest ****
 make -j24 all 
 arm-none-eabi-size   KeypadPinInitTest.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size   KeypadPinInitTest.elf
 Finished building: default.size.stdout
  
 
-13:26:19 Build Finished. 0 errors, 0 warnings. (took 193ms)
+22:22:02 Build Finished. 0 errors, 0 warnings. (took 195ms)
 

@@ -1,4 +1,4 @@
-14:01:44 **** Incremental Build of configuration Debug for project CPE 316 A2 Keypad ****
+22:21:59 **** Incremental Build of configuration Debug for project CPE 316 A2 Keypad ****
 make -j24 all 
 arm-none-eabi-size   CPE\ 316\ A2\ Keypad.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size   CPE\ 316\ A2\ Keypad.elf
 Finished building: default.size.stdout
  
 
-14:01:44 Build Finished. 0 errors, 0 warnings. (took 218ms)
+22:22:00 Build Finished. 0 errors, 0 warnings. (took 199ms)
 

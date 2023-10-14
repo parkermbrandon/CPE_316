@@ -162,97 +162,98 @@ int main(void)
  8000248:	f04f 4380 	mov.w	r3, #1073741824	; 0x40000000
  800024c:	f04f 32ff 	mov.w	r2, #4294967295
  8000250:	62da      	str	r2, [r3, #44]	; 0x2c
-    TIM2->CCR1 = 400;  // 50% duty cycle
+    TIM2->CCR1 = 1;  // 50% duty cycle
  8000252:	f04f 4380 	mov.w	r3, #1073741824	; 0x40000000
- 8000256:	f44f 72c8 	mov.w	r2, #400	; 0x190
- 800025a:	635a      	str	r2, [r3, #52]	; 0x34
+ 8000256:	2201      	movs	r2, #1
+ 8000258:	635a      	str	r2, [r3, #52]	; 0x34
     TIM2->DIER |= TIM_DIER_CC1IE;  // Enable Capture/Compare 1 interrupt
- 800025c:	f04f 4380 	mov.w	r3, #1073741824	; 0x40000000
- 8000260:	68db      	ldr	r3, [r3, #12]
- 8000262:	f04f 4280 	mov.w	r2, #1073741824	; 0x40000000
- 8000266:	f043 0302 	orr.w	r3, r3, #2
- 800026a:	60d3      	str	r3, [r2, #12]
+ 800025a:	f04f 4380 	mov.w	r3, #1073741824	; 0x40000000
+ 800025e:	68db      	ldr	r3, [r3, #12]
+ 8000260:	f04f 4280 	mov.w	r2, #1073741824	; 0x40000000
+ 8000264:	f043 0302 	orr.w	r3, r3, #2
+ 8000268:	60d3      	str	r3, [r2, #12]
 
     // Enable TIM2
     TIM2->CR1 |= TIM_CR1_CEN;
- 800026c:	f04f 4380 	mov.w	r3, #1073741824	; 0x40000000
- 8000270:	681b      	ldr	r3, [r3, #0]
- 8000272:	f04f 4280 	mov.w	r2, #1073741824	; 0x40000000
- 8000276:	f043 0301 	orr.w	r3, r3, #1
- 800027a:	6013      	str	r3, [r2, #0]
+ 800026a:	f04f 4380 	mov.w	r3, #1073741824	; 0x40000000
+ 800026e:	681b      	ldr	r3, [r3, #0]
+ 8000270:	f04f 4280 	mov.w	r2, #1073741824	; 0x40000000
+ 8000274:	f043 0301 	orr.w	r3, r3, #1
+ 8000278:	6013      	str	r3, [r2, #0]
 
     // Enable TIM2 interrupt
     NVIC_EnableIRQ(TIM2_IRQn);
- 800027c:	201c      	movs	r0, #28
- 800027e:	f7ff ffa3 	bl	80001c8 <__NVIC_EnableIRQ>
+ 800027a:	201c      	movs	r0, #28
+ 800027c:	f7ff ffa4 	bl	80001c8 <__NVIC_EnableIRQ>
 
     // Enable MCO, select MSI (4 MHz source)
     RCC->CFGR = ((RCC->CFGR & ~(RCC_CFGR_MCOSEL)) | (RCC_CFGR_MCOSEL_0));
- 8000282:	4b20      	ldr	r3, [pc, #128]	; (8000304 <main+0x100>)
- 8000284:	689b      	ldr	r3, [r3, #8]
- 8000286:	f023 63e0 	bic.w	r3, r3, #117440512	; 0x7000000
- 800028a:	4a1e      	ldr	r2, [pc, #120]	; (8000304 <main+0x100>)
- 800028c:	f043 7380 	orr.w	r3, r3, #16777216	; 0x1000000
- 8000290:	6093      	str	r3, [r2, #8]
+ 8000280:	4b20      	ldr	r3, [pc, #128]	; (8000304 <main+0x100>)
+ 8000282:	689b      	ldr	r3, [r3, #8]
+ 8000284:	f023 63e0 	bic.w	r3, r3, #117440512	; 0x7000000
+ 8000288:	4a1e      	ldr	r2, [pc, #120]	; (8000304 <main+0x100>)
+ 800028a:	f043 7380 	orr.w	r3, r3, #16777216	; 0x1000000
+ 800028e:	6093      	str	r3, [r2, #8]
 
     // Configure MCO output on PA8
     RCC->AHB2ENR |= RCC_AHB2ENR_GPIOAEN;
- 8000292:	4b1c      	ldr	r3, [pc, #112]	; (8000304 <main+0x100>)
- 8000294:	6cdb      	ldr	r3, [r3, #76]	; 0x4c
- 8000296:	4a1b      	ldr	r2, [pc, #108]	; (8000304 <main+0x100>)
- 8000298:	f043 0301 	orr.w	r3, r3, #1
- 800029c:	64d3      	str	r3, [r2, #76]	; 0x4c
+ 8000290:	4b1c      	ldr	r3, [pc, #112]	; (8000304 <main+0x100>)
+ 8000292:	6cdb      	ldr	r3, [r3, #76]	; 0x4c
+ 8000294:	4a1b      	ldr	r2, [pc, #108]	; (8000304 <main+0x100>)
+ 8000296:	f043 0301 	orr.w	r3, r3, #1
+ 800029a:	64d3      	str	r3, [r2, #76]	; 0x4c
     GPIOA->MODER &= ~GPIO_MODER_MODE8;
- 800029e:	f04f 4390 	mov.w	r3, #1207959552	; 0x48000000
- 80002a2:	681b      	ldr	r3, [r3, #0]
- 80002a4:	f04f 4290 	mov.w	r2, #1207959552	; 0x48000000
- 80002a8:	f423 3340 	bic.w	r3, r3, #196608	; 0x30000
- 80002ac:	6013      	str	r3, [r2, #0]
+ 800029c:	f04f 4390 	mov.w	r3, #1207959552	; 0x48000000
+ 80002a0:	681b      	ldr	r3, [r3, #0]
+ 80002a2:	f04f 4290 	mov.w	r2, #1207959552	; 0x48000000
+ 80002a6:	f423 3340 	bic.w	r3, r3, #196608	; 0x30000
+ 80002aa:	6013      	str	r3, [r2, #0]
     GPIOA->MODER |= (2 << GPIO_MODER_MODE8_Pos);
- 80002ae:	f04f 4390 	mov.w	r3, #1207959552	; 0x48000000
- 80002b2:	681b      	ldr	r3, [r3, #0]
- 80002b4:	f04f 4290 	mov.w	r2, #1207959552	; 0x48000000
- 80002b8:	f443 3300 	orr.w	r3, r3, #131072	; 0x20000
- 80002bc:	6013      	str	r3, [r2, #0]
+ 80002ac:	f04f 4390 	mov.w	r3, #1207959552	; 0x48000000
+ 80002b0:	681b      	ldr	r3, [r3, #0]
+ 80002b2:	f04f 4290 	mov.w	r2, #1207959552	; 0x48000000
+ 80002b6:	f443 3300 	orr.w	r3, r3, #131072	; 0x20000
+ 80002ba:	6013      	str	r3, [r2, #0]
     GPIOA->OTYPER &= ~GPIO_OTYPER_OT8;
- 80002be:	f04f 4390 	mov.w	r3, #1207959552	; 0x48000000
- 80002c2:	685b      	ldr	r3, [r3, #4]
- 80002c4:	f04f 4290 	mov.w	r2, #1207959552	; 0x48000000
- 80002c8:	f423 7380 	bic.w	r3, r3, #256	; 0x100
- 80002cc:	6053      	str	r3, [r2, #4]
+ 80002bc:	f04f 4390 	mov.w	r3, #1207959552	; 0x48000000
+ 80002c0:	685b      	ldr	r3, [r3, #4]
+ 80002c2:	f04f 4290 	mov.w	r2, #1207959552	; 0x48000000
+ 80002c6:	f423 7380 	bic.w	r3, r3, #256	; 0x100
+ 80002ca:	6053      	str	r3, [r2, #4]
     GPIOA->PUPDR &= ~GPIO_PUPDR_PUPD8;
- 80002ce:	f04f 4390 	mov.w	r3, #1207959552	; 0x48000000
- 80002d2:	68db      	ldr	r3, [r3, #12]
- 80002d4:	f04f 4290 	mov.w	r2, #1207959552	; 0x48000000
- 80002d8:	f423 3340 	bic.w	r3, r3, #196608	; 0x30000
- 80002dc:	60d3      	str	r3, [r2, #12]
+ 80002cc:	f04f 4390 	mov.w	r3, #1207959552	; 0x48000000
+ 80002d0:	68db      	ldr	r3, [r3, #12]
+ 80002d2:	f04f 4290 	mov.w	r2, #1207959552	; 0x48000000
+ 80002d6:	f423 3340 	bic.w	r3, r3, #196608	; 0x30000
+ 80002da:	60d3      	str	r3, [r2, #12]
     GPIOA->OSPEEDR |= GPIO_OSPEEDR_OSPEED8;
- 80002de:	f04f 4390 	mov.w	r3, #1207959552	; 0x48000000
- 80002e2:	689b      	ldr	r3, [r3, #8]
- 80002e4:	f04f 4290 	mov.w	r2, #1207959552	; 0x48000000
- 80002e8:	f443 3340 	orr.w	r3, r3, #196608	; 0x30000
- 80002ec:	6093      	str	r3, [r2, #8]
+ 80002dc:	f04f 4390 	mov.w	r3, #1207959552	; 0x48000000
+ 80002e0:	689b      	ldr	r3, [r3, #8]
+ 80002e2:	f04f 4290 	mov.w	r2, #1207959552	; 0x48000000
+ 80002e6:	f443 3340 	orr.w	r3, r3, #196608	; 0x30000
+ 80002ea:	6093      	str	r3, [r2, #8]
     GPIOA->AFR[1] &= ~GPIO_AFRH_AFSEL8;
- 80002ee:	f04f 4390 	mov.w	r3, #1207959552	; 0x48000000
- 80002f2:	6a5b      	ldr	r3, [r3, #36]	; 0x24
- 80002f4:	f04f 4290 	mov.w	r2, #1207959552	; 0x48000000
- 80002f8:	f023 030f 	bic.w	r3, r3, #15
- 80002fc:	6253      	str	r3, [r2, #36]	; 0x24
+ 80002ec:	f04f 4390 	mov.w	r3, #1207959552	; 0x48000000
+ 80002f0:	6a5b      	ldr	r3, [r3, #36]	; 0x24
+ 80002f2:	f04f 4290 	mov.w	r2, #1207959552	; 0x48000000
+ 80002f6:	f023 030f 	bic.w	r3, r3, #15
+ 80002fa:	6253      	str	r3, [r2, #36]	; 0x24
   \details Enables IRQ interrupts by clearing the I-bit in the CPSR.
            Can only be executed in Privileged modes.
  */
 __STATIC_FORCEINLINE void __enable_irq(void)
 {
   __ASM volatile ("cpsie i" : : : "memory");
- 80002fe:	b662      	cpsie	i
+ 80002fc:	b662      	cpsie	i
 }
- 8000300:	bf00      	nop
+ 80002fe:	bf00      	nop
 
     // Enable global interrupts
     __enable_irq();
 
     while (1)
- 8000302:	e7fe      	b.n	8000302 <main+0xfe>
+ 8000300:	e7fe      	b.n	8000300 <main+0xfc>
+ 8000302:	bf00      	nop
  8000304:	40021000 	.word	0x40021000
 
 08000308 <TIM2_IRQHandler>:

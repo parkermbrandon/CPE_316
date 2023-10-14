@@ -96,6 +96,7 @@ void Init_GPIO(void)
  80001d4:	f043 0307 	orr.w	r3, r3, #7
  80001d8:	64d3      	str	r3, [r2, #76]	; 0x4c
 
+	// Clear the LED GPIO registers
 	GPIOB->MODER &= ~GPIO_MODER_MODER6;
  80001da:	4b34      	ldr	r3, [pc, #208]	; (80002ac <_Z9Init_GPIOv+0xe4>)
  80001dc:	681b      	ldr	r3, [r3, #0]
@@ -115,6 +116,7 @@ void Init_GPIO(void)
  80001fc:	f423 2370 	bic.w	r3, r3, #983040	; 0xf0000
  8000200:	6013      	str	r3, [r2, #0]
 
+	// Set the LED GPIO pins as output
 	GPIOB->MODER |= GPIO_MODER_MODER6_0;
  8000202:	4b2a      	ldr	r3, [pc, #168]	; (80002ac <_Z9Init_GPIOv+0xe4>)
  8000204:	681b      	ldr	r3, [r3, #0]

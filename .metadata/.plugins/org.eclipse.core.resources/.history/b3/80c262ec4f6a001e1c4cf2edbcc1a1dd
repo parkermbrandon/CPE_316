@@ -1,0 +1,55 @@
+#include "main.h"
+#include "ExternalDAC.h"
+
+void GPIO_Init(void) {
+    __HAL_RCC_GPIOA_CLK_ENABLE();  // Enable GPIOA clock
+
+    GPIO_InitTypeDef GPIO_InitStruct = {0};
+    GPIO_InitStruct.Pin = GPIO_PIN_0;
+    GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+    HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+}
+
+void testWaveforms() {
+    int arraySize = 256;  // Replace with the actual size of your waveform arrays
+    int delayTime = 1;  // Delay time in milliseconds, adjust as needed
+
+    // Test Sine Wave
+    for (int i = 0; i < arraySize; ++i) {
+        HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, sine_wave[i] > 2048 ? GPIO_PIN_SET : GPIO_PIN_RESET);
+        HAL_Delay(delayTime);
+    }
+
+    // Test Square Wave
+    for (int i = 0; i < arraySize; ++i) {
+        HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, square_wave[i] > 2048 ? GPIO_PIN_SET : GPIO_PIN_RESET);
+        HAL_Delay(delayTime);
+    }
+
+    // Test Triangle Wave
+    for (int i = 0; i < arraySize; ++i) {
+        HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, triangle_wave[i] > 2048 ? GPIO_PIN_SET : GPIO_PIN_RESET);
+        HAL_Delay(delayTime);
+    }
+
+    // Test Sawtooth Wave
+    for (int i = 0; i < arraySize; ++i) {
+        HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, sawtooth_wave[i] > 2048 ? GPIO_PIN_SET : GPIO_PIN_RESET);
+        HAL_Delay(delayTime);
+    }
+}
+
+int main()
+{
+
+	HAL_Init();
+	GPIO_Init();
+	while(1)
+	{
+		testWaveforms();
+	}
+
+	return 0;
+}

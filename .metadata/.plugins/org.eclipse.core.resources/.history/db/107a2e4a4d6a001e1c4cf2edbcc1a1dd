@@ -1,0 +1,20 @@
+#ifndef DAC_H
+#define DAC_H
+
+#include <stdint.h>
+
+extern const uint16_t sine_wave[256];
+extern const uint16_t square_wave[256];
+extern const uint16_t sawtooth_wave[256];
+extern const uint16_t triangle_wave[256];
+
+class DAC {
+public:
+	DAC();
+	virtual ~DAC();
+	void DAC_init();
+	void DAC_write();
+	uint16_t DAC_mvolt_convert();
+};
+
+#endif /* SRC_DAC_H_ */

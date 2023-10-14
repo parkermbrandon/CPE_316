@@ -1,0 +1,17 @@
+/*
+ * DAC.h
+ *
+ *  Created on: Oct 13, 2023
+ *      Author: goneb
+ */
+
+#ifndef SRC_DAC_H_
+#define SRC_DAC_H_
+
+class DAC {
+public:
+	DAC();
+	virtual ~DAC();
+};
+
+#endif /* SRC_DAC_H_ */

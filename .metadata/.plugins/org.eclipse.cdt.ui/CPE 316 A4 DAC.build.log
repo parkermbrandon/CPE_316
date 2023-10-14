@@ -1,10 +1,10 @@
-16:01:44 **** Incremental Build of configuration Debug for project CPE 316 A4 DAC ****
+22:22:00 **** Incremental Build of configuration Debug for project CPE 316 A4 DAC ****
 make -j24 all 
 arm-none-eabi-size   CPE\ 316\ A4\ DAC.elf 
    text	   data	    bss	    dec	    hex	filename
-   2016	     20	   1572	   3608	    e18	CPE 316 A4 DAC.elf
+   1888	     20	   1572	   3480	    d98	CPE 316 A4 DAC.elf
 Finished building: default.size.stdout
  
 
-16:01:44 Build Finished. 0 errors, 0 warnings. (took 198ms)
+22:22:00 Build Finished. 0 errors, 0 warnings. (took 194ms)
 
