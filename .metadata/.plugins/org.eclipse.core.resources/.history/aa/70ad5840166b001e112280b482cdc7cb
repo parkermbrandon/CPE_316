@@ -32,9 +32,6 @@ void TIM2_init() {
 
     // Enable TIM2 IRQ in NVIC
     NVIC_EnableIRQ(TIM2_IRQn);
-
-    //Enable Global Interrupts
-    __enable_irq();
 }
 
 extern "C" void TIM2_IRQHandler(void) {
@@ -96,14 +93,13 @@ int main()
 {
 
 	HAL_Init();
-	TIM2_init();
 	keys.Keypad_init();
 	dac.DAC_init();
 
 	while(1)
 	{
-		//testWaveforms(dac);
-		//keys.tick();
+		testWaveforms(dac);
+		keys.tick();
 	}
 
 	return 0;

@@ -32,9 +32,6 @@ void TIM2_init() {
 
     // Enable TIM2 IRQ in NVIC
     NVIC_EnableIRQ(TIM2_IRQn);
-
-    //Enable Global Interrupts
-    __enable_irq();
 }
 
 extern "C" void TIM2_IRQHandler(void) {
