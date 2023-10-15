@@ -51,11 +51,8 @@ void Init_GPIO(void)
 
 void tick() {
   for (int c = 0; c < COLS; c++) {
-    //GPIOA->BSRR = (1U << (colPins[c] + 16));  // sets the current column pin to low
-	  GPIOA->ODR &= ~(1U << colPins[c]);  // Reset column pin
+    GPIOA->BSRR = (1U << (colPins[c] + 16));  // sets the current column pin to low
     // This is done because the rows are pulled-up. When a button is pressed, this column will be shorted to one of the rows, pulling it to a low state.
-    //HAL_Delay(_KEYPAD_SETTLING_DELAY); // do we need a delay, not sure..
-
 
     for (int r = 0; r < ROWS; r++) {
       int i = r * COLS + c;
@@ -67,8 +64,7 @@ void tick() {
         keystates[i] = 0;
       }
     }
-    //GPIOA->BSRR = (1U << colPins[c]); // After checking all rows for a given column, the column is set back to high
-    GPIOA->ODR |= (1U << colPins[c]);  // Set column pin
+    GPIOA->BSRR = (1U << colPins[c]); // After checking all rows for a given column, the column is set back to high
   }
 }
 
@@ -99,7 +95,7 @@ void update_LEDs(char key) {
 int main(void)
 {
   HAL_Init();
-  SystemClock_Config();
+  //SystemClock_Config();
   Init_GPIO();
 
   while (1)

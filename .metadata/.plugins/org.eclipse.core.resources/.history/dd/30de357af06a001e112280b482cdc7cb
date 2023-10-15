@@ -1,0 +1,16 @@
+#include "main.h"
+#include <stdio.h>
+
+#ifndef SRC_KEYPAD_H_
+#define SRC_KEYPAD_H_
+
+class Keypad {
+public:
+	Keypad();
+	void Keypad_init();
+	void tick();
+	void update_LEDs(char key);
+	void translate_key_chars();
+};
+
+#endif

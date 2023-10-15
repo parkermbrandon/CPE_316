@@ -1,0 +1,24 @@
+#include "main.h"
+#include <stdio.h>
+
+#ifndef SRC_KEYPAD_H_
+#define SRC_KEYPAD_H_
+
+extern const uint8_t ROWS;  // Four rows
+extern const uint8_t COLS;
+
+extern char keys[ROWS][COLS];
+
+extern uint8_t rowPins[ROWS];  // PB10, PB3, PB5, PB4
+extern uint8_t colPins[COLS];  // PA0, PA4, PA1
+
+class Keypad {
+public:
+	Keypad();
+	void Keypad_init();
+	void tick();
+	void update_LEDs();
+	void translate_key_chars();
+};
+
+#endif

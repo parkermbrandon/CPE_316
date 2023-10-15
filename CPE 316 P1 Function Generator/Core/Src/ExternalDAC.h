@@ -18,4 +18,4 @@ public:
 	uint16_t DAC_mvolt_convert(float mvoltage);
 };
 
-#endif /* SRC_EXTERNALDAC_H_ */
+#endif
