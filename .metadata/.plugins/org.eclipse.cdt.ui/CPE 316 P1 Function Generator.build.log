@@ -1,6 +1,9 @@
-21:59:33 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+09:40:55 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
 make -j24 all 
-arm-none-eabi-g++ "../Core/Src/ExternalDAC.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ExternalDAC.d" -MT"Core/Src/ExternalDAC.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ExternalDAC.o"
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.cpp:18:5: warning: built-in function 'index' declared as non-function [-Wbuiltin-declaration-mismatch]
+   18 | int index = 0;  // Index for waveform array
+      |     ^~~~~
 arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 Finished building target: CPE 316 P1 Function Generator.elf
  
@@ -13,5 +16,5 @@ Finished building: default.size.stdout
 Finished building: CPE 316 P1 Function Generator.list
  
 
-21:59:34 Build Finished. 0 errors, 0 warnings. (took 637ms)
+09:40:56 Build Finished. 0 errors, 1 warnings. (took 619ms)
 
