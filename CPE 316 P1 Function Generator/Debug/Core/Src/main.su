@@ -1,8 +1,10 @@
 ../Drivers/CMSIS/Include/core_cm4.h:1679:22:void __NVIC_EnableIRQ(IRQn_Type)	16	static,ignoring_inline_asm
-../Core/Src/main.cpp:22:6:void TIM2_init()	8	static,ignoring_inline_asm
-../Core/Src/main.cpp:40:17:void TIM2_IRQHandler()	8	static
-../Core/Src/main.cpp:50:6:void testWaveforms(External_DAC&)	56	static
-../Core/Src/main.cpp:95:5:int main()	8	static
-../Core/Src/main.cpp:110:1:void __static_initialization_and_destruction_0(int, int)	16	static
-../Core/Src/main.cpp:110:1:cpp)	8	static
-../Core/Src/main.cpp:110:1:cpp)	8	static
+../Core/Src/main.cpp:24:5:int max(int, int)	16	static
+../Core/Src/main.cpp:29:5:int min(int, int)	16	static
+../Core/Src/main.cpp:35:6:void TIM2_init()	8	static
+../Core/Src/main.cpp:50:17:void TIM2_IRQHandler()	16	static
+../Core/Src/main.cpp:96:5:int main()	8	static,ignoring_inline_asm
+../Core/Src/main.cpp:114:6:void testWaveforms(External_DAC&)	56	static
+../Core/Src/main.cpp:158:1:void __static_initialization_and_destruction_0(int, int)	16	static
+../Core/Src/main.cpp:158:1:cpp)	8	static
+../Core/Src/main.cpp:158:1:cpp)	8	static

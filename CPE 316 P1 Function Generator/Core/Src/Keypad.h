@@ -9,7 +9,7 @@ public:
 	void Keypad_init();
 	void tick();
 	void update_LEDs(char key);
-	void findButtonPressed();
+	char findButtonPressed();
 
 private:
 	static const uint8_t ROWS = 4;  // Four rows

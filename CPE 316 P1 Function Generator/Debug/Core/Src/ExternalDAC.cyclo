@@ -2,5 +2,5 @@
 ../Core/Src/ExternalDAC.cpp:83:1:External_DAC::~External_DAC()	1
 ../Core/Src/ExternalDAC.cpp:83:1:virtual External_DAC::~External_DAC()	1
 ../Core/Src/ExternalDAC.cpp:86:6:void External_DAC::DAC_init()	1
-../Core/Src/ExternalDAC.cpp:123:6:void External_DAC::DAC_write(uint16_t)	2
-../Core/Src/ExternalDAC.cpp:131:10:uint16_t External_DAC::DAC_mvolt_convert(float)	1
+../Core/Src/ExternalDAC.cpp:135:6:void External_DAC::DAC_write(uint16_t)	2
+../Core/Src/ExternalDAC.cpp:143:10:uint16_t External_DAC::DAC_mvolt_convert(float)	1

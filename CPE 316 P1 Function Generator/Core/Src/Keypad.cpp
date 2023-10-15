@@ -91,7 +91,7 @@ void Keypad::update_LEDs(char key) {
   }
 }
 
-void Keypad::findButtonPressed()
+char Keypad::findButtonPressed()
 {
 	for (int r = 0; r < ROWS; r++)
 	{
@@ -102,6 +102,7 @@ void Keypad::findButtonPressed()
 		{
 		  char key = keys[r][c];
 		  update_LEDs(key);
+		  return key;
 		}
 	  }
 	}

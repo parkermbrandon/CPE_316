@@ -1,17 +1,10 @@
-17:38:32 **** Incremental Build of configuration Debug for project CPE 316 A2 Keypad ****
+12:51:01 **** Build of configuration Debug for project CPE 316 A2 Keypad ****
 make -j24 all 
-arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-g++ -o "CPE 316 A2 Keypad.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A2 Keypad\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A2 Keypad.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
-Finished building target: CPE 316 A2 Keypad.elf
- 
 arm-none-eabi-size   CPE\ 316\ A2\ Keypad.elf 
-arm-none-eabi-objdump -h -S  CPE\ 316\ A2\ Keypad.elf  > "CPE 316 A2 Keypad.list"
    text	   data	    bss	    dec	    hex	filename
    2256	     40	   1584	   3880	    f28	CPE 316 A2 Keypad.elf
 Finished building: default.size.stdout
  
-Finished building: CPE 316 A2 Keypad.list
- 
 
-17:38:33 Build Finished. 0 errors, 0 warnings. (took 624ms)
+12:51:01 Build Finished. 0 errors, 0 warnings. (took 202ms)
 

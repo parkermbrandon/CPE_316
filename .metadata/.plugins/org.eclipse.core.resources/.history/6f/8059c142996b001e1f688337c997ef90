@@ -1,0 +1,114 @@
+#include "main.h"
+#include "ExternalDAC.h"
+#include "Keypad.h"
+
+void SystemClock_Config(void);
+void testWaveforms(External_DAC& dac);
+void TIM2_init();
+extern "C" void TIM2_IRQHandler(void);
+
+volatile uint8_t flagA2outpu = 0;
+uint8_t dataToTransmit =0;
+
+#define ARRAY_SIZE 256
+
+External_DAC dac;
+Keypad keys;
+
+// Global variables for waveform and frequency
+int waveform = 0;  // 0 for square, 1 for sine, 2 for triangle, 3 for sawtooth
+int frequency = 100;  // Frequency in Hz
+int i = 0;  // Index for waveform array
+int dutyCycle = 50;  // Duty cycle for square wave
+
+// Initialize TIM2 for 16 µs interval
+void TIM2_init() {
+	RCC->APB1ENR1 |= RCC_APB1ENR1_TIM2EN;
+	TIM2->PSC = 3;
+	TIM2->ARR = 310;
+	TIM2->DIER |= TIM_DIER_UIE;
+	TIM2->CR1 |= TIM_CR1_CEN;
+	NVIC_EnableIRQ(TIM2_IRQn);
+}
+
+//extern "C" void SPI_IRQHandler(void)
+//{
+//	//Load data for transmission
+//	SPI1->DR ()
+//}
+
+extern "C" void TIM2_IRQHandler(void)
+{
+	 if (TIM2->SR & TIM_SR_UIF)
+	 {
+	        TIM2->SR &= ~TIM_SR_UIF;
+	        for (int i = 0; i < ARRAY_SIZE; ++i)
+			{
+				dac.DAC_write(sine_wave[i]);
+			}
+	 }
+}
+
+int main()
+{
+
+	__enable_irq();
+	HAL_Init();
+	TIM2_init();
+	keys.Keypad_init();
+	dac.DAC_init();
+
+	while(1)
+	{
+		//testWaveforms(dac);
+		//keys.tick();
+	}
+
+	return 0;
+}
+
+void testWaveforms(External_DAC& dac)
+{
+    int arraySize = 256;  // Replace with the actual size of your waveform arrays
+    int delayTime = 1;  // Delay time in milliseconds, adjust as needed
+
+    // Test Sine Wave
+    for(int i = 0; i < 3; i++)
+    {
+		for (int i = 0; i < arraySize; ++i)
+		{
+			dac.DAC_write(sine_wave[i]);
+			HAL_Delay(delayTime);
+		}
+    }
+
+    // Test Square Wave
+    for(int i = 0; i < 3; i++)
+    {
+		for (int i = 0; i < arraySize; ++i)
+		{
+			dac.DAC_write(square_wave[i]);
+			HAL_Delay(delayTime);
+		}
+    }
+
+    // Test Triangle Wave
+    for(int i = 0; i < 3; i++)
+    {
+		for (int i = 0; i < arraySize; ++i)
+		{
+			dac.DAC_write(triangle_wave[i]);
+			HAL_Delay(delayTime);
+		}
+    }
+
+    // Test Sawtooth Wave
+    for(int i = 0; i < 3; i++)
+    {
+		for (int i = 0; i < arraySize; ++i)
+		{
+			dac.DAC_write(sawtooth_wave[i]);
+			HAL_Delay(delayTime);
+		}
+    }
+}

@@ -2,4 +2,4 @@
 ../Core/Src/Keypad.cpp:13:6:void Keypad::Keypad_init()	2
 ../Core/Src/Keypad.cpp:43:6:void Keypad::tick()	4
 ../Core/Src/Keypad.cpp:67:6:void Keypad::update_LEDs(char)	10
-../Core/Src/Keypad.cpp:94:6:void Keypad::findButtonPressed()	4
+../Core/Src/Keypad.cpp:94:6:char Keypad::findButtonPressed()	4
