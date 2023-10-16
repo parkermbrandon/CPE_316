@@ -1,0 +1,236 @@
+#include "main.h"
+#include "ExternalDAC.h"
+#include "Keypad.h"
+#include <stdio.h>
+
+void SystemClock_Config(void);
+void testWaveforms(External_DAC& dac);
+void TIM2_init();
+extern "C" void TIM2_IRQHandler(void);
+
+volatile uint8_t flagA2outpu = 0;
+uint8_t dataToTransmit =0;
+
+#define ARRAY_SIZE 256
+
+External_DAC dac;
+Keypad keys;
+
+// Global variables for waveform and frequency
+int waveform = 0;  // 0 for square, 1 for sine, 2 for triangle, 3 for sawtooth
+int frequency = 100;  // Frequency in Hz
+int i = 0;  // Index for waveform array
+int dutyCycle = 50;  // Duty cycle for square wave
+
+int max(int a, int b)
+{
+    return (a > b) ? a : b;
+}
+
+int min(int a, int b)
+{
+    return (a < b) ? a : b;
+}
+
+
+// Initialize TIM2 for 16 µs interval
+void TIM2_init() {
+	RCC->APB1ENR1 |= RCC_APB1ENR1_TIM2EN;
+	TIM2->PSC = 0;
+	TIM2->ARR = 3000;
+	TIM2->DIER |= TIM_DIER_UIE;
+	TIM2->CR1 |= TIM_CR1_CEN;
+	NVIC_EnableIRQ(TIM2_IRQn);
+}
+
+//extern "C" void SPI_IRQHandler(void)
+//{
+//	//Load data for transmission
+//	SPI1->DR ()
+//}
+
+extern "C" void TIM2_IRQHandler(void)
+{
+	 if (TIM2->SR & TIM_SR_UIF)
+	 {
+	        TIM2->SR &= ~TIM_SR_UIF;
+	        keys.tick();
+	        char key = keys.findButtonPressed();
+
+	        // Update waveform and frequency based on keypad input
+	            if (key >= '1' && key <= '5') {
+	                frequency = (key - '0') * 100;
+	            } else if (key == '6') {
+	                waveform = 0;
+	            } else if (key == '7') {
+	                waveform = 1;
+	            } else if (key == '8') {
+	                waveform = 2;
+	            } else if (key == '9') {
+	                waveform = 3;
+	            } else if (key == '*') {
+	                dutyCycle = max(10, dutyCycle - 10);
+	            } else if (key == '#') {
+	                dutyCycle = min(90, dutyCycle + 10);
+	            } else if (key == '0') {
+	                dutyCycle = 50;
+	            }
+
+	            uint16_t value_A, value_B;
+
+	            switch (waveform) {
+					case 0:
+						value_A = sine_wave_1000[i];
+						value_B = sine_wave_1000[i + 1];  // Replace with the value you want for DACB
+						break;
+					case 1:
+						value_A = triangle_wave_1000[i];
+						value_B = triangle_wave_1000[i + 1];  // Replace with the value you want for DACB
+						break;
+					case 2:
+						value_A = sawtooth_wave_1000[i];
+						value_B = sawtooth_wave_1000[i + 1];  // Replace with the value you want for DACB
+						break;
+					case 3:
+						value_A = square_wave_1000[i];
+						value_B = square_wave_1000[i + 1];  // Replace with the value you want for DACB
+						break;
+				}
+
+	                    // Write to both DACs
+	                    dac.DAC_write(value_A, value_B);
+	        // Update index based on frequency
+	        i = (i + 2) % 1000;//(1000 * 500 / frequency);  // Assuming waveform arrays have 256 points and max frequency is 500 Hz
+	 }
+}
+
+int main()
+{
+	HAL_Init();
+	SystemClock_Config();
+	__enable_irq();
+	TIM2_init();
+	keys.Keypad_init();
+	dac.DAC_init();
+
+	while(1)
+	{
+		//testWaveforms(dac);
+		//keys.tick();
+	}
+
+	return 0;
+}
+
+void testWaveforms(External_DAC& dac)
+{
+    int arraySize = 256;  // Replace with the actual size of your waveform arrays
+    int delayTime = 1;  // Delay time in milliseconds, adjust as needed
+
+    // Test Sine Wave
+    for(int i = 0; i < 3; i++)
+    {
+		for (int i = 0; i < arraySize; ++i)
+		{
+			//dac.DAC_write(sine_wave_1000[i]);
+			HAL_Delay(delayTime);
+		}
+    }
+
+    // Test Square Wave
+    for(int i = 0; i < 3; i++)
+    {
+		for (int i = 0; i < arraySize; ++i)
+		{
+			//dac.DAC_write(square_wave_1000[i]);
+			HAL_Delay(delayTime);
+		}
+    }
+
+    // Test Triangle Wave
+    for(int i = 0; i < 3; i++)
+    {
+		for (int i = 0; i < arraySize; ++i)
+		{
+			//dac.DAC_write(triangle_wave_1000[i]);
+			HAL_Delay(delayTime);
+		}
+    }
+
+    // Test Sawtooth Wave
+    for(int i = 0; i < 3; i++)
+    {
+		for (int i = 0; i < arraySize; ++i)
+		{
+			//dac.DAC_write(sawtooth_wave_1000[i]);
+			HAL_Delay(delayTime);
+		}
+    }
+}
+
+void SystemClock_Config(void)
+{
+  RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+  RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+
+  /** Configure the main internal regulator output voltage
+  */
+  if (HAL_PWREx_ControlVoltageScaling(PWR_REGULATOR_VOLTAGE_SCALE1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Initializes the RCC Oscillators according to the specified parameters
+  * in the RCC_OscInitTypeDef structure.
+  */
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_MSI;
+  RCC_OscInitStruct.MSIState = RCC_MSI_ON;
+  RCC_OscInitStruct.MSICalibrationValue = 0;
+  RCC_OscInitStruct.MSIClockRange = RCC_MSIRANGE_11;
+  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
+  if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Initializes the CPU, AHB and APB buses clocks
+  */
+  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
+                              |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_MSI;
+  RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
+  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+}
+
+void Error_Handler(void)
+{
+  __disable_irq();
+  while (1)
+  {
+  }
+
+}
+
+#ifdef  USE_FULL_ASSERT
+/**
+  * @brief  Reports the name of the source file and the source line number
+  *         where the assert_param error has occurred.
+  * @param  file: pointer to the source file name
+  * @param  line: assert_param error line source number
+  * @retval None
+  */
+void assert_failed(uint8_t *file, uint32_t line)
+{
+  /* USER CODE BEGIN 6 */
+  /* User can add his own implementation to report the file name and line number,
+     ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
+  /* USER CODE END 6 */
+}
+#endif /* USE_FULL_ASSERT */
+

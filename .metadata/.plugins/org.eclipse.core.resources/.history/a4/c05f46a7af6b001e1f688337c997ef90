@@ -1,0 +1,154 @@
+#include "ExternalDAC.h"
+
+extern const uint16_t sine_wave[100] = {
+    1861, 1978, 2094, 2210, 2324, 2436, 2546, 2653, 2758, 2858, 2955, 3047, 3135, 3218, 3295, 3367,
+    3432, 3492, 3545, 3591, 3631, 3664, 3689, 3707, 3718, 3722, 3718, 3707, 3689, 3664, 3631, 3591,
+    3545, 3492, 3432, 3367, 3295, 3218, 3135, 3047, 2955, 2858, 2758, 2653, 2546, 2436, 2324, 2210,
+    2094, 1978, 1861, 1744, 1628, 1512, 1398, 1286, 1176, 1069, 964, 864, 767, 675, 587, 504,
+    427, 355, 290, 230, 177, 131, 91, 58, 33, 15, 4, 0, 4, 15, 33, 58,
+    91, 131, 177, 230, 290, 355, 427, 504, 587, 675, 767, 864, 964, 1069, 1176, 1286,
+    1398, 1512, 1628, 1744,
+};
+extern const uint16_t square_wave[100] = {
+    3722, 3722, 3722, 3722, 3722, 3722, 3722, 3722, 3722, 3722, 3722, 3722, 3722, 3722, 3722, 3722,
+    3722, 3722, 3722, 3722, 3722, 3722, 3722, 3722, 3722, 3722, 3722, 3722, 3722, 3722, 3722, 3722,
+    3722, 3722, 3722, 3722, 3722, 3722, 3722, 3722, 3722, 3722, 3722, 3722, 3722, 3722, 3722, 3722,
+    3722, 3722, 1861, 1861, 1861, 1861, 1861, 1861, 1861, 1861, 1861, 1861, 1861, 1861, 1861, 1861,
+    1861, 1861, 1861, 1861, 1861, 1861, 1861, 1861, 1861, 1861, 1861, 1861, 1861, 1861, 1861, 1861,
+    1861, 1861, 1861, 1861, 1861, 1861, 1861, 1861, 1861, 1861, 1861, 1861, 1861, 1861, 1861, 1861,
+    1861, 1861, 1861, 1861,
+};
+extern const uint16_t sawtooth_wave[100] = {
+    1861, 1880, 1898, 1917, 1935, 1954, 1973, 1991, 2010, 2028, 2047, 2066, 2084, 2103, 2122, 2140,
+    2159, 2177, 2196, 2215, 2233, 2252, 2270, 2289, 2308, 2326, 2345, 2363, 2382, 2401, 2419, 2438,
+    2457, 2475, 2494, 2512, 2531, 2550, 2568, 2587, 2605, 2624, 2643, 2661, 2680, 2698, 2717, 2736,
+    2754, 2773, 2792, 2810, 2829, 2847, 2866, 2885, 2903, 2922, 2940, 2959, 2978, 2996, 3015, 3033,
+    3052, 3071, 3089, 3108, 3126, 3145, 3164, 3182, 3201, 3220, 3238, 3257, 3275, 3294, 3313, 3331,
+    3350, 3368, 3387, 3406, 3424, 3443, 3461, 3480, 3499, 3517, 3536, 3555, 3573, 3592, 3610, 3629,
+    3648, 3666, 3685, 3703,
+};
+extern const uint16_t triangle_wave[100] = {
+    1861, 1898, 1935, 1973, 2010, 2047, 2084, 2122, 2159, 2196, 2233, 2270, 2308, 2345, 2382, 2419,
+    2457, 2494, 2531, 2568, 2605, 2643, 2680, 2717, 2754, 2792, 2829, 2866, 2903, 2940, 2978, 3015,
+    3052, 3089, 3126, 3164, 3201, 3238, 3275, 3313, 3350, 3387, 3424, 3461, 3499, 3536, 3573, 3610,
+    3648, 3685, 3722, 3685, 3648, 3610, 3573, 3536, 3499, 3461, 3424, 3387, 3350, 3313, 3275, 3238,
+    3201, 3164, 3126, 3089, 3052, 3015, 2978, 2940, 2903, 2866, 2829, 2792, 2754, 2717, 2680, 2643,
+    2605, 2568, 2531, 2494, 2457, 2419, 2382, 2345, 2308, 2270, 2233, 2196, 2159, 2122, 2084, 2047,
+    2010, 1973, 1935, 1898,
+};
+
+External_DAC::External_DAC() {
+
+}
+
+External_DAC::~External_DAC() {
+}
+
+void External_DAC::DAC_init(void)
+{
+    RCC->AHB2ENR |= RCC_AHB2ENR_GPIOAEN;
+    GPIOA->MODER &= ~(GPIO_MODER_MODE4 | GPIO_MODER_MODE5 | GPIO_MODER_MODE6 | GPIO_MODER_MODE7);
+    GPIOA->MODER |= (GPIO_MODER_MODE4_1 | GPIO_MODER_MODE5_1 | GPIO_MODER_MODE6_1 | GPIO_MODER_MODE7_1);
+    GPIOA->AFR[0] &= ~(GPIO_AFRL_AFSEL4 | GPIO_AFRL_AFSEL5 | GPIO_AFRL_AFSEL6 | GPIO_AFRL_AFSEL7);
+    GPIOA->AFR[0] |= ((5 << GPIO_AFRL_AFSEL4_Pos) | (5 << GPIO_AFRL_AFSEL5_Pos) | (5 << GPIO_AFRL_AFSEL6_Pos) | (5 << GPIO_AFRL_AFSEL7_Pos));
+    GPIOA->OTYPER &= ~(GPIO_OTYPER_OT4 | GPIO_OTYPER_OT5 | GPIO_OTYPER_OT6 | GPIO_OTYPER_OT7);
+    GPIOA->PUPDR &= ~(GPIO_PUPDR_PUPD4 | GPIO_PUPDR_PUPD5 | GPIO_PUPDR_PUPD6 | GPIO_PUPDR_PUPD7);
+    RCC->APB2ENR |= RCC_APB2ENR_SPI1EN;
+    SPI1->CR1 = SPI_CR1_MSTR;
+    SPI1->CR2 = SPI_CR2_SSOE | SPI_CR2_NSSP | (0xF << SPI_CR2_DS_Pos);
+    SPI1->CR1 |= SPI_CR1_SPE;
+//	  RCC->AHB2ENR |= (RCC_AHB2ENR_GPIOAEN);
+//
+//	  GPIOA->MODER &= ~(GPIO_MODER_MODE4 | GPIO_MODER_MODE5 |		// mask function
+//						GPIO_MODER_MODE6 | GPIO_MODER_MODE7);
+//	  GPIOA->MODER |= (GPIO_MODER_MODE4_1 | GPIO_MODER_MODE5_1 |	// enable alternate function
+//					   GPIO_MODER_MODE6_1 | GPIO_MODER_MODE7_1);
+//
+//	  GPIOA->AFR[0] &= ~(GPIO_AFRL_AFSEL4 | GPIO_AFRL_AFSEL5 |		// mask AF selection
+//						  GPIO_AFRL_AFSEL6 | GPIO_AFRL_AFSEL7);
+//	  GPIOA->AFR[0] |= ((5 << GPIO_AFRL_AFSEL4_Pos) |				// select SPI_1 (AF5)
+//						(5 << GPIO_AFRL_AFSEL5_Pos) |
+//						(5 << GPIO_AFRL_AFSEL6_Pos) |
+//						(5 << GPIO_AFRL_AFSEL7_Pos));
+//
+//	  GPIOA->OTYPER &= ~(GPIO_OTYPER_OT4 | GPIO_OTYPER_OT5 |		// push-pull output
+//						  GPIO_OTYPER_OT6 | GPIO_OTYPER_OT7);
+//
+//	  GPIOA->PUPDR &= ~(GPIO_PUPDR_PUPD4 | GPIO_PUPDR_PUPD5 |		// no pull ups or pull downs
+//						GPIO_PUPDR_PUPD6 | GPIO_PUPDR_PUPD7);
+//
+//	  GPIOA->OSPEEDR &= ~(GPIO_OSPEEDR_OSPEED4 | 					// low speed
+//						  GPIO_OSPEEDR_OSPEED5 |
+//						  GPIO_OSPEEDR_OSPEED6 |
+//						  GPIO_OSPEEDR_OSPEED7);
+//
+//	  // configure SPI 1
+//	  RCC->APB2ENR |= (RCC_APB2ENR_SPI1EN);		// enable SPI1 clock
+//	  SPI1->CR1 = (SPI_CR1_MSTR);				// enable master mode, fck/2, hardware CS, MSB first, full duplex
+//	  SPI1->CR2 = (SPI_CR2_SSOE |				// enable CS output
+//				   SPI_CR2_NSSP |				// create CS pulse
+//				   //SPI_CR2_TXEIE |				// Tx buffer empty interrupt enable
+//				   (0xF << SPI_CR2_DS_Pos));	// 16-bit data frames
+//	  SPI1->CR1 |= (SPI_CR1_SPE);				// enable SPI
+}
+
+// Write a 12-bit value to the DAC
+void External_DAC::DAC_write(uint16_t value)
+{
+    uint16_t spi_data = (value & 0x0FFF) | 0x3000;  // 12-bit value, OR 0x3000 sets the Gain and buffer in the DAC see page 18 of datasheet
+    while(!(SPI1->SR & SPI_SR_TXE));  // Wait for TXE (Transmit buffer empty)
+    SPI1->DR = spi_data;  // Send the data
+}
+
+// Convert a voltage value into a 12-bit value to control the DAC
+uint16_t External_DAC::DAC_mvolt_convert(float mvoltage)
+{
+	return (mvoltage * 4095) / 3300;
+}
+
+/* Matlab script for generating lookup tables
+% Parameters
+fs = 256;  % Sampling frequency
+t = 0:1/fs:1-1/fs;  % Time vector
+Vref = 3.3;  % Reference voltage
+bit_depth = 4095;  % 12-bit DAC
+dc_offset = 1.5;  % DC offset in volts
+Vpp = 3.0;  % Peak-to-peak voltage in volts
+
+% Scaling factors
+scale_factor = bit_depth / Vref;
+dc_offset_scaled = round(dc_offset * scale_factor);
+amplitude_scaled = round((Vpp / 2) * scale_factor);
+
+% Generate Sine Wave
+sine_wave = round(dc_offset_scaled + amplitude_scaled * sin(2 * pi * t));
+
+% Generate Square Wave
+square_wave = round(dc_offset_scaled + amplitude_scaled * (square(2 * pi * t) + 1) / 2);
+
+% Generate Triangle Wave
+triangle_wave = round(dc_offset_scaled + amplitude_scaled * (sawtooth(2 * pi * t, 0.5) + 1) / 2);
+
+% Generate Sawtooth Wave
+sawtooth_wave = round(dc_offset_scaled + amplitude_scaled * (sawtooth(2 * pi * t) + 1) / 2);
+
+% Print Lookup Tables
+print_lookup_table('sine_wave', sine_wave);
+print_lookup_table('square_wave', square_wave);
+print_lookup_table('sawtooth_wave', sawtooth_wave);
+print_lookup_table('triangle_wave', triangle_wave);
+
+% Function to print lookup table in 16x16 format
+function print_lookup_table(name, data)
+    fprintf('extern const uint16_t %s[%d] = {\n', name, length(data));
+    for i = 1:16:length(data)
+        fprintf('    ');
+        fprintf('%d, ', data(i:min(i+15, end)));
+        fprintf('\n');
+    end
+    fprintf('};\n');
+end
+ */
+
+
+
