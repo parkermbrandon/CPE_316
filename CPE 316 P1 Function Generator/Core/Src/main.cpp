@@ -34,8 +34,8 @@ int min(int a, int b)
 // Initialize TIM2 for 16 µs interval
 void TIM2_init() {
 	RCC->APB1ENR1 |= RCC_APB1ENR1_TIM2EN;
-	TIM2->PSC = 0;
-	TIM2->ARR = 400;
+	TIM2->PSC = 1;
+	TIM2->ARR = 410;
 	TIM2->DIER |= TIM_DIER_UIE;
 	TIM2->CR1 |= TIM_CR1_CEN;
 	NVIC_EnableIRQ(TIM2_IRQn);
@@ -108,6 +108,7 @@ extern "C" void TIM2_IRQHandler(void)
     if (TIM2->SR & TIM_SR_UIF)
     {
         TIM2->SR &= ~TIM_SR_UIF;
+
         keys.tick();
         char key = keys.findButtonPressed();
 
@@ -128,8 +129,17 @@ extern "C" void TIM2_IRQHandler(void)
         }
 
         if (key >= '6' && key <= '9') {
-            waveform = key - '6';
-        }
+               waveform = key - '6';
+           }
+
+           if (key == '*') {
+               dutyCycle = max(10, dutyCycle - 10);
+           } else if (key == '#') {
+               dutyCycle = min(90, dutyCycle + 10);
+           } else if (key == '0') {
+               dutyCycle = 50;
+           }
+
 
         switch (frequency) {
             case 100:
@@ -175,15 +185,27 @@ extern "C" void TIM2_IRQHandler(void)
         }
 
         if (current_wave) {
-            value_A = current_wave[i];
-            value_B = current_wave[i + 1];
-            dac.DAC_write(value_A, value_B);
+        	 if (waveform == 3) {  // Square wave
+        	            int high_time = (dutyCycle * modulo_value) / 100;
+        	            if (i < high_time) {
+        	                value_A = 0xFFF;  // Max value for your DAC
+        	                value_B = 0xFFF;
+        	            } else {
+        	                value_A = 0x000;  // Min value for your DAC
+        	                value_B = 0x000;
+        	            }
+        	        } else {
+        	            value_A = current_wave[i];
+        	            value_B = current_wave[i + 1];
+        	        }
+        	        dac.DAC_write(value_A, value_B);
         }
 
         // Update index based on frequency
         i = (i + 2) % modulo_value;
     }
 }
+
 
 
 /*
@@ -264,6 +286,7 @@ extern "C" void TIM2_IRQHandler(void)
     }
 }
 */
+
 
 
 //

@@ -521,7 +521,7 @@ void External_DAC::DAC_init(void)
     GPIOA->OTYPER &= ~(GPIO_OTYPER_OT4 | GPIO_OTYPER_OT5 | GPIO_OTYPER_OT6 | GPIO_OTYPER_OT7);
     GPIOA->PUPDR &= ~(GPIO_PUPDR_PUPD4 | GPIO_PUPDR_PUPD5 | GPIO_PUPDR_PUPD6 | GPIO_PUPDR_PUPD7);
     RCC->APB2ENR |= RCC_APB2ENR_SPI1EN;
-    SPI1->CR1 = SPI_CR1_MSTR | SPI_CR1_BR_0;  // Set prescaler to fPCLK/4
+    SPI1->CR1 = SPI_CR1_MSTR | SPI_CR1_BR_1;  // Set prescaler to fPCLK/4
     SPI1->CR2 = SPI_CR2_SSOE | SPI_CR2_NSSP | (0xF << SPI_CR2_DS_Pos);
     SPI1->CR1 |= SPI_CR1_SPE;
 }
@@ -533,6 +533,7 @@ uint16_t External_DAC::DAC_mvolt_convert(float mvoltage)
 }
 
 void External_DAC::DAC_write(uint16_t value_A, uint16_t value_B)
+//void External_DAC::DAC_write(uint16_t value_A)
 {
     uint16_t spi_data_A = (value_A & 0x0FFF) | 0x3000;  // For DACA
     uint16_t spi_data_B = (value_B & 0x0FFF) | 0xB000;  // For DACB

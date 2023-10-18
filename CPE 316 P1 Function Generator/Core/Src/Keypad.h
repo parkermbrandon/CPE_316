@@ -11,6 +11,8 @@ public:
 	void update_LEDs(char key);
 	char findButtonPressed();
 
+	char lastKey = '\0';
+
 private:
 	static const uint8_t ROWS = 4;  // Four rows
 	static const uint8_t COLS = 3;  // Three columns

@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="4"/>
+		<item key="selection" value="100"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="100"/>
+			<item value="800"/>
+			<item value="100Hz"/>
+			<item value="1200"/>
+			<item value="index"/>
 			<item value="4"/>
 			<item value="keys"/>
 			<item value="_JUST_PRESSED_POS"/>
@@ -16,6 +21,19 @@
 			<item value="pb6"/>
 		</list>
 		<list key="replacehistory">
+			<item value="500"/>
+			<item value="400"/>
+			<item value="300"/>
+			<item value="200"/>
+			<item value="160"/>
+			<item value="267"/>
+			<item value="500Hz"/>
+			<item value="400Hz"/>
+			<item value="300Hz"/>
+			<item value="200Hz"/>
+			<item value="100Hz"/>
+			<item value="800"/>
+			<item value="100"/>
 			<item value="uint8_t"/>
 			<item value="uint8_T"/>
 		</list>

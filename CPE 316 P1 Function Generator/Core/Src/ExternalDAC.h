@@ -35,6 +35,7 @@ public:
 	virtual ~External_DAC();
 	void DAC_init();
 	void DAC_write(uint16_t value_A, uint16_t value_B);
+	//void DAC_write(uint16_t value_A);
 	uint16_t DAC_mvolt_convert(float mvoltage);
 };
 
