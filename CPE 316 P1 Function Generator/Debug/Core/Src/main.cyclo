@@ -1,11 +1,16 @@
 ../Drivers/CMSIS/Include/core_cm4.h:1679:22:void __NVIC_EnableIRQ(IRQn_Type)	2
-../Core/Src/main.cpp:23:5:int max(int, int)	2
-../Core/Src/main.cpp:28:5:int min(int, int)	2
-../Core/Src/main.cpp:35:6:void TIM2_init()	1
-../Core/Src/main.cpp:106:17:void TIM2_IRQHandler()	48
-../Core/Src/main.cpp:348:5:int main()	1
-../Core/Src/main.cpp:366:6:void SystemClock_Config()	4
-../Core/Src/main.cpp:411:6:void Error_Handler()	1
-../Core/Src/main.cpp:418:1:void __static_initialization_and_destruction_0(int, int)	5
-../Core/Src/main.cpp:418:1:cpp)	1
-../Core/Src/main.cpp:418:1:cpp)	1
+../Core/Src/main.cpp:30:5:int max(int, int)	2
+../Core/Src/main.cpp:35:5:int min(int, int)	2
+../Core/Src/main.cpp:42:6:void TIM2_init()	1
+../Core/Src/main.cpp:113:6:void updateFrequency(char)	11
+../Core/Src/main.cpp:126:6:void updateWaveform(char)	3
+../Core/Src/main.cpp:132:6:void updateDutyCycle(char)	11
+../Core/Src/main.cpp:153:6:bool shouldResetWaveform()	3
+../Core/Src/main.cpp:162:17:const uint16_t* getCurrentWave()	29
+../Core/Src/main.cpp:208:17:void TIM2_IRQHandler()	6
+../Core/Src/main.cpp:503:5:int main()	1
+../Core/Src/main.cpp:521:6:void SystemClock_Config()	4
+../Core/Src/main.cpp:566:6:void Error_Handler()	1
+../Core/Src/main.cpp:573:1:void __static_initialization_and_destruction_0(int, int)	5
+../Core/Src/main.cpp:573:1:cpp)	1
+../Core/Src/main.cpp:573:1:cpp)	1

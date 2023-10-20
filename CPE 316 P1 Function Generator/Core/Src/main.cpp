@@ -15,10 +15,17 @@ uint8_t dataToTransmit =0;
 External_DAC dac;
 Keypad keys;
 
-int waveform = 3;  // 0 for square, 1 for sine, 2 for triangle, 3 for sawtooth
-int frequency = 1000;  // Frequency in Hz
-int i = 0;  // Index for waveform array
-int dutyCycle = 50;  // Duty cycle for square wave
+static int lastFrequency = -1;
+static int lastWaveform = -1;
+static int i = 0;  // Index for waveform array
+static int modulo_value = 800;  // Default for 100Hz
+static int frequency = 100;
+static int waveform = 3;  // Default waveform
+static int dutyCycle = 50;  // Default duty cycle
+static bool keyWasPressed = false;
+static bool anyKeyPressed = false;
+uint32_t systemTime = 0;
+int stride_length = 1;
 
 int max(int a, int b)
 {
@@ -35,7 +42,7 @@ int min(int a, int b)
 void TIM2_init() {
 	RCC->APB1ENR1 |= RCC_APB1ENR1_TIM2EN;
 	TIM2->PSC = 1;
-	TIM2->ARR = 410;
+	TIM2->ARR = 400;
 	TIM2->DIER |= TIM_DIER_UIE;
 	TIM2->CR1 |= TIM_CR1_CEN;
 	NVIC_EnableIRQ(TIM2_IRQn);
@@ -103,23 +110,159 @@ void TIM2_init() {
     }
 }*/
 
+void updateFrequency(char key) {
+    if (key >= '1' && key <= '5') {
+        frequency = (key - '0') * 100;
+        switch (frequency) {
+            case 100: modulo_value = 800; break;
+            case 200: modulo_value = 400; break;
+            case 300: modulo_value = 267; break;
+            case 400: modulo_value = 200; break;
+            case 500: modulo_value = 160; break;
+        }
+    }
+}
+
+void updateWaveform(char key) {
+    if (key >= '6' && key <= '9') {
+        waveform = key - '6';
+    }
+}
+
+void updateDutyCycle(char key) {
+	if (key == '*' || key == '#' || key == '0') {
+	    anyKeyPressed = true;
+	    if (!keyWasPressed) {
+	        if (key == '*') {
+	            dutyCycle = (dutyCycle <= 10) ? 10 : (dutyCycle - 10);
+	        } else if (key == '#') {
+	            dutyCycle = (dutyCycle >= 90) ? 90 : (dutyCycle + 10);
+	        } else if (key == '0') {
+	            dutyCycle = 50;
+	        }
+	        keyWasPressed = true;
+	    }
+	} else {
+	    if (!anyKeyPressed) {
+	        keyWasPressed = false;
+	    }
+	    anyKeyPressed = false;
+	}
+}
+
+bool shouldResetWaveform() {
+    if (lastWaveform != waveform || lastFrequency != frequency) {
+        lastWaveform = waveform;
+        lastFrequency = frequency;
+        return true;
+    }
+    return false;
+}
+
+const uint16_t* getCurrentWave() {
+    switch (frequency) {
+        case 100:
+            switch (waveform) {
+                case 0: return sine_wave_100Hz; break;
+                case 1: return triangle_wave_100Hz; break;
+                case 2: return sawtooth_wave_100Hz; break;
+                case 3: return square_wave_100Hz; break;
+            }
+            break;
+        case 200:
+        	switch (waveform) {
+				case 0: return sine_wave_200Hz; break;
+				case 1: return triangle_wave_200Hz; break;
+				case 2: return sawtooth_wave_200Hz; break;
+				case 3: return square_wave_200Hz; break;
+			}
+			break;
+		case 300:
+			switch (waveform) {
+				case 0: return sine_wave_300Hz; break;
+				case 1: return triangle_wave_300Hz; break;
+				case 2: return sawtooth_wave_300Hz; break;
+				case 3: return square_wave_300Hz; break;
+			}
+			break;
+		case 400:
+			switch (waveform) {
+				case 0: return sine_wave_400Hz; break;
+				case 1: return triangle_wave_400Hz; break;
+				case 2: return sawtooth_wave_400Hz; break;
+				case 3: return square_wave_400Hz; break;
+			}
+			break;
+		case 500:
+			switch (waveform) {
+				case 0: return sine_wave_500Hz; break;
+				case 1: return triangle_wave_500Hz; break;
+				case 2: return sawtooth_wave_500Hz; break;
+				case 3: return square_wave_500Hz; break;
+			}
+		break;
+    }
+    return nullptr;
+}
+
+extern "C" void TIM2_IRQHandler(void)
+{
+    if (TIM2->SR & TIM_SR_UIF)
+    {
+        TIM2->SR &= ~TIM_SR_UIF;
+        systemTime++;
+
+        char key = keys.tick();
+
+		updateFrequency(key);
+		updateWaveform(key);
+		updateDutyCycle(key);
+
+		if (shouldResetWaveform()) {
+			i = 0;  // Reset index
+		}
+
+		uint16_t value_A, value_B;
+		const uint16_t *current_wave = getCurrentWave();
+
+		if (current_wave) {
+			if (waveform == 3) {
+				int high_time = (dutyCycle * modulo_value) / 100;
+				value_A = (i < high_time) ? 3722 : 1861;
+				value_B = value_A;
+			} else {
+				value_A = current_wave[i];
+				value_B = current_wave[i + 1];
+			}
+
+			dac.DAC_write(value_A, value_B);
+		}
+
+		// Update index based on frequency
+	   i = (i + 2) % modulo_value;
+    }
+}
+
+/*
 extern "C" void TIM2_IRQHandler(void)
 {
     if (TIM2->SR & TIM_SR_UIF)
     {
         TIM2->SR &= ~TIM_SR_UIF;
 
-        keys.tick();
-        char key = keys.findButtonPressed();
+        char key = keys.tick();
 
+        static int lastFrequency = -1;
         uint16_t value_A, value_B;
         int modulo_value = 800;  // Default for 100Hz
         const uint16_t *current_wave = nullptr;
 
         // Update waveform and frequency based on keypad input
-        if (key >= '1' && key <= '5') {
+        if (key >= '1' && key <= '5')
+        {
             frequency = (key - '0') * 100;
-            switch (frequency) {
+            switch (frequency)
+            {
                 case 100: modulo_value = 800; break;
                 case 200: modulo_value = 400; break;
                 case 300: modulo_value = 267; break;
@@ -128,17 +271,27 @@ extern "C" void TIM2_IRQHandler(void)
             }
         }
 
-        if (key >= '6' && key <= '9') {
+        if (lastWaveform != waveform || lastFrequency != frequency) {
+                      i = 0;  // Reset index
+                      lastWaveform = waveform;
+                      lastFrequency = frequency;  // Update lastFrequency
+                  }
+
+
+        if (key >= '6' && key <= '9')
+        {
                waveform = key - '6';
            }
 
-           if (key == '*') {
+           if (key == '*')
+           {
                dutyCycle = max(10, dutyCycle - 10);
            } else if (key == '#') {
                dutyCycle = min(90, dutyCycle + 10);
            } else if (key == '0') {
                dutyCycle = 50;
            }
+
 
 
         switch (frequency) {
@@ -188,11 +341,11 @@ extern "C" void TIM2_IRQHandler(void)
         	 if (waveform == 3) {  // Square wave
         	            int high_time = (dutyCycle * modulo_value) / 100;
         	            if (i < high_time) {
-        	                value_A = 0xFFF;  // Max value for your DAC
-        	                value_B = 0xFFF;
+        	                value_A = 3722;  // Max value for your DAC
+        	                value_B = 3722;
         	            } else {
-        	                value_A = 0x000;  // Min value for your DAC
-        	                value_B = 0x000;
+        	                value_A = 1861;  // Min value for your DAC
+        	                value_B = 1861;
         	            }
         	        } else {
         	            value_A = current_wave[i];
@@ -203,8 +356,10 @@ extern "C" void TIM2_IRQHandler(void)
 
         // Update index based on frequency
         i = (i + 2) % modulo_value;
+
     }
 }
+*/
 
 
 

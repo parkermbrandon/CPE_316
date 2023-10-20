@@ -2,6 +2,7 @@
 
 const uint8_t ROWS = 4;  // Four rows
 const uint8_t COLS = 3;  // Three columns
+//uint32_t systemTime = 0;
 
 Keypad::Keypad() {
 	for (int i = 0; i < ROWS * COLS; ++i)
@@ -40,7 +41,16 @@ void Keypad::Keypad_init(void)
     }
 }
 
-void Keypad::tick() {
+bool Keypad::hasButtonBeenPressed() {
+    for (int i = 0; i < ROWS * COLS; ++i) {
+        if (keystates[i]) {
+            return true;
+        }
+    }
+    return false;
+}
+
+char Keypad::tick() {
   for (int c = 0; c < COLS; c++)
   {
     GPIOA->BSRR = (1U << (colPins[c] + 16));  // sets the current column pin to low
@@ -52,13 +62,14 @@ void Keypad::tick() {
       if (pressed)
       {
         keystates[i] = 1;
+
       } else {
-        keystates[i] = 0;
+    	 keystates[i] = 0;
       }
     }
+
     GPIOA->BSRR = (1U << colPins[c]); // After checking all rows for a given column, the column is set back to high
   }
-
   findButtonPressed();
 }
 
@@ -92,6 +103,9 @@ void Keypad::update_LEDs(char key) {
 char Keypad::findButtonPressed()
 {
     static char lastKey = '\0';  // Keep track of the last key pressed
+    static uint32_t lastDebounceTime = 0;  // the last time the output pin was toggled
+    const uint32_t debounceDelay = 50;  // the debounce time in milliseconds
+
     char currentKey = '\0';  // Initialize to no key pressed
 
     for (int r = 0; r < ROWS; r++)
@@ -111,14 +125,63 @@ char Keypad::findButtonPressed()
         }
     }
 
-    if (currentKey != '\0')  // If a new key is pressed
-    {
-        lastKey = currentKey;  // Update the last key pressed
-        //update_LEDs(currentKey);
-    }
+//    uint32_t currentTime = HAL_GetTick();  // Get the current time
+//
+//    if (currentKey != '\0' && (currentTime - lastDebounceTime) > debounceDelay)  // If a new key is pressed and debounce time has passed
+//    {
+//        lastKey = currentKey;  // Update the last key pressed
+//        update_LEDs(currentKey);
+//        lastDebounceTime = currentTime;  // Update the last debounce time
+//    }
+//    else if (currentKey == '\0')
+//    {
+//        lastKey = '\0';  // Reset lastKey if no key is pressed
+//    }
+
+    if (currentKey != '\0' && (systemTime - lastDebounceTime) > debounceDelay)
+        {
+            lastKey = currentKey;
+            update_LEDs(currentKey);
+            lastDebounceTime = systemTime;
+        }
+        else if (currentKey == '\0')
+        {
+            lastKey = '\0';
+        }
 
     return lastKey;  // Return the current key if pressed, otherwise the last key
 }
+
+//char Keypad::findButtonPressed()
+//{
+//    static char lastKey = '\0';  // Keep track of the last key pressed
+//    char currentKey = '\0';  // Initialize to no key pressed
+//
+//    for (int r = 0; r < ROWS; r++)
+//    {
+//        for (int c = 0; c < COLS; c++)
+//        {
+//            int i = r * COLS + c;
+//            if (keystates[i])
+//            {
+//                currentKey = keys[r][c];
+//                break;  // Exit the loop once a key is found
+//            }
+//        }
+//        if (currentKey != '\0')
+//        {
+//            break;  // Exit the loop once a key is found
+//        }
+//    }
+//
+//    if (currentKey != '\0')  // If a new key is pressed
+//    {
+//        lastKey = currentKey;  // Update the last key pressed
+//        update_LEDs(currentKey);
+//    }
+//
+//    return lastKey;  // Return the current key if pressed, otherwise the last key
+//}
 
 //char Keypad::findButtonPressed()
 //{

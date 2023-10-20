@@ -7,9 +7,10 @@ class Keypad {
 public:
 	Keypad();
 	void Keypad_init();
-	void tick();
+	char tick();
 	void update_LEDs(char key);
 	char findButtonPressed();
+	bool hasButtonBeenPressed();
 
 	char lastKey = '\0';
 
