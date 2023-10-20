@@ -114,60 +114,50 @@ bool shouldResetWaveform() {
 }
 
 const uint16_t* getCurrentWave() {
-    switch (waveform) {
-        case 0: return sine_wave_100Hz; break;
-        case 1: return triangle_wave_100Hz; break;
-        case 2: return sawtooth_wave_100Hz; break;
-        case 3: return square_wave_100Hz; break;
+    switch (frequency) {
+        case 100:
+            switch (waveform) {
+                case 0: return sine_wave_100Hz; break;
+                case 1: return triangle_wave_100Hz; break;
+                case 2: return sawtooth_wave_100Hz; break;
+                case 3: return square_wave_100Hz; break;
+            }
+            break;
+        case 200:
+        	switch (waveform) {
+				case 0: return sine_wave_200Hz; break;
+				case 1: return triangle_wave_200Hz; break;
+				case 2: return sawtooth_wave_200Hz; break;
+				case 3: return square_wave_200Hz; break;
+			}
+			break;
+		case 300:
+			switch (waveform) {
+				case 0: return sine_wave_300Hz; break;
+				case 1: return triangle_wave_300Hz; break;
+				case 2: return sawtooth_wave_300Hz; break;
+				case 3: return square_wave_300Hz; break;
+			}
+			break;
+		case 400:
+			switch (waveform) {
+				case 0: return sine_wave_400Hz; break;
+				case 1: return triangle_wave_400Hz; break;
+				case 2: return sawtooth_wave_400Hz; break;
+				case 3: return square_wave_400Hz; break;
+			}
+			break;
+		case 500:
+			switch (waveform) {
+				case 0: return sine_wave_500Hz; break;
+				case 1: return triangle_wave_500Hz; break;
+				case 2: return sawtooth_wave_500Hz; break;
+				case 3: return square_wave_500Hz; break;
+			}
+		break;
     }
     return nullptr;
 }
-
-//const uint16_t* getCurrentWave() {
-//    switch (frequency) {
-//        case 100:
-//            switch (waveform) {
-//                case 0: return sine_wave_100Hz; break;
-//                case 1: return triangle_wave_100Hz; break;
-//                case 2: return sawtooth_wave_100Hz; break;
-//                case 3: return square_wave_100Hz; break;
-//            }
-//            break;
-//        case 200:
-//        	switch (waveform) {
-//				case 0: return sine_wave_200Hz; break;
-//				case 1: return triangle_wave_200Hz; break;
-//				case 2: return sawtooth_wave_200Hz; break;
-//				case 3: return square_wave_200Hz; break;
-//			}
-//			break;
-//		case 300:
-//			switch (waveform) {
-//				case 0: return sine_wave_300Hz; break;
-//				case 1: return triangle_wave_300Hz; break;
-//				case 2: return sawtooth_wave_300Hz; break;
-//				case 3: return square_wave_300Hz; break;
-//			}
-//			break;
-//		case 400:
-//			switch (waveform) {
-//				case 0: return sine_wave_400Hz; break;
-//				case 1: return triangle_wave_400Hz; break;
-//				case 2: return sawtooth_wave_400Hz; break;
-//				case 3: return square_wave_400Hz; break;
-//			}
-//			break;
-//		case 500:
-//			switch (waveform) {
-//				case 0: return sine_wave_500Hz; break;
-//				case 1: return triangle_wave_500Hz; break;
-//				case 2: return sawtooth_wave_500Hz; break;
-//				case 3: return square_wave_500Hz; break;
-//			}
-//		break;
-//    }
-//    return nullptr;
-//}
 
 extern "C" void TIM2_IRQHandler(void)
 {
