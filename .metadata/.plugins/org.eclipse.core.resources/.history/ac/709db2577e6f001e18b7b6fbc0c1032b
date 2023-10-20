@@ -4,10 +4,10 @@
 #ifndef SRC_EXTERNALDAC_H_
 #define SRC_EXTERNALDAC_H_
 
-extern const uint16_t sine_wave[834];
-extern const uint16_t square_wave[834];
-extern const uint16_t sawtooth_wave[834];
-extern const uint16_t triangle_wave[834];
+extern const uint16_t sine_wave[740];
+extern const uint16_t square_wave[740];
+extern const uint16_t sawtooth_wave[740];
+extern const uint16_t triangle_wave[740];
 
 class External_DAC {
 public:

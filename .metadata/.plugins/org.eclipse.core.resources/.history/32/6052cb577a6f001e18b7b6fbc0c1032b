@@ -7,6 +7,9 @@ void SystemClock_Config(void);
 void TIM2_init();
 extern "C" void TIM2_IRQHandler(void);
 
+//volatile uint8_t flagA2outpu = 0;
+//uint8_t dataToTransmit = 0;
+
 #define ARRAY_SIZE 256
 
 External_DAC dac;
@@ -15,7 +18,7 @@ Keypad keys;
 static int lastFrequency = -1;
 static int lastWaveform = -1;
 static int i = 0;  // Index for waveform array
-static int modulo_value = 834;  // Length of the lookup tables
+static int modulo_value = 800;  // Default for 100Hz
 static int frequency = 100;
 static int waveform = 3;  // Default waveform
 static int dutyCycle = 50;  // Default duty cycle
@@ -25,28 +28,54 @@ uint32_t systemTime = 0;
 int stride_length = 1;
 const uint16_t *current_wave = nullptr;
 
+
+int max(int a, int b)
+{
+    return (a > b) ? a : b;
+}
+
+int min(int a, int b)
+{
+    return (a < b) ? a : b;
+}
+
+
 // Initialize TIM2 for 16 µs interval
 void TIM2_init() {
 	RCC->APB1ENR1 |= RCC_APB1ENR1_TIM2EN;
 	TIM2->PSC = 1;
-	TIM2->ARR = 410;
+	TIM2->ARR = 400;
 	TIM2->DIER |= TIM_DIER_UIE;
 	TIM2->CR1 |= TIM_CR1_CEN;
 	NVIC_EnableIRQ(TIM2_IRQn);
 }
 
+// Update stride_length based on frequency in updateFrequency()
 void updateFrequency(char key) {
     if (key >= '1' && key <= '5') {
         frequency = (key - '0') * 100;
         switch (frequency) {
-            case 100: stride_length = 1;  break;
-            case 200: stride_length = 2;  break;
-            case 300: stride_length = 3;  break;
-            case 400: stride_length = 4;  break;
-            case 500: stride_length = 5;  break;
+            case 100: stride_length = 1; modulo_value = 800; break;
+            case 200: stride_length = 2; modulo_value = 800; break;
+            case 300: stride_length = 3; modulo_value = 800; break;
+            case 400: stride_length = 4; modulo_value = 800; break;
+            case 500: stride_length = 5; modulo_value = 800; break;
         }
     }
 }
+
+//void updateFrequency(char key) {
+//    if (key >= '1' && key <= '5') {
+//        frequency = (key - '0') * 100;
+//        switch (frequency) {
+//            case 100: modulo_value = 800; break;
+//            case 200: modulo_value = 400; break;
+//            case 300: modulo_value = 267; break;
+//            case 400: modulo_value = 200; break;
+//            case 500: modulo_value = 160; break;
+//        }
+//    }
+//}
 
 void updateWaveform(char key) {
     if (key >= '6' && key <= '9') {
@@ -86,13 +115,59 @@ bool shouldResetWaveform() {
 
 const uint16_t* getCurrentWave() {
     switch (waveform) {
-        case 0: return sine_wave; break;
-        case 1: return triangle_wave; break;
-        case 2: return sawtooth_wave; break;
-        case 3: return square_wave; break;
+        case 0: return sine_wave_100Hz; break;
+        case 1: return triangle_wave_100Hz; break;
+        case 2: return sawtooth_wave_100Hz; break;
+        case 3: return square_wave_100Hz; break;
     }
     return nullptr;
 }
+
+//const uint16_t* getCurrentWave() {
+//    switch (frequency) {
+//        case 100:
+//            switch (waveform) {
+//                case 0: return sine_wave_100Hz; break;
+//                case 1: return triangle_wave_100Hz; break;
+//                case 2: return sawtooth_wave_100Hz; break;
+//                case 3: return square_wave_100Hz; break;
+//            }
+//            break;
+//        case 200:
+//        	switch (waveform) {
+//				case 0: return sine_wave_200Hz; break;
+//				case 1: return triangle_wave_200Hz; break;
+//				case 2: return sawtooth_wave_200Hz; break;
+//				case 3: return square_wave_200Hz; break;
+//			}
+//			break;
+//		case 300:
+//			switch (waveform) {
+//				case 0: return sine_wave_300Hz; break;
+//				case 1: return triangle_wave_300Hz; break;
+//				case 2: return sawtooth_wave_300Hz; break;
+//				case 3: return square_wave_300Hz; break;
+//			}
+//			break;
+//		case 400:
+//			switch (waveform) {
+//				case 0: return sine_wave_400Hz; break;
+//				case 1: return triangle_wave_400Hz; break;
+//				case 2: return sawtooth_wave_400Hz; break;
+//				case 3: return square_wave_400Hz; break;
+//			}
+//			break;
+//		case 500:
+//			switch (waveform) {
+//				case 0: return sine_wave_500Hz; break;
+//				case 1: return triangle_wave_500Hz; break;
+//				case 2: return sawtooth_wave_500Hz; break;
+//				case 3: return square_wave_500Hz; break;
+//			}
+//		break;
+//    }
+//    return nullptr;
+//}
 
 extern "C" void TIM2_IRQHandler(void)
 {
@@ -127,6 +202,7 @@ extern "C" void TIM2_IRQHandler(void)
 			dac.DAC_write(value_A, value_B);
 		}
 
+		// Update index based on frequency
 	   i = (i + stride_length * 2) % modulo_value;
     }
 }
@@ -142,7 +218,8 @@ int main()
 
 	while(1)
 	{
-
+		//testWaveforms(dac);
+		//keys.tick();
 	}
 
 	return 0;

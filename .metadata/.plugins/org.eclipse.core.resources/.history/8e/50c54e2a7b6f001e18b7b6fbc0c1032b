@@ -7,6 +7,9 @@ void SystemClock_Config(void);
 void TIM2_init();
 extern "C" void TIM2_IRQHandler(void);
 
+//volatile uint8_t flagA2outpu = 0;
+//uint8_t dataToTransmit = 0;
+
 #define ARRAY_SIZE 256
 
 External_DAC dac;
@@ -15,7 +18,7 @@ Keypad keys;
 static int lastFrequency = -1;
 static int lastWaveform = -1;
 static int i = 0;  // Index for waveform array
-static int modulo_value = 834;  // Length of the lookup tables
+static int modulo_value = 800;  // Default for 100Hz
 static int frequency = 100;
 static int waveform = 3;  // Default waveform
 static int dutyCycle = 50;  // Default duty cycle
@@ -25,11 +28,23 @@ uint32_t systemTime = 0;
 int stride_length = 1;
 const uint16_t *current_wave = nullptr;
 
+
+int max(int a, int b)
+{
+    return (a > b) ? a : b;
+}
+
+int min(int a, int b)
+{
+    return (a < b) ? a : b;
+}
+
+
 // Initialize TIM2 for 16 µs interval
 void TIM2_init() {
 	RCC->APB1ENR1 |= RCC_APB1ENR1_TIM2EN;
 	TIM2->PSC = 1;
-	TIM2->ARR = 410;
+	TIM2->ARR = 450;
 	TIM2->DIER |= TIM_DIER_UIE;
 	TIM2->CR1 |= TIM_CR1_CEN;
 	NVIC_EnableIRQ(TIM2_IRQn);
@@ -127,6 +142,7 @@ extern "C" void TIM2_IRQHandler(void)
 			dac.DAC_write(value_A, value_B);
 		}
 
+		// Update index based on frequency
 	   i = (i + stride_length * 2) % modulo_value;
     }
 }
@@ -142,7 +158,8 @@ int main()
 
 	while(1)
 	{
-
+		//testWaveforms(dac);
+		//keys.tick();
 	}
 
 	return 0;

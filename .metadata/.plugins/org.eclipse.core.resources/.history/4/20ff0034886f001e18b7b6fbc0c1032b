@@ -125,6 +125,19 @@ char Keypad::findButtonPressed()
         }
     }
 
+//    uint32_t currentTime = HAL_GetTick();  // Get the current time
+//
+//    if (currentKey != '\0' && (currentTime - lastDebounceTime) > debounceDelay)  // If a new key is pressed and debounce time has passed
+//    {
+//        lastKey = currentKey;  // Update the last key pressed
+//        update_LEDs(currentKey);
+//        lastDebounceTime = currentTime;  // Update the last debounce time
+//    }
+//    else if (currentKey == '\0')
+//    {
+//        lastKey = '\0';  // Reset lastKey if no key is pressed
+//    }
+
     if (currentKey != '\0' && (systemTime - lastDebounceTime) > debounceDelay)
         {
             lastKey = currentKey;
@@ -138,3 +151,51 @@ char Keypad::findButtonPressed()
 
     return lastKey;  // Return the current key if pressed, otherwise the last key
 }
+
+//char Keypad::findButtonPressed()
+//{
+//    static char lastKey = '\0';  // Keep track of the last key pressed
+//    char currentKey = '\0';  // Initialize to no key pressed
+//
+//    for (int r = 0; r < ROWS; r++)
+//    {
+//        for (int c = 0; c < COLS; c++)
+//        {
+//            int i = r * COLS + c;
+//            if (keystates[i])
+//            {
+//                currentKey = keys[r][c];
+//                break;  // Exit the loop once a key is found
+//            }
+//        }
+//        if (currentKey != '\0')
+//        {
+//            break;  // Exit the loop once a key is found
+//        }
+//    }
+//
+//    if (currentKey != '\0')  // If a new key is pressed
+//    {
+//        lastKey = currentKey;  // Update the last key pressed
+//        update_LEDs(currentKey);
+//    }
+//
+//    return lastKey;  // Return the current key if pressed, otherwise the last key
+//}
+
+//char Keypad::findButtonPressed()
+//{
+//	for (int r = 0; r < ROWS; r++)
+//	{
+//	  for (int c = 0; c < COLS; c++)
+//	  {
+//		int i = r * COLS + c;
+//		if (keystates[i])
+//		{
+//		  char key = keys[r][c];
+//		  update_LEDs(key);
+//		  return key;
+//		}
+//	  }
+//	}
+//}

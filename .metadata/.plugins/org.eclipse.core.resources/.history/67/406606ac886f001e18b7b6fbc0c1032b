@@ -15,7 +15,7 @@ Keypad keys;
 static int lastFrequency = -1;
 static int lastWaveform = -1;
 static int i = 0;  // Index for waveform array
-static int modulo_value = 834;  // Length of the lookup tables
+static int modulo_value = 848;  // Length of the lookup tables
 static int frequency = 100;
 static int waveform = 3;  // Default waveform
 static int dutyCycle = 50;  // Default duty cycle
