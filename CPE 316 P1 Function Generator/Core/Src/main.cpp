@@ -15,7 +15,7 @@ Keypad keys;
 static int lastFrequency = -1;
 static int lastWaveform = -1;
 static int i = 0;  // Index for waveform array
-static int modulo_value = 834;  // Length of the lookup tables
+static int modulo_value = 720;  // Length of the lookup tables
 static int frequency = 100;
 static int waveform = 3;  // Default waveform
 static int dutyCycle = 50;  // Default duty cycle
@@ -29,7 +29,7 @@ const uint16_t *current_wave = nullptr;
 void TIM2_init() {
 	RCC->APB1ENR1 |= RCC_APB1ENR1_TIM2EN;
 	TIM2->PSC = 1;
-	TIM2->ARR = 410;
+	TIM2->ARR = 1114;
 	TIM2->DIER |= TIM_DIER_UIE;
 	TIM2->CR1 |= TIM_CR1_CEN;
 	NVIC_EnableIRQ(TIM2_IRQn);
@@ -117,7 +117,7 @@ extern "C" void TIM2_IRQHandler(void)
 		if (current_wave) {
 			if (waveform == 3) {
 				int high_time = (dutyCycle * modulo_value) / 100;
-				value_A = (i < high_time) ? 3722 : 1861;
+				value_A = (i < high_time) ? 3723 : 0;
 				value_B = value_A;
 			} else {
 				value_A = current_wave[i];

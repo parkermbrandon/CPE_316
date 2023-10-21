@@ -190,3 +190,1374 @@ Finished building: default.size.stdout
  
 Finished building: CPE 316 P1 Function Generator.list
  
+17:41:48 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/Keypad.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/Keypad.d" -MT"Core/Src/Keypad.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Keypad.o"
+../Core/Src/Keypad.cpp: In member function 'char Keypad::tick()':
+../Core/Src/Keypad.cpp:74:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   74 | }
+      | ^
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  14356	    136	   1944	  16436	   4034	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+17:42:58 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/Keypad.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/Keypad.d" -MT"Core/Src/Keypad.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Keypad.o"
+../Core/Src/Keypad.cpp: In member function 'char Keypad::tick()':
+../Core/Src/Keypad.cpp:74:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   74 | }
+      | ^
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  14356	    136	   1944	  16436	   4034	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+17:44:08 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/Keypad.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/Keypad.d" -MT"Core/Src/Keypad.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Keypad.o"
+../Core/Src/Keypad.cpp: In member function 'char Keypad::tick()':
+../Core/Src/Keypad.cpp:74:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   74 | }
+      | ^
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  14360	    136	   1944	  16440	   4038	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+17:45:48 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/Keypad.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/Keypad.d" -MT"Core/Src/Keypad.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Keypad.o"
+../Core/Src/Keypad.cpp: In member function 'char Keypad::tick()':
+../Core/Src/Keypad.cpp:74:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   74 | }
+      | ^
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  14360	    136	   1944	  16440	   4038	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+17:54:02 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  14360	    136	   1944	  16440	   4038	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+17:54:42 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  14360	    136	   1944	  16440	   4038	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+17:55:10 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  14360	    136	   1944	  16440	   4038	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+17:55:38 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  14360	    136	   1944	  16440	   4038	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+17:56:13 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  14360	    136	   1944	  16440	   4038	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+17:56:48 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  14360	    136	   1944	  16440	   4038	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+17:57:03 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14360	    136	   1944	  16440	   4038	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+17:57:29 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  14360	    136	   1944	  16440	   4038	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+17:57:59 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  14360	    136	   1944	  16440	   4038	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+17:58:16 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  14360	    136	   1944	  16440	   4038	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+17:59:24 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  14360	    136	   1944	  16440	   4038	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+18:03:26 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/ExternalDAC.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ExternalDAC.d" -MT"Core/Src/ExternalDAC.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ExternalDAC.o"
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  14360	    136	   1944	  16440	   4038	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+18:04:03 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/Keypad.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/Keypad.d" -MT"Core/Src/Keypad.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Keypad.o"
+../Core/Src/Keypad.cpp: In member function 'char Keypad::tick()':
+../Core/Src/Keypad.cpp:74:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   74 | }
+      | ^
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  14364	    136	   1944	  16444	   403c	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+18:05:02 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/Keypad.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/Keypad.d" -MT"Core/Src/Keypad.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Keypad.o"
+../Core/Src/Keypad.cpp: In member function 'char Keypad::tick()':
+../Core/Src/Keypad.cpp:74:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   74 | }
+      | ^
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  14360	    136	   1944	  16440	   4038	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+18:11:50 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/ExternalDAC.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ExternalDAC.d" -MT"Core/Src/ExternalDAC.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ExternalDAC.o"
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  14360	    136	   1944	  16440	   4038	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+18:14:53 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/ExternalDAC.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ExternalDAC.d" -MT"Core/Src/ExternalDAC.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ExternalDAC.o"
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  14360	    136	   1944	  16440	   4038	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+18:17:21 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/ExternalDAC.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ExternalDAC.d" -MT"Core/Src/ExternalDAC.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ExternalDAC.o"
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  14360	    136	   1944	  16440	   4038	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+18:19:30 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/ExternalDAC.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ExternalDAC.d" -MT"Core/Src/ExternalDAC.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ExternalDAC.o"
+../Core/Src/ExternalDAC.cpp:3:23: error: conflicting declaration 'const uint16_t sine_wave [835]'
+    3 | extern const uint16_t sine_wave[835] = {
+      |                       ^~~~~~~~~
+In file included from ../Core/Src/ExternalDAC.cpp:1:
+../Core/Src/ExternalDAC.h:7:23: note: previous declaration as 'const uint16_t sine_wave [834]'
+    7 | extern const uint16_t sine_wave[834];
+      |                       ^~~~~~~~~
+make: *** [Core/Src/subdir.mk:44: Core/Src/ExternalDAC.o] Error 1
+"make -j24 all" terminated with exit code 2. Build might be incomplete.
+18:20:33 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/ExternalDAC.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ExternalDAC.d" -MT"Core/Src/ExternalDAC.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ExternalDAC.o"
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  14376	    136	   1944	  16456	   4048	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+18:30:25 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  14376	    136	   1944	  16456	   4048	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+19:00:40 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/ExternalDAC.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ExternalDAC.d" -MT"Core/Src/ExternalDAC.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ExternalDAC.o"
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  12488	    136	   1944	  14568	   38e8	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+19:01:05 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12488	    136	   1944	  14568	   38e8	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+19:03:32 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/ExternalDAC.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ExternalDAC.d" -MT"Core/Src/ExternalDAC.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ExternalDAC.o"
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-7' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+   57 | };
+      | ^
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-21' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-35' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-49' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-63' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-77' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-91' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-105' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-119' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-133' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-147' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-161' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-175' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-189' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-203' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-217' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-230' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-244' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-258' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-272' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-286' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-300' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-314' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-327' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-341' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-355' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-369' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-382' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-396' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-410' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-423' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-437' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-451' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-464' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-478' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-491' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-505' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-518' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-532' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-545' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-558' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-572' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-585' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-598' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-612' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-625' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-638' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-651' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-664' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-677' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-690' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-703' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-716' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-729' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-742' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-755' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-768' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-780' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-793' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-806' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-818' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-831' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-843' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-856' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-868' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-881' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-893' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-905' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-917' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-929' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-942' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-954' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-966' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-978' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-989' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1001' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1013' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1025' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1036' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1048' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1060' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1071' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1083' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1094' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1105' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1116' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1128' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1139' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1150' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1161' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1172' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1182' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1193' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1204' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1215' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1225' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1236' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1246' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1256' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1267' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1277' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1287' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1297' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1307' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1317' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1327' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1337' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1347' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1356' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1366' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1375' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1385' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1394' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1403' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1412' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1421' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1430' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1439' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1448' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1457' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1466' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1474' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1483' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1491' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1499' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1508' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1516' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1524' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1532' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1540' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1548' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1555' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1563' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1571' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1578' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1585' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1593' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1600' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1607' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1614' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1621' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1628' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1635' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1641' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1648' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1654' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1661' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1667' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1673' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1679' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1685' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1691' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1697' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1702' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1708' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1714' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1719' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1724' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1730' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1735' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1740' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1745' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1749' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1754' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1759' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1763' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1768' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1772' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1776' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1780' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1784' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1788' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1792' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1796' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1800' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1803' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1806' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1810' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1813' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1816' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1819' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1822' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1825' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1828' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1830' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1833' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1835' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1837' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1839' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1842' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1843' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1845' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1847' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1849' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1850' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1852' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1853' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1854' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1855' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1856' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1857' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1858' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1859' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1860' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1860' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1860' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1861' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1861' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1861' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1861' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1861' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1861' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1860' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1860' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1859' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1859' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1858' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1857' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1856' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1855' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1854' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1852' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1851' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1850' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1848' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1846' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1844' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1843' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1840' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1838' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1836' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1834' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1831' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1829' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1826' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1823' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1821' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1818' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1815' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1811' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1808' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1805' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1801' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1798' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1794' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1790' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1786' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1782' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1778' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1774' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1770' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1766' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1761' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1756' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1752' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1747' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1742' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1737' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1732' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1727' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1722' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1716' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1711' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1705' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1700' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1694' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1688' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1682' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1676' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1670' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1664' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1657' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1651' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1644' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1638' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1631' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1624' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1617' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1611' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1603' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1596' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1589' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1582' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1574' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1567' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1559' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1551' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1544' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1536' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1528' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1520' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1512' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1504' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1495' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1487' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1478' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1470' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1461' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1452' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1444' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1435' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1426' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1417' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1408' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1399' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1389' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1380' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1370' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1361' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1351' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1342' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1332' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1322' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1312' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1302' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1292' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1282' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1272' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1262' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1251' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1241' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1230' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1220' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1209' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1199' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1188' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1177' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1166' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1155' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1144' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1133' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1122' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1111' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1100' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1088' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1077' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1065' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1054' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1042' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1031' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1019' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1007' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-995' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-984' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-972' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-960' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-948' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-936' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-923' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-911' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-899' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-887' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-874' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-862' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-850' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-837' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-825' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-812' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-799' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-787' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-774' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-761' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-748' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-736' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-723' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-710' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-697' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-684' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-671' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-658' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-645' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-631' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-618' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-605' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-592' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-578' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-565' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-552' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-538' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-525' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-511' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-498' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-484' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-471' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-457' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-444' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-430' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-417' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-403' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-389' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-376' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-362' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-348' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-334' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-320' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-307' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-293' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-279' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-265' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-251' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-237' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-224' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-210' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-196' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-182' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-168' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-154' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-140' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-126' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-112' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-98' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-84' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-70' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-56' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-42' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-28' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-14' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+make: *** [Core/Src/subdir.mk:44: Core/Src/ExternalDAC.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j24 all" terminated with exit code 2. Build might be incomplete.
+19:06:40 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/ExternalDAC.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ExternalDAC.d" -MT"Core/Src/ExternalDAC.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ExternalDAC.o"
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+   57 | };
+      | ^
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-2' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-2' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-2' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-2' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-2' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-2' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+../Core/Src/ExternalDAC.cpp:57:1: error: narrowing conversion of '-1' from 'int' to 'uint16_t' {aka 'short unsigned int'} [-Wnarrowing]
+make: *** [Core/Src/subdir.mk:44: Core/Src/ExternalDAC.o] Error 1
+"make -j24 all" terminated with exit code 2. Build might be incomplete.
+19:10:14 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/ExternalDAC.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ExternalDAC.d" -MT"Core/Src/ExternalDAC.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ExternalDAC.o"
+../Core/Src/ExternalDAC.cpp:223:23: error: redefinition of 'const uint16_t square_wave [835]'
+  223 | extern const uint16_t square_wave[835] = {
+      |                       ^~~~~~~~~~~
+../Core/Src/ExternalDAC.cpp:58:23: note: 'const uint16_t square_wave [835]' previously defined here
+   58 | extern const uint16_t square_wave[835] = {
+      |                       ^~~~~~~~~~~
+../Core/Src/ExternalDAC.cpp:278:23: error: redefinition of 'const uint16_t sawtooth_wave [835]'
+  278 | extern const uint16_t sawtooth_wave[835] = {
+      |                       ^~~~~~~~~~~~~
+../Core/Src/ExternalDAC.cpp:113:23: note: 'const uint16_t sawtooth_wave [835]' previously defined here
+  113 | extern const uint16_t sawtooth_wave[835] = {
+      |                       ^~~~~~~~~~~~~
+../Core/Src/ExternalDAC.cpp:333:23: error: redefinition of 'const uint16_t triangle_wave [835]'
+  333 | extern const uint16_t triangle_wave[835] = {
+      |                       ^~~~~~~~~~~~~
+../Core/Src/ExternalDAC.cpp:168:23: note: 'const uint16_t triangle_wave [835]' previously defined here
+  168 | extern const uint16_t triangle_wave[835] = {
+      |                       ^~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:44: Core/Src/ExternalDAC.o] Error 1
+"make -j24 all" terminated with exit code 2. Build might be incomplete.
+19:10:41 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/ExternalDAC.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ExternalDAC.d" -MT"Core/Src/ExternalDAC.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ExternalDAC.o"
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  14376	    136	   1944	  16456	   4048	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+19:11:31 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  14376	    136	   1944	  16456	   4048	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+19:12:58 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  14376	    136	   1944	  16456	   4048	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+19:13:34 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  14376	    136	   1944	  16456	   4048	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+19:13:55 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  14376	    136	   1944	  16456	   4048	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+19:19:52 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/ExternalDAC.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ExternalDAC.d" -MT"Core/Src/ExternalDAC.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ExternalDAC.o"
+../Core/Src/ExternalDAC.cpp:3:23: error: conflicting declaration 'const uint16_t sine_wave [1200]'
+    3 | extern const uint16_t sine_wave[1200] = {
+      |                       ^~~~~~~~~
+In file included from ../Core/Src/ExternalDAC.cpp:1:
+../Core/Src/ExternalDAC.h:7:23: note: previous declaration as 'const uint16_t sine_wave [835]'
+    7 | extern const uint16_t sine_wave[835];
+      |                       ^~~~~~~~~
+../Core/Src/ExternalDAC.cpp:80:23: error: conflicting declaration 'const uint16_t square_wave [1200]'
+   80 | extern const uint16_t square_wave[1200] = {
+      |                       ^~~~~~~~~~~
+In file included from ../Core/Src/ExternalDAC.cpp:1:
+../Core/Src/ExternalDAC.h:8:23: note: previous declaration as 'const uint16_t square_wave [835]'
+    8 | extern const uint16_t square_wave[835];
+      |                       ^~~~~~~~~~~
+../Core/Src/ExternalDAC.cpp:157:23: error: conflicting declaration 'const uint16_t sawtooth_wave [1200]'
+  157 | extern const uint16_t sawtooth_wave[1200] = {
+      |                       ^~~~~~~~~~~~~
+In file included from ../Core/Src/ExternalDAC.cpp:1:
+../Core/Src/ExternalDAC.h:9:23: note: previous declaration as 'const uint16_t sawtooth_wave [835]'
+    9 | extern const uint16_t sawtooth_wave[835];
+      |                       ^~~~~~~~~~~~~
+../Core/Src/ExternalDAC.cpp:234:23: error: conflicting declaration 'const uint16_t triangle_wave [1200]'
+  234 | extern const uint16_t triangle_wave[1200] = {
+      |                       ^~~~~~~~~~~~~
+In file included from ../Core/Src/ExternalDAC.cpp:1:
+../Core/Src/ExternalDAC.h:10:23: note: previous declaration as 'const uint16_t triangle_wave [835]'
+   10 | extern const uint16_t triangle_wave[835];
+      |                       ^~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:44: Core/Src/ExternalDAC.o] Error 1
+"make -j24 all" terminated with exit code 2. Build might be incomplete.
+19:20:08 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/ExternalDAC.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ExternalDAC.d" -MT"Core/Src/ExternalDAC.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ExternalDAC.o"
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  17288	    136	   1944	  19368	   4ba8	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+19:21:07 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  17288	    136	   1944	  19368	   4ba8	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+19:21:29 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  17288	    136	   1944	  19368	   4ba8	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+19:22:43 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/ExternalDAC.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ExternalDAC.d" -MT"Core/Src/ExternalDAC.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ExternalDAC.o"
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  14888	    136	   1944	  16968	   4248	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+19:23:06 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  14888	    136	   1944	  16968	   4248	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+19:27:38 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/ExternalDAC.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ExternalDAC.d" -MT"Core/Src/ExternalDAC.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ExternalDAC.o"
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  14696	    136	   1944	  16776	   4188	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+19:29:44 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/ExternalDAC.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ExternalDAC.d" -MT"Core/Src/ExternalDAC.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ExternalDAC.o"
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  12488	    136	   1944	  14568	   38e8	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+19:30:09 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  12488	    136	   1944	  14568	   38e8	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+19:30:28 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  12488	    136	   1944	  14568	   38e8	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+19:31:54 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/ExternalDAC.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ExternalDAC.d" -MT"Core/Src/ExternalDAC.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/ExternalDAC.o"
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  13448	    136	   1944	  15528	   3ca8	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+19:32:20 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  13448	    136	   1944	  15528	   3ca8	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+19:32:42 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  13448	    136	   1944	  15528	   3ca8	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+19:33:02 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  13448	    136	   1944	  15528	   3ca8	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+19:33:28 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  13448	    136	   1944	  15528	   3ca8	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+19:33:54 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  13448	    136	   1944	  15528	   3ca8	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+19:34:13 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  13448	    136	   1944	  15528	   3ca8	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+19:34:39 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  13448	    136	   1944	  15528	   3ca8	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+19:34:59 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  13448	    136	   1944	  15528	   3ca8	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+19:35:27 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  13448	    136	   1944	  15528	   3ca8	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+19:35:50 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  13448	    136	   1944	  15528	   3ca8	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+19:36:08 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  13448	    136	   1944	  15528	   3ca8	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+19:36:31 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  13448	    136	   1944	  15528	   3ca8	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+19:36:49 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  13448	    136	   1944	  15528	   3ca8	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+19:37:24 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  13448	    136	   1944	  15528	   3ca8	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+19:37:55 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/main.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  13448	    136	   1944	  15528	   3ca8	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+19:39:39 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/Keypad.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/Keypad.d" -MT"Core/Src/Keypad.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Keypad.o"
+../Core/Src/Keypad.cpp: In member function 'char Keypad::tick()':
+../Core/Src/Keypad.cpp:74:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   74 | }
+      | ^
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  13452	    136	   1944	  15532	   3cac	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+19:40:25 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/Keypad.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/Keypad.d" -MT"Core/Src/Keypad.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Keypad.o"
+../Core/Src/Keypad.cpp: In member function 'char Keypad::tick()':
+../Core/Src/Keypad.cpp:74:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   74 | }
+      | ^
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  13452	    136	   1944	  15532	   3cac	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+19:45:05 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/Keypad.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/Keypad.d" -MT"Core/Src/Keypad.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Keypad.o"
+../Core/Src/Keypad.cpp: In member function 'char Keypad::tick()':
+../Core/Src/Keypad.cpp:74:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   74 | }
+      | ^
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  13448	    136	   1944	  15528	   3ca8	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
+19:45:51 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+make -j24 all 
+arm-none-eabi-g++ "../Core/Src/Keypad.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/Keypad.d" -MT"Core/Src/Keypad.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Keypad.o"
+../Core/Src/Keypad.cpp: In member function 'char Keypad::tick()':
+../Core/Src/Keypad.cpp:74:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   74 | }
+      | ^
+arm-none-eabi-g++ -o "CPE 316 P1 Function Generator.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 P1 Function Generator\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 P1 Function Generator.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 P1 Function Generator.elf
+ 
+arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ P1\ Function\ Generator.elf  > "CPE 316 P1 Function Generator.list"
+   text	   data	    bss	    dec	    hex	filename
+  13448	    136	   1944	  15528	   3ca8	CPE 316 P1 Function Generator.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 P1 Function Generator.list
+ 
