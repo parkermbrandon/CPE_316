@@ -10,7 +10,6 @@ public:
 	char tick();
 	void update_LEDs(char key);
 	char findButtonPressed();
-	bool hasButtonBeenPressed();
 
 	char lastKey = '\0';
 

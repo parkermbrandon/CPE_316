@@ -1,0 +1,30 @@
+#include "stm32l4xx.h"
+
+void USART2_init() {
+    // Enable USART2 and GPIOD Clock
+    RCC->APB1ENR1 |= RCC_APB1ENR1_USART2EN;
+    RCC->AHB2ENR |= RCC_AHB2ENR_GPIODEN;
+
+    // Configure PD6 and PD5 as Alternate Function for USART2
+    GPIOD->MODER &= ~(GPIO_MODER_MODE6 | GPIO_MODER_MODE5);
+    GPIOD->MODER |= (GPIO_MODER_MODE6_1 | GPIO_MODER_MODE5_1);
+    GPIOD->AFR[0] |= (7 << GPIO_AFRL_AFSEL6_Pos) | (7 << GPIO_AFRL_AFSEL5_Pos);
+
+    // Configure USART2
+    USART2->BRR = 0x1A1;  // Baud rate of 115200, assuming 80MHz clock
+    USART2->CR1 = USART_CR1_TE | USART_CR1_RE | USART_CR1_UE;  // Enable Tx, Rx and USART2
+}
+
+void USART2_send(char ch) {
+    while (!(USART2->ISR & USART_ISR_TXE));  // Wait for Transmit data register empty
+    USART2->TDR = ch;
+}
+
+int main() {
+    USART2_init();
+
+    while (1) {
+        USART2_send('A');
+        //for (int i = 0; i < 1000000; i++);  // Simple delay
+    }
+}

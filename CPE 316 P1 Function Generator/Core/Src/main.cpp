@@ -7,8 +7,6 @@ void SystemClock_Config(void);
 void TIM2_init();
 extern "C" void TIM2_IRQHandler(void);
 
-#define ARRAY_SIZE 256
-
 External_DAC dac;
 Keypad keys;
 
@@ -23,22 +21,31 @@ static bool keyWasPressed = false;
 static bool anyKeyPressed = false;
 uint32_t systemTime = 0;
 int stride_length = 1;
-const uint16_t *current_wave = nullptr;
 
-// Initialize TIM2 for 16 µs interval
+// Initialize TIM2
 void TIM2_init() {
-	RCC->APB1ENR1 |= RCC_APB1ENR1_TIM2EN;
-	TIM2->PSC = 1;
-	TIM2->ARR = 1114;
-	TIM2->DIER |= TIM_DIER_UIE;
-	TIM2->CR1 |= TIM_CR1_CEN;
-	NVIC_EnableIRQ(TIM2_IRQn);
+    // Enable clock for TIM2
+    RCC->APB1ENR1 |= RCC_APB1ENR1_TIM2EN;
+    // Set the prescaler to 1
+    TIM2->PSC = 1;
+    // Set the Auto-Reload Register (ARR) value to 1114
+    TIM2->ARR = 1114;
+    // Enable Update Interrupt (UIE)
+    TIM2->DIER |= TIM_DIER_UIE;
+    // Enable the counter (CEN)
+    TIM2->CR1 |= TIM_CR1_CEN;
+    // Enable the TIM2 interrupt in the NVIC
+    NVIC_EnableIRQ(TIM2_IRQn);
 }
 
-void updateFrequency(char key) {
-    if (key >= '1' && key <= '5') {
+
+void updateFrequency(char key)
+{
+    if (key >= '1' && key <= '5')
+    {
         frequency = (key - '0') * 100;
-        switch (frequency) {
+        switch (frequency)
+        {
             case 100: stride_length = 1;  break;
             case 200: stride_length = 2;  break;
             case 300: stride_length = 3;  break;
@@ -48,35 +55,50 @@ void updateFrequency(char key) {
     }
 }
 
-void updateWaveform(char key) {
-    if (key >= '6' && key <= '9') {
+void updateWaveform(char key)
+{
+    if (key >= '6' && key <= '9')
+    {
         waveform = key - '6';
     }
 }
 
-void updateDutyCycle(char key) {
-	if (key == '*' || key == '#' || key == '0') {
+void updateDutyCycle(char key)
+{
+	if (key == '*' || key == '#' || key == '0')
+	{
 	    anyKeyPressed = true;
-	    if (!keyWasPressed) {
-	        if (key == '*') {
+	    if (!keyWasPressed)
+	    {
+	        if (key == '*')
+	        {
 	            dutyCycle = (dutyCycle <= 10) ? 10 : (dutyCycle - 10);
-	        } else if (key == '#') {
+	        }
+	        else if (key == '#')
+	        {
 	            dutyCycle = (dutyCycle >= 90) ? 90 : (dutyCycle + 10);
-	        } else if (key == '0') {
+	        }
+	        else if (key == '0')
+	        {
 	            dutyCycle = 50;
 	        }
 	        keyWasPressed = true;
 	    }
-	} else {
-	    if (!anyKeyPressed) {
+	}
+	else
+	{
+	    if (!anyKeyPressed)
+	    {
 	        keyWasPressed = false;
 	    }
 	    anyKeyPressed = false;
 	}
 }
 
-bool shouldResetWaveform() {
-    if (lastWaveform != waveform || lastFrequency != frequency) {
+bool shouldResetWaveform()
+{
+    if (lastWaveform != waveform || lastFrequency != frequency)
+    {
         lastWaveform = waveform;
         lastFrequency = frequency;
         return true;
@@ -84,8 +106,10 @@ bool shouldResetWaveform() {
     return false;
 }
 
-const uint16_t* getCurrentWave() {
-    switch (waveform) {
+const uint16_t* getCurrentWave()
+{
+    switch (waveform)
+    {
         case 0: return sine_wave; break;
         case 1: return triangle_wave; break;
         case 2: return sawtooth_wave; break;
@@ -107,16 +131,20 @@ extern "C" void TIM2_IRQHandler(void)
 		updateWaveform(key);
 		updateDutyCycle(key);
 
-		if (shouldResetWaveform()) {
-			i = 0;  // Reset index
+		if (shouldResetWaveform())
+		{
+			i = 0;
 		}
 
 		uint16_t value_A, value_B;
 		const uint16_t *current_wave = getCurrentWave();
 
-		if (current_wave) {
-			if (waveform == 3) {
+		if (current_wave)
+		{
+			if (waveform == 3) // If waveform is square update duty cycle
+			{
 				int high_time = (dutyCycle * modulo_value) / 100;
+				// Value of 3723 is 12 bit value that will output 3V from the DAC
 				value_A = (i < high_time) ? 3723 : 0;
 				value_B = value_A;
 			} else {
@@ -142,7 +170,7 @@ int main()
 
 	while(1)
 	{
-
+	// Everything is handled by ISR
 	}
 
 	return 0;

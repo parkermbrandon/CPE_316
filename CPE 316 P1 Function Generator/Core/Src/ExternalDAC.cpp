@@ -197,18 +197,30 @@ External_DAC::~External_DAC() {
 
 void External_DAC::DAC_init(void)
 {
+    // Enable clock for GPIOA
     RCC->AHB2ENR |= RCC_AHB2ENR_GPIOAEN;
+    // Clear the mode bits for GPIOA pins 4, 5, 6, and 7
     GPIOA->MODER &= ~(GPIO_MODER_MODE4 | GPIO_MODER_MODE5 | GPIO_MODER_MODE6 | GPIO_MODER_MODE7);
+    // Set GPIOA pins 4, 5, 6, and 7 to alternate function mode
     GPIOA->MODER |= (GPIO_MODER_MODE4_1 | GPIO_MODER_MODE5_1 | GPIO_MODER_MODE6_1 | GPIO_MODER_MODE7_1);
+    // Clear the alternate function selection for GPIOA pins 4, 5, 6, and 7
     GPIOA->AFR[0] &= ~(GPIO_AFRL_AFSEL4 | GPIO_AFRL_AFSEL5 | GPIO_AFRL_AFSEL6 | GPIO_AFRL_AFSEL7);
+    // Set the alternate function for GPIOA pins 4, 5, 6, and 7 to AF5 (SPI1)
     GPIOA->AFR[0] |= ((5 << GPIO_AFRL_AFSEL4_Pos) | (5 << GPIO_AFRL_AFSEL5_Pos) | (5 << GPIO_AFRL_AFSEL6_Pos) | (5 << GPIO_AFRL_AFSEL7_Pos));
+    // Set GPIOA pins 4, 5, 6, and 7 as push-pull
     GPIOA->OTYPER &= ~(GPIO_OTYPER_OT4 | GPIO_OTYPER_OT5 | GPIO_OTYPER_OT6 | GPIO_OTYPER_OT7);
+    // Disable pull-up/pull-down resistors for GPIOA pins 4, 5, 6, and 7
     GPIOA->PUPDR &= ~(GPIO_PUPDR_PUPD4 | GPIO_PUPDR_PUPD5 | GPIO_PUPDR_PUPD6 | GPIO_PUPDR_PUPD7);
+    // Enable SPI1 clock
     RCC->APB2ENR |= RCC_APB2ENR_SPI1EN;
-    SPI1->CR1 = SPI_CR1_MSTR | SPI_CR1_BR_1;  // Set prescaler to fPCLK/4
+    // Configure SPI1: Master mode, baud rate = fPCLK/4
+    SPI1->CR1 = SPI_CR1_MSTR | SPI_CR1_BR_1;
+    // Configure SPI1: Enable software slave management, set data size to 16 bits
     SPI1->CR2 = SPI_CR2_SSOE | SPI_CR2_NSSP | (0xF << SPI_CR2_DS_Pos);
+    // Enable SPI1
     SPI1->CR1 |= SPI_CR1_SPE;
 }
+
 
 // Convert a voltage value into a 12-bit value to control the DAC
 uint16_t External_DAC::DAC_mvolt_convert(float mvoltage)
@@ -232,49 +244,49 @@ void External_DAC::DAC_write(uint16_t value_A, uint16_t value_B)
 }
 
 
-/* Matlab script for generating lookup tables
-% Parameters
-fs = 256;  % Sampling frequency
-t = 0:1/fs:1-1/fs;  % Time vector
-Vref = 3.3;  % Reference voltage
-bit_depth = 4095;  % 12-bit DAC
-dc_offset = 1.5;  % DC offset in volts
-Vpp = 3.0;  % Peak-to-peak voltage in volts
+//Matlab script for generating lookup tables
+//% Parameters
+//fs = 256;  % Sampling frequency
+//t = 0:1/fs:1-1/fs;  % Time vector
+//Vref = 3.3;  % Reference voltage
+//bit_depth = 4095;  % 12-bit DAC
+//dc_offset = 1.5;  % DC offset in volts
+//Vpp = 3.0;  % Peak-to-peak voltage in volts
+//
+//% Scaling factors
+//scale_factor = bit_depth / Vref;
+//dc_offset_scaled = round(dc_offset * scale_factor);
+//amplitude_scaled = round((Vpp / 2) * scale_factor);
+//
+//% Generate Sine Wave
+//sine_wave = round(dc_offset_scaled + amplitude_scaled * sin(2 * pi * t));
+//
+//% Generate Square Wave
+//square_wave = round(dc_offset_scaled + amplitude_scaled * (square(2 * pi * t) + 1) / 2);
+//
+//% Generate Triangle Wave
+//triangle_wave = round(dc_offset_scaled + amplitude_scaled * (sawtooth(2 * pi * t, 0.5) + 1) / 2);
+//
+//% Generate Sawtooth Wave
+//sawtooth_wave = round(dc_offset_scaled + amplitude_scaled * (sawtooth(2 * pi * t) + 1) / 2);
+//
+//% Print Lookup Tables
+//print_lookup_table('sine_wave', sine_wave);
+//print_lookup_table('square_wave', square_wave);
+//print_lookup_table('sawtooth_wave', sawtooth_wave);
+//print_lookup_table('triangle_wave', triangle_wave);
+//
+//% Function to print lookup table in 16x16 format
+//function print_lookup_table(name, data)
+//    fprintf('extern const uint16_t %s[%d] = {\n', name, length(data));
+//    for i = 1:16:length(data)
+//        fprintf('    ');
+//        fprintf('%d, ', data(i:min(i+15, end)));
+//        fprintf('\n');
+//    end
+//    fprintf('};\n');
+//end
 
-% Scaling factors
-scale_factor = bit_depth / Vref;
-dc_offset_scaled = round(dc_offset * scale_factor);
-amplitude_scaled = round((Vpp / 2) * scale_factor);
-
-% Generate Sine Wave
-sine_wave = round(dc_offset_scaled + amplitude_scaled * sin(2 * pi * t));
-
-% Generate Square Wave
-square_wave = round(dc_offset_scaled + amplitude_scaled * (square(2 * pi * t) + 1) / 2);
-
-% Generate Triangle Wave
-triangle_wave = round(dc_offset_scaled + amplitude_scaled * (sawtooth(2 * pi * t, 0.5) + 1) / 2);
-
-% Generate Sawtooth Wave
-sawtooth_wave = round(dc_offset_scaled + amplitude_scaled * (sawtooth(2 * pi * t) + 1) / 2);
-
-% Print Lookup Tables
-print_lookup_table('sine_wave', sine_wave);
-print_lookup_table('square_wave', square_wave);
-print_lookup_table('sawtooth_wave', sawtooth_wave);
-print_lookup_table('triangle_wave', triangle_wave);
-
-% Function to print lookup table in 16x16 format
-function print_lookup_table(name, data)
-    fprintf('extern const uint16_t %s[%d] = {\n', name, length(data));
-    for i = 1:16:length(data)
-        fprintf('    ');
-        fprintf('%d, ', data(i:min(i+15, end)));
-        fprintf('\n');
-    end
-    fprintf('};\n');
-end
- */
 
 
 

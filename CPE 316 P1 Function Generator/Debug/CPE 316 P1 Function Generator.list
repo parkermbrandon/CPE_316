@@ -29,23 +29,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
  12 .comment      00000043  00000000  00000000  000200a8  2**0
                   CONTENTS, READONLY
- 13 .debug_info   00006145  00000000  00000000  000200eb  2**0
+ 13 .debug_info   000060c0  00000000  00000000  000200eb  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_abbrev 000016d5  00000000  00000000  00026230  2**0
+ 14 .debug_abbrev 000016d5  00000000  00000000  000261ab  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_aranges 00000630  00000000  00000000  00027908  2**3
+ 15 .debug_aranges 00000628  00000000  00000000  00027880  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_rnglists 00000485  00000000  00000000  00027f38  2**0
+ 16 .debug_rnglists 0000047f  00000000  00000000  00027ea8  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_macro  000271bc  00000000  00000000  000283bd  2**0
+ 17 .debug_macro  000271b6  00000000  00000000  00028327  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_line   000068dc  00000000  00000000  0004f579  2**0
+ 18 .debug_line   000068ab  00000000  00000000  0004f4dd  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_str    000e70b8  00000000  00000000  00055e55  2**0
+ 19 .debug_str    000e7071  00000000  00000000  00055d88  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .debug_frame  000019f0  00000000  00000000  0013cf10  2**2
+ 20 .debug_frame  000019c8  00000000  00000000  0013cdfc  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_line_str 00000079  00000000  00000000  0013e900  2**0
+ 21 .debug_line_str 00000079  00000000  00000000  0013e7c4  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -147,30 +147,35 @@ void External_DAC::DAC_init(void)
  800022a:	b083      	sub	sp, #12
  800022c:	af00      	add	r7, sp, #0
  800022e:	6078      	str	r0, [r7, #4]
+    // Enable clock for GPIOA
     RCC->AHB2ENR |= RCC_AHB2ENR_GPIOAEN;
  8000230:	4b27      	ldr	r3, [pc, #156]	; (80002d0 <_ZN12External_DAC8DAC_initEv+0xa8>)
  8000232:	6cdb      	ldr	r3, [r3, #76]	; 0x4c
  8000234:	4a26      	ldr	r2, [pc, #152]	; (80002d0 <_ZN12External_DAC8DAC_initEv+0xa8>)
  8000236:	f043 0301 	orr.w	r3, r3, #1
  800023a:	64d3      	str	r3, [r2, #76]	; 0x4c
+    // Clear the mode bits for GPIOA pins 4, 5, 6, and 7
     GPIOA->MODER &= ~(GPIO_MODER_MODE4 | GPIO_MODER_MODE5 | GPIO_MODER_MODE6 | GPIO_MODER_MODE7);
  800023c:	f04f 4390 	mov.w	r3, #1207959552	; 0x48000000
  8000240:	681b      	ldr	r3, [r3, #0]
  8000242:	f04f 4290 	mov.w	r2, #1207959552	; 0x48000000
  8000246:	f423 437f 	bic.w	r3, r3, #65280	; 0xff00
  800024a:	6013      	str	r3, [r2, #0]
+    // Set GPIOA pins 4, 5, 6, and 7 to alternate function mode
     GPIOA->MODER |= (GPIO_MODER_MODE4_1 | GPIO_MODER_MODE5_1 | GPIO_MODER_MODE6_1 | GPIO_MODER_MODE7_1);
  800024c:	f04f 4390 	mov.w	r3, #1207959552	; 0x48000000
  8000250:	681b      	ldr	r3, [r3, #0]
  8000252:	f04f 4290 	mov.w	r2, #1207959552	; 0x48000000
  8000256:	f443 432a 	orr.w	r3, r3, #43520	; 0xaa00
  800025a:	6013      	str	r3, [r2, #0]
+    // Clear the alternate function selection for GPIOA pins 4, 5, 6, and 7
     GPIOA->AFR[0] &= ~(GPIO_AFRL_AFSEL4 | GPIO_AFRL_AFSEL5 | GPIO_AFRL_AFSEL6 | GPIO_AFRL_AFSEL7);
  800025c:	f04f 4390 	mov.w	r3, #1207959552	; 0x48000000
  8000260:	6a1b      	ldr	r3, [r3, #32]
  8000262:	f04f 4290 	mov.w	r2, #1207959552	; 0x48000000
  8000266:	b29b      	uxth	r3, r3
  8000268:	6213      	str	r3, [r2, #32]
+    // Set the alternate function for GPIOA pins 4, 5, 6, and 7 to AF5 (SPI1)
     GPIOA->AFR[0] |= ((5 << GPIO_AFRL_AFSEL4_Pos) | (5 << GPIO_AFRL_AFSEL5_Pos) | (5 << GPIO_AFRL_AFSEL6_Pos) | (5 << GPIO_AFRL_AFSEL7_Pos));
  800026a:	f04f 4390 	mov.w	r3, #1207959552	; 0x48000000
  800026e:	6a1b      	ldr	r3, [r3, #32]
@@ -178,32 +183,38 @@ void External_DAC::DAC_init(void)
  8000274:	f043 43aa 	orr.w	r3, r3, #1426063360	; 0x55000000
  8000278:	f443 03aa 	orr.w	r3, r3, #5570560	; 0x550000
  800027c:	6213      	str	r3, [r2, #32]
+    // Set GPIOA pins 4, 5, 6, and 7 as push-pull
     GPIOA->OTYPER &= ~(GPIO_OTYPER_OT4 | GPIO_OTYPER_OT5 | GPIO_OTYPER_OT6 | GPIO_OTYPER_OT7);
  800027e:	f04f 4390 	mov.w	r3, #1207959552	; 0x48000000
  8000282:	685b      	ldr	r3, [r3, #4]
  8000284:	f04f 4290 	mov.w	r2, #1207959552	; 0x48000000
  8000288:	f023 03f0 	bic.w	r3, r3, #240	; 0xf0
  800028c:	6053      	str	r3, [r2, #4]
+    // Disable pull-up/pull-down resistors for GPIOA pins 4, 5, 6, and 7
     GPIOA->PUPDR &= ~(GPIO_PUPDR_PUPD4 | GPIO_PUPDR_PUPD5 | GPIO_PUPDR_PUPD6 | GPIO_PUPDR_PUPD7);
  800028e:	f04f 4390 	mov.w	r3, #1207959552	; 0x48000000
  8000292:	68db      	ldr	r3, [r3, #12]
  8000294:	f04f 4290 	mov.w	r2, #1207959552	; 0x48000000
  8000298:	f423 437f 	bic.w	r3, r3, #65280	; 0xff00
  800029c:	60d3      	str	r3, [r2, #12]
+    // Enable SPI1 clock
     RCC->APB2ENR |= RCC_APB2ENR_SPI1EN;
  800029e:	4b0c      	ldr	r3, [pc, #48]	; (80002d0 <_ZN12External_DAC8DAC_initEv+0xa8>)
  80002a0:	6e1b      	ldr	r3, [r3, #96]	; 0x60
  80002a2:	4a0b      	ldr	r2, [pc, #44]	; (80002d0 <_ZN12External_DAC8DAC_initEv+0xa8>)
  80002a4:	f443 5380 	orr.w	r3, r3, #4096	; 0x1000
  80002a8:	6613      	str	r3, [r2, #96]	; 0x60
-    SPI1->CR1 = SPI_CR1_MSTR | SPI_CR1_BR_1;  // Set prescaler to fPCLK/4
+    // Configure SPI1: Master mode, baud rate = fPCLK/4
+    SPI1->CR1 = SPI_CR1_MSTR | SPI_CR1_BR_1;
  80002aa:	4b0a      	ldr	r3, [pc, #40]	; (80002d4 <_ZN12External_DAC8DAC_initEv+0xac>)
  80002ac:	2214      	movs	r2, #20
  80002ae:	601a      	str	r2, [r3, #0]
+    // Configure SPI1: Enable software slave management, set data size to 16 bits
     SPI1->CR2 = SPI_CR2_SSOE | SPI_CR2_NSSP | (0xF << SPI_CR2_DS_Pos);
  80002b0:	4b08      	ldr	r3, [pc, #32]	; (80002d4 <_ZN12External_DAC8DAC_initEv+0xac>)
  80002b2:	f640 720c 	movw	r2, #3852	; 0xf0c
  80002b6:	605a      	str	r2, [r3, #4]
+    // Enable SPI1
     SPI1->CR1 |= SPI_CR1_SPE;
  80002b8:	4b06      	ldr	r3, [pc, #24]	; (80002d4 <_ZN12External_DAC8DAC_initEv+0xac>)
  80002ba:	681b      	ldr	r3, [r3, #0]
@@ -293,12 +304,12 @@ void External_DAC::DAC_write(uint16_t value_A, uint16_t value_B)
  8000350:	40013000 	.word	0x40013000
 
 08000354 <_ZN6KeypadC1Ev>:
+#include "Keypad.h"
 
 const uint8_t ROWS = 4;  // Four rows
 const uint8_t COLS = 3;  // Three columns
-//uint32_t systemTime = 0;
 
-Keypad::Keypad() {
+Keypad::Keypad()
  8000354:	b490      	push	{r4, r7}
  8000356:	b084      	sub	sp, #16
  8000358:	af00      	add	r7, sp, #0
@@ -332,6 +343,7 @@ Keypad::Keypad() {
  8000390:	601a      	str	r2, [r3, #0]
  8000392:	605a      	str	r2, [r3, #4]
  8000394:	609a      	str	r2, [r3, #8]
+{
 	for (int i = 0; i < ROWS * COLS; ++i)
  8000396:	2300      	movs	r3, #0
  8000398:	60fb      	str	r3, [r7, #12]
@@ -489,12 +501,9 @@ void Keypad::Keypad_init(void)
  80004b8:	48000800 	.word	0x48000800
 
 080004bc <_ZN6Keypad4tickEv>:
-        }
-    }
-    return false;
-}
 
-char Keypad::tick() {
+char Keypad::tick()
+{
  80004bc:	b580      	push	{r7, lr}
  80004be:	b086      	sub	sp, #24
  80004c0:	af00      	add	r7, sp, #0
@@ -610,7 +619,8 @@ char Keypad::tick() {
 
 08000578 <_ZN6Keypad11update_LEDsEc>:
 
-void Keypad::update_LEDs(char key) {
+void Keypad::update_LEDs(char key)
+{
  8000578:	b480      	push	{r7}
  800057a:	b085      	sub	sp, #20
  800057c:	af00      	add	r7, sp, #0
@@ -724,8 +734,8 @@ char Keypad::findButtonPressed()
  800063a:	6078      	str	r0, [r7, #4]
     static char lastKey = '\0';  // Keep track of the last key pressed
     static uint32_t lastDebounceTime = 0;  // the last time the output pin was toggled
-    const uint32_t debounceDelay = 500;  // the debounce time in milliseconds
- 800063c:	f44f 73fa 	mov.w	r3, #500	; 0x1f4
+    const uint32_t debounceDelay = 580;  // the debounce time in milliseconds
+ 800063c:	f44f 7311 	mov.w	r3, #580	; 0x244
  8000640:	613b      	str	r3, [r7, #16]
 
     char currentKey = '\0';  // Initialize to no key pressed
@@ -815,7 +825,7 @@ char Keypad::findButtonPressed()
  80006be:	4b10      	ldr	r3, [pc, #64]	; (8000700 <_ZN6Keypad17findButtonPressedEv+0xcc>)
  80006c0:	681b      	ldr	r3, [r3, #0]
  80006c2:	1ad3      	subs	r3, r2, r3
- 80006c4:	f5b3 7ffa 	cmp.w	r3, #500	; 0x1f4
+ 80006c4:	f5b3 7f11 	cmp.w	r3, #580	; 0x244
  80006c8:	d90c      	bls.n	80006e4 <_ZN6Keypad17findButtonPressedEv+0xb0>
         {
             lastKey = currentKey;
@@ -896,41 +906,47 @@ __STATIC_INLINE void __NVIC_EnableIRQ(IRQn_Type IRQn)
  8000740:	e000e100 	.word	0xe000e100
 
 08000744 <_Z9TIM2_initv>:
+static bool anyKeyPressed = false;
 uint32_t systemTime = 0;
 int stride_length = 1;
-const uint16_t *current_wave = nullptr;
 
-// Initialize TIM2 for 16 µs interval
+// Initialize TIM2
 void TIM2_init() {
  8000744:	b580      	push	{r7, lr}
  8000746:	af00      	add	r7, sp, #0
-	RCC->APB1ENR1 |= RCC_APB1ENR1_TIM2EN;
+    // Enable clock for TIM2
+    RCC->APB1ENR1 |= RCC_APB1ENR1_TIM2EN;
  8000748:	4b11      	ldr	r3, [pc, #68]	; (8000790 <_Z9TIM2_initv+0x4c>)
  800074a:	6d9b      	ldr	r3, [r3, #88]	; 0x58
  800074c:	4a10      	ldr	r2, [pc, #64]	; (8000790 <_Z9TIM2_initv+0x4c>)
  800074e:	f043 0301 	orr.w	r3, r3, #1
  8000752:	6593      	str	r3, [r2, #88]	; 0x58
-	TIM2->PSC = 1;
+    // Set the prescaler to 1
+    TIM2->PSC = 1;
  8000754:	f04f 4380 	mov.w	r3, #1073741824	; 0x40000000
  8000758:	2201      	movs	r2, #1
  800075a:	629a      	str	r2, [r3, #40]	; 0x28
-	TIM2->ARR = 1114;
+    // Set the Auto-Reload Register (ARR) value to 1114
+    TIM2->ARR = 1114;
  800075c:	f04f 4380 	mov.w	r3, #1073741824	; 0x40000000
  8000760:	f240 425a 	movw	r2, #1114	; 0x45a
  8000764:	62da      	str	r2, [r3, #44]	; 0x2c
-	TIM2->DIER |= TIM_DIER_UIE;
+    // Enable Update Interrupt (UIE)
+    TIM2->DIER |= TIM_DIER_UIE;
  8000766:	f04f 4380 	mov.w	r3, #1073741824	; 0x40000000
  800076a:	68db      	ldr	r3, [r3, #12]
  800076c:	f04f 4280 	mov.w	r2, #1073741824	; 0x40000000
  8000770:	f043 0301 	orr.w	r3, r3, #1
  8000774:	60d3      	str	r3, [r2, #12]
-	TIM2->CR1 |= TIM_CR1_CEN;
+    // Enable the counter (CEN)
+    TIM2->CR1 |= TIM_CR1_CEN;
  8000776:	f04f 4380 	mov.w	r3, #1073741824	; 0x40000000
  800077a:	681b      	ldr	r3, [r3, #0]
  800077c:	f04f 4280 	mov.w	r2, #1073741824	; 0x40000000
  8000780:	f043 0301 	orr.w	r3, r3, #1
  8000784:	6013      	str	r3, [r2, #0]
-	NVIC_EnableIRQ(TIM2_IRQn);
+    // Enable the TIM2 interrupt in the NVIC
+    NVIC_EnableIRQ(TIM2_IRQn);
  8000786:	201c      	movs	r0, #28
  8000788:	f7ff ffbe 	bl	8000708 <__NVIC_EnableIRQ>
 }
@@ -940,19 +956,22 @@ void TIM2_init() {
 
 08000794 <_Z15updateFrequencyc>:
 
-void updateFrequency(char key) {
+
+void updateFrequency(char key)
+{
  8000794:	b480      	push	{r7}
  8000796:	b083      	sub	sp, #12
  8000798:	af00      	add	r7, sp, #0
  800079a:	4603      	mov	r3, r0
  800079c:	71fb      	strb	r3, [r7, #7]
-    if (key >= '1' && key <= '5') {
+    if (key >= '1' && key <= '5')
  800079e:	79fb      	ldrb	r3, [r7, #7]
  80007a0:	2b30      	cmp	r3, #48	; 0x30
  80007a2:	d936      	bls.n	8000812 <_Z15updateFrequencyc+0x7e>
  80007a4:	79fb      	ldrb	r3, [r7, #7]
  80007a6:	2b35      	cmp	r3, #53	; 0x35
  80007a8:	d833      	bhi.n	8000812 <_Z15updateFrequencyc+0x7e>
+    {
         frequency = (key - '0') * 100;
  80007aa:	79fb      	ldrb	r3, [r7, #7]
  80007ac:	3b30      	subs	r3, #48	; 0x30
@@ -960,7 +979,7 @@ void updateFrequency(char key) {
  80007b0:	fb02 f303 	mul.w	r3, r2, r3
  80007b4:	4a1a      	ldr	r2, [pc, #104]	; (8000820 <_Z15updateFrequencyc+0x8c>)
  80007b6:	6013      	str	r3, [r2, #0]
-        switch (frequency) {
+        switch (frequency)
  80007b8:	4b19      	ldr	r3, [pc, #100]	; (8000820 <_Z15updateFrequencyc+0x8c>)
  80007ba:	681b      	ldr	r3, [r3, #0]
  80007bc:	f5b3 7ffa 	cmp.w	r3, #500	; 0x1f4
@@ -1023,19 +1042,21 @@ void updateFrequency(char key) {
 
 08000828 <_Z14updateWaveformc>:
 
-void updateWaveform(char key) {
+void updateWaveform(char key)
+{
  8000828:	b480      	push	{r7}
  800082a:	b083      	sub	sp, #12
  800082c:	af00      	add	r7, sp, #0
  800082e:	4603      	mov	r3, r0
  8000830:	71fb      	strb	r3, [r7, #7]
-    if (key >= '6' && key <= '9') {
+    if (key >= '6' && key <= '9')
  8000832:	79fb      	ldrb	r3, [r7, #7]
  8000834:	2b35      	cmp	r3, #53	; 0x35
  8000836:	d906      	bls.n	8000846 <_Z14updateWaveformc+0x1e>
  8000838:	79fb      	ldrb	r3, [r7, #7]
  800083a:	2b39      	cmp	r3, #57	; 0x39
  800083c:	d803      	bhi.n	8000846 <_Z14updateWaveformc+0x1e>
+    {
         waveform = key - '6';
  800083e:	79fb      	ldrb	r3, [r7, #7]
  8000840:	3b36      	subs	r3, #54	; 0x36
@@ -1053,13 +1074,14 @@ void updateWaveform(char key) {
 
 08000858 <_Z15updateDutyCyclec>:
 
-void updateDutyCycle(char key) {
+void updateDutyCycle(char key)
+{
  8000858:	b480      	push	{r7}
  800085a:	b083      	sub	sp, #12
  800085c:	af00      	add	r7, sp, #0
  800085e:	4603      	mov	r3, r0
  8000860:	71fb      	strb	r3, [r7, #7]
-	if (key == '*' || key == '#' || key == '0') {
+	if (key == '*' || key == '#' || key == '0')
  8000862:	79fb      	ldrb	r3, [r7, #7]
  8000864:	2b2a      	cmp	r3, #42	; 0x2a
  8000866:	d005      	beq.n	8000874 <_Z15updateDutyCyclec+0x1c>
@@ -1069,21 +1091,24 @@ void updateDutyCycle(char key) {
  800086e:	79fb      	ldrb	r3, [r7, #7]
  8000870:	2b30      	cmp	r3, #48	; 0x30
  8000872:	d131      	bne.n	80008d8 <_Z15updateDutyCyclec+0x80>
+	{
 	    anyKeyPressed = true;
  8000874:	4b22      	ldr	r3, [pc, #136]	; (8000900 <_Z15updateDutyCyclec+0xa8>)
  8000876:	2201      	movs	r2, #1
  8000878:	701a      	strb	r2, [r3, #0]
-	    if (!keyWasPressed) {
+	    if (!keyWasPressed)
  800087a:	4b22      	ldr	r3, [pc, #136]	; (8000904 <_Z15updateDutyCyclec+0xac>)
  800087c:	781b      	ldrb	r3, [r3, #0]
  800087e:	f083 0301 	eor.w	r3, r3, #1
  8000882:	b2db      	uxtb	r3, r3
  8000884:	2b00      	cmp	r3, #0
  8000886:	d035      	beq.n	80008f4 <_Z15updateDutyCyclec+0x9c>
-	        if (key == '*') {
+	    {
+	        if (key == '*')
  8000888:	79fb      	ldrb	r3, [r7, #7]
  800088a:	2b2a      	cmp	r3, #42	; 0x2a
  800088c:	d10b      	bne.n	80008a6 <_Z15updateDutyCyclec+0x4e>
+	        {
 	            dutyCycle = (dutyCycle <= 10) ? 10 : (dutyCycle - 10);
  800088e:	4b1e      	ldr	r3, [pc, #120]	; (8000908 <_Z15updateDutyCyclec+0xb0>)
  8000890:	681b      	ldr	r3, [r3, #0]
@@ -1097,10 +1122,12 @@ void updateDutyCycle(char key) {
  80008a0:	4a19      	ldr	r2, [pc, #100]	; (8000908 <_Z15updateDutyCyclec+0xb0>)
  80008a2:	6013      	str	r3, [r2, #0]
  80008a4:	e014      	b.n	80008d0 <_Z15updateDutyCyclec+0x78>
-	        } else if (key == '#') {
+	        }
+	        else if (key == '#')
  80008a6:	79fb      	ldrb	r3, [r7, #7]
  80008a8:	2b23      	cmp	r3, #35	; 0x23
  80008aa:	d10b      	bne.n	80008c4 <_Z15updateDutyCyclec+0x6c>
+	        {
 	            dutyCycle = (dutyCycle >= 90) ? 90 : (dutyCycle + 10);
  80008ac:	4b16      	ldr	r3, [pc, #88]	; (8000908 <_Z15updateDutyCyclec+0xb0>)
  80008ae:	681b      	ldr	r3, [r3, #0]
@@ -1114,10 +1141,12 @@ void updateDutyCycle(char key) {
  80008be:	4a12      	ldr	r2, [pc, #72]	; (8000908 <_Z15updateDutyCyclec+0xb0>)
  80008c0:	6013      	str	r3, [r2, #0]
  80008c2:	e005      	b.n	80008d0 <_Z15updateDutyCyclec+0x78>
-	        } else if (key == '0') {
+	        }
+	        else if (key == '0')
  80008c4:	79fb      	ldrb	r3, [r7, #7]
  80008c6:	2b30      	cmp	r3, #48	; 0x30
  80008c8:	d102      	bne.n	80008d0 <_Z15updateDutyCyclec+0x78>
+	        {
 	            dutyCycle = 50;
  80008ca:	4b0f      	ldr	r3, [pc, #60]	; (8000908 <_Z15updateDutyCyclec+0xb0>)
  80008cc:	2232      	movs	r2, #50	; 0x32
@@ -1127,17 +1156,20 @@ void updateDutyCycle(char key) {
  80008d0:	4b0c      	ldr	r3, [pc, #48]	; (8000904 <_Z15updateDutyCyclec+0xac>)
  80008d2:	2201      	movs	r2, #1
  80008d4:	701a      	strb	r2, [r3, #0]
-	    if (!keyWasPressed) {
+	    if (!keyWasPressed)
  80008d6:	e00d      	b.n	80008f4 <_Z15updateDutyCyclec+0x9c>
 	    }
-	} else {
-	    if (!anyKeyPressed) {
+	}
+	else
+	{
+	    if (!anyKeyPressed)
  80008d8:	4b09      	ldr	r3, [pc, #36]	; (8000900 <_Z15updateDutyCyclec+0xa8>)
  80008da:	781b      	ldrb	r3, [r3, #0]
  80008dc:	f083 0301 	eor.w	r3, r3, #1
  80008e0:	b2db      	uxtb	r3, r3
  80008e2:	2b00      	cmp	r3, #0
  80008e4:	d002      	beq.n	80008ec <_Z15updateDutyCyclec+0x94>
+	    {
 	        keyWasPressed = false;
  80008e6:	4b07      	ldr	r3, [pc, #28]	; (8000904 <_Z15updateDutyCyclec+0xac>)
  80008e8:	2200      	movs	r2, #0
@@ -1161,10 +1193,11 @@ void updateDutyCycle(char key) {
 
 0800090c <_Z19shouldResetWaveformv>:
 
-bool shouldResetWaveform() {
+bool shouldResetWaveform()
+{
  800090c:	b480      	push	{r7}
  800090e:	af00      	add	r7, sp, #0
-    if (lastWaveform != waveform || lastFrequency != frequency) {
+    if (lastWaveform != waveform || lastFrequency != frequency)
  8000910:	4b0d      	ldr	r3, [pc, #52]	; (8000948 <_Z19shouldResetWaveformv+0x3c>)
  8000912:	681a      	ldr	r2, [r3, #0]
  8000914:	4b0d      	ldr	r3, [pc, #52]	; (800094c <_Z19shouldResetWaveformv+0x40>)
@@ -1177,6 +1210,7 @@ bool shouldResetWaveform() {
  8000922:	681b      	ldr	r3, [r3, #0]
  8000924:	429a      	cmp	r2, r3
  8000926:	d009      	beq.n	800093c <_Z19shouldResetWaveformv+0x30>
+    {
         lastWaveform = waveform;
  8000928:	4b08      	ldr	r3, [pc, #32]	; (800094c <_Z19shouldResetWaveformv+0x40>)
  800092a:	681b      	ldr	r3, [r3, #0]
@@ -1205,10 +1239,11 @@ bool shouldResetWaveform() {
 
 08000958 <_Z14getCurrentWavev>:
 
-const uint16_t* getCurrentWave() {
+const uint16_t* getCurrentWave()
+{
  8000958:	b480      	push	{r7}
  800095a:	af00      	add	r7, sp, #0
-    switch (waveform) {
+    switch (waveform)
  800095c:	4b0e      	ldr	r3, [pc, #56]	; (8000998 <_Z14getCurrentWavev+0x40>)
  800095e:	681b      	ldr	r3, [r3, #0]
  8000960:	2b03      	cmp	r3, #3
@@ -1220,6 +1255,7 @@ const uint16_t* getCurrentWave() {
  8000970:	08000981 	.word	0x08000981
  8000974:	08000985 	.word	0x08000985
  8000978:	08000989 	.word	0x08000989
+    {
         case 0: return sine_wave; break;
  800097c:	4b07      	ldr	r3, [pc, #28]	; (800099c <_Z14getCurrentWavev+0x44>)
  800097e:	e006      	b.n	800098e <_Z14getCurrentWavev+0x36>
@@ -1297,12 +1333,13 @@ extern "C" void TIM2_IRQHandler(void)
  8000a00:	4618      	mov	r0, r3
  8000a02:	f7ff ff29 	bl	8000858 <_Z15updateDutyCyclec>
 
-		if (shouldResetWaveform()) {
+		if (shouldResetWaveform())
  8000a06:	f7ff ff81 	bl	800090c <_Z19shouldResetWaveformv>
  8000a0a:	4603      	mov	r3, r0
  8000a0c:	2b00      	cmp	r3, #0
  8000a0e:	d002      	beq.n	8000a16 <TIM2_IRQHandler+0x6a>
-			i = 0;  // Reset index
+		{
+			i = 0;
  8000a10:	4b29      	ldr	r3, [pc, #164]	; (8000ab8 <TIM2_IRQHandler+0x10c>)
  8000a12:	2200      	movs	r2, #0
  8000a14:	601a      	str	r2, [r3, #0]
@@ -1313,15 +1350,17 @@ extern "C" void TIM2_IRQHandler(void)
  8000a16:	f7ff ff9f 	bl	8000958 <_Z14getCurrentWavev>
  8000a1a:	6078      	str	r0, [r7, #4]
 
-		if (current_wave) {
+		if (current_wave)
  8000a1c:	687b      	ldr	r3, [r7, #4]
  8000a1e:	2b00      	cmp	r3, #0
  8000a20:	d032      	beq.n	8000a88 <TIM2_IRQHandler+0xdc>
-			if (waveform == 3) {
+		{
+			if (waveform == 3) // If waveform is square update duty cycle
  8000a22:	4b26      	ldr	r3, [pc, #152]	; (8000abc <TIM2_IRQHandler+0x110>)
  8000a24:	681b      	ldr	r3, [r3, #0]
  8000a26:	2b03      	cmp	r3, #3
  8000a28:	d119      	bne.n	8000a5e <TIM2_IRQHandler+0xb2>
+			{
 				int high_time = (dutyCycle * modulo_value) / 100;
  8000a2a:	4b25      	ldr	r3, [pc, #148]	; (8000ac0 <TIM2_IRQHandler+0x114>)
  8000a2c:	681b      	ldr	r3, [r3, #0]
@@ -1334,6 +1373,7 @@ extern "C" void TIM2_IRQHandler(void)
  8000a3e:	17db      	asrs	r3, r3, #31
  8000a40:	1ad3      	subs	r3, r2, r3
  8000a42:	603b      	str	r3, [r7, #0]
+				// Value of 3723 is 12 bit value that will output 3V from the DAC
 				value_A = (i < high_time) ? 3723 : 0;
  8000a44:	4b1c      	ldr	r3, [pc, #112]	; (8000ab8 <TIM2_IRQHandler+0x10c>)
  8000a46:	681b      	ldr	r3, [r3, #0]

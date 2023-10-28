@@ -2,9 +2,9 @@
 
 const uint8_t ROWS = 4;  // Four rows
 const uint8_t COLS = 3;  // Three columns
-//uint32_t systemTime = 0;
 
-Keypad::Keypad() {
+Keypad::Keypad()
+{
 	for (int i = 0; i < ROWS * COLS; ++i)
 	{
 		keystates[i] = 0;
@@ -41,16 +41,8 @@ void Keypad::Keypad_init(void)
     }
 }
 
-bool Keypad::hasButtonBeenPressed() {
-    for (int i = 0; i < ROWS * COLS; ++i) {
-        if (keystates[i]) {
-            return true;
-        }
-    }
-    return false;
-}
-
-char Keypad::tick() {
+char Keypad::tick()
+{
   for (int c = 0; c < COLS; c++)
   {
     GPIOA->BSRR = (1U << (colPins[c] + 16));  // sets the current column pin to low
@@ -73,7 +65,8 @@ char Keypad::tick() {
   findButtonPressed();
 }
 
-void Keypad::update_LEDs(char key) {
+void Keypad::update_LEDs(char key)
+{
 
   // Clear all LEDs
   GPIOB->BSRR = GPIO_BSRR_BR_6;
@@ -104,7 +97,7 @@ char Keypad::findButtonPressed()
 {
     static char lastKey = '\0';  // Keep track of the last key pressed
     static uint32_t lastDebounceTime = 0;  // the last time the output pin was toggled
-    const uint32_t debounceDelay = 500;  // the debounce time in milliseconds
+    const uint32_t debounceDelay = 580;  // the debounce time in milliseconds
 
     char currentKey = '\0';  // Initialize to no key pressed
 
