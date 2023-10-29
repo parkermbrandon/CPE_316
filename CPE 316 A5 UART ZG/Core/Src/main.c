@@ -1,5 +1,4 @@
-#include "stm32l4xx.h"
-#include "stm32l4xx_hal.h"  // For HAL_Delay
+#include "main.h"
 
 void SystemClock_Config(void);
 
@@ -66,9 +65,6 @@ void LPUART1_IRQHandler(void) {
         // Read received data
         char received_char = LPUART1->RDR;
 
-        // Move cursor to the right position for echoing
-		//UART_ESC_Code("7C");  // Move cursor 7 spaces to the right
-
         // Check for special characters for color change
         if (received_char == 'R') {
             UART_ESC_Code("31m");  // Set text color to red
@@ -84,10 +80,39 @@ void LPUART1_IRQHandler(void) {
             UART_print(str);
         }
 
-        // Move cursor back to the original position
-        //UART_ESC_Code("0k");
-		//UART_ESC_Code("7D");  // Move cursor 7 spaces to the left
     }
+}
+
+void draw_init(void)
+{
+		// Clear the screen
+		UART_ESC_Code("2J");
+
+		// Move the cursor down 3 lines and to the right 5 spaces
+		UART_ESC_Code("3B");  // Move down 3 lines
+		UART_ESC_Code("5C");  // Move right 5 spaces
+
+		// Print text
+		UART_print("All good students read the");
+
+		// Move the cursor down 1 line and to the left 21 spaces
+		UART_ESC_Code("1B");  // Move down 1 line
+		UART_ESC_Code("21D"); // Move left 21 spaces
+
+		// Change the text to blinking mode
+		UART_ESC_Code("5m");
+
+		// Print text
+		UART_print("Reference Manual");
+
+		// Move cursor back to the top left position
+		UART_ESC_Code("H");
+
+		// Remove character attributes (disable blinking text)
+		UART_ESC_Code("0m");
+
+		// Print text
+		UART_print("Input: ");
 }
 
 int main() {
@@ -96,51 +121,16 @@ int main() {
     SystemClock_Config();
 	LPUART1_init();
 
-	 // Enable LPUART1 RX interrupt
+	// Enable LPUART1 RX interrupt
 	LPUART1->CR1 |= USART_CR1_RXNEIE;
 	NVIC_EnableIRQ(LPUART1_IRQn);
 
+	draw_init();
 
-	// Clear the screen
-	UART_ESC_Code("2J");
 
-	// Move the cursor down 3 lines and to the right 5 spaces
-	UART_ESC_Code("3B");  // Move down 3 lines
-	UART_ESC_Code("5C");  // Move right 5 spaces
 
-	// Print text
-	UART_print("All good students read the");
-
-	// Move the cursor down 1 line and to the left 21 spaces
-	UART_ESC_Code("1B");  // Move down 1 line
-	UART_ESC_Code("21D"); // Move left 21 spaces
-
-	// Change the text to blinking mode
-	UART_ESC_Code("5m");
-
-	// Print text
-	UART_print("Reference Manual");
-
-	// Move cursor back to the top left position
-	UART_ESC_Code("H");
-
-	// Remove character attributes (disable blinking text)
-	UART_ESC_Code("0m");
-
-	// Print text
-	UART_print("Input: ");
     // Main loop
     while (1) {
-        // Print 'A' via LPUART1
-        //UART_print("Aaa a");
-    	 // Move the cursor down 3 lines and to the right 5 spaces
-    	    //USART_ESC_Code("3B");  // Move down 3 lines
-    	    //USART_ESC_Code("5C");  // Move right 5 spaces
-        // Delay for 1 second
-       // HAL_Delay(50);
-        //UART_print("1");
-        //UART_print("\n");
-
 
     }
 }
