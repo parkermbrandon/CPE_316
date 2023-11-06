@@ -1,24 +1,21 @@
-14:19:16 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC ****
+14:40:36 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC ****
 make -j24 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L496xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'process_samples':
-../Core/Src/main.c:234:10: warning: unused variable 'buffer' [-Wunused-variable]
-  234 |     char buffer[50];
-      |          ^~~~~~
-../Core/Src/main.c:231:14: warning: unused variable 'avg_value' [-Wunused-variable]
-  231 |     uint32_t avg_value = sum_value / 20;
-      |              ^~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:66:14: warning: variable 'avg' set but not used [-Wunused-but-set-variable]
+   66 |     uint32_t avg;
+      |              ^~~
 arm-none-eabi-gcc -o "CPE 316 A6 ADC.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC\STM32L496ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: CPE 316 A6 ADC.elf
  
 arm-none-eabi-size   CPE\ 316\ A6\ ADC.elf 
 arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC.elf  > "CPE 316 A6 ADC.list"
    text	   data	    bss	    dec	    hex	filename
-   6568	     20	   1620	   8208	   2010	CPE 316 A6 ADC.elf
+   1420	     12	   1612	   3044	    be4	CPE 316 A6 ADC.elf
 Finished building: default.size.stdout
  
 Finished building: CPE 316 A6 ADC.list
  
 
-14:19:17 Build Finished. 0 errors, 2 warnings. (took 668ms)
+14:40:36 Build Finished. 0 errors, 1 warnings. (took 667ms)
 

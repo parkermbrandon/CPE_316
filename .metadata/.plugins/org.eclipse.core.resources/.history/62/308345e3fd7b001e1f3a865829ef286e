@@ -1,0 +1,68 @@
+#include "main.h"
+
+volatile uint16_t adc_val;
+volatile uint8_t adc_flag = 0;
+uint16_t adc_samples[20];
+
+void ADC_init(void){
+	 // Enable GPIOA clock
+	    RCC->AHB2ENR |= RCC_AHB2ENR_GPIOAEN;
+
+	    // Set PA4 as analog mode
+	    GPIOA->MODER |= GPIO_MODER_MODE4_1 | GPIO_MODER_MODE4_0;
+
+	    // Enable ADC1 clock
+	    RCC->AHB2ENR |= RCC_AHB2ENR_ADCEN;
+
+	    // ADC clock configuration
+	    ADC1->CCR |= ADC_CCR_CKMODE_0; // Clock mode: HCLK/2
+
+	    // ADC configuration
+	    ADC1->CFGR &= ~ADC_CFGR_RES; // 12-bit resolution
+	    ADC1->CFGR &= ~ADC_CFGR_ALIGN; // Right alignment
+
+	    // ADC Sampling Time Configuration for Channel 9
+	    ADC1->SMPR1 |= ADC_SMPR1_SMP9_0 | ADC_SMPR1_SMP9_1; // Sampling time: 47.5 ADC clock cycles
+
+	    // ADC Regular Channel Configuration
+	    ADC1->SQR1 &= ~ADC_SQR1_SQ1; // Reset channel
+	    ADC1->SQR1 |= ADC_SQR1_SQ1_0 | ADC_SQR1_SQ1_3; // Set channel 9 to rank 1
+
+	    // Enable ADC1
+	    ADC1->CR |= ADC_CR_ADEN;
+	    while(!(ADC1->ISR & ADC_ISR_ADRDY)); // Wait for ADC ready
+
+}
+
+void ADC1_2_IRQHandler(void) {
+    // Check if ADC conversion is complete
+    if (ADC1->ISR & ADC_ISR_EOC) {
+        adc_val = ADC1->DR;  // Save conversion result
+        adc_flag = 1;  // Set flag
+    }
+}
+
+uint32_t ADC_Read(void) {
+    ADC1->CR |= ADC_CR_ADSTART;
+    while(adc_flag == 0);  // Wait for ADC conversion to complete
+    adc_flag = 0;  // Clear flag
+    return adc_val;
+}
+
+main(){
+	ADC_init();
+	    uint16_t min, max;
+	    uint32_t avg;
+
+	    while(1) {
+	        for (int i = 0; i < 20; i++) {
+	            adc_samples[i] = ADC_Read();
+	        }
+	        process_samples(adc_samples, &min, &max, &avg);
+
+	        // Convert min, max, and avg to calibrated voltage values and send to USART
+	        send_to_USART(min);
+	        send_to_USART(max);
+	        send_to_USART(avg);
+	    }
+}
