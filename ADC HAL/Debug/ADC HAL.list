@@ -506,8 +506,8 @@ int main(void)
  80005ec:	f003 fbcc 	bl	8003d88 <HAL_UART_Transmit>
 
     // Pretend we have to do something else for a while
-    HAL_Delay(1);
- 80005f0:	2001      	movs	r0, #1
+    HAL_Delay(100);
+ 80005f0:	2064      	movs	r0, #100	; 0x64
  80005f2:	f000 fb6d 	bl	8000cd0 <HAL_Delay>
     HAL_GPIO_WritePin(GPIOA, GPIO_PIN_10, GPIO_PIN_SET);
  80005f6:	e7ce      	b.n	8000596 <main+0x1a>

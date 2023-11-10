@@ -1022,3 +1022,1144 @@ Finished building: default.size.stdout
  
 Finished building: CPE 316 A6 ADC L476RG.list
  
+09:51:50 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   6000	     20	   1572	   7592	   1da8	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+09:52:55 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   6004	     20	   1572	   7596	   1dac	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+09:53:48 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   6004	     20	   1572	   7596	   1dac	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+09:54:49 **** Incremental Build of configuration Debug for project ADC HAL ****
+make -j24 all 
+arm-none-eabi-size   ADC\ HAL.elf 
+   text	   data	    bss	    dec	    hex	filename
+  21020	    100	   2140	  23260	   5adc	ADC HAL.elf
+Finished building: default.size.stdout
+ 
+09:59:30 **** Incremental Build of configuration Debug for project ADC HAL ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "ADC HAL.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\ADC HAL\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADC HAL.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADC HAL.elf
+ 
+arm-none-eabi-size   ADC\ HAL.elf 
+arm-none-eabi-objdump -h -S  ADC\ HAL.elf  > "ADC HAL.list"
+   text	   data	    bss	    dec	    hex	filename
+  21020	    100	   2140	  23260	   5adc	ADC HAL.elf
+Finished building: default.size.stdout
+ 
+Finished building: ADC HAL.list
+ 
+10:05:28 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   5984	     20	   1572	   7576	   1d98	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+10:06:18 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   5980	     20	   1572	   7572	   1d94	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+10:06:58 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   5980	     20	   1572	   7572	   1d94	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+10:07:19 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   5980	     20	   1572	   7572	   1d94	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+10:08:18 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   5984	     20	   1572	   7576	   1d98	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+10:12:54 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5984	     20	   1572	   7576	   1d98	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+10:19:10 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   5904	     20	   1572	   7496	   1d48	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+10:19:39 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   5980	     20	   1572	   7572	   1d94	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+10:29:36 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   5980	     20	   1572	   7572	   1d94	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+10:31:36 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   6268	     20	   1628	   7916	   1eec	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+10:32:54 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   6288	     20	   1628	   7936	   1f00	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+10:34:18 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   6208	     20	   1628	   7856	   1eb0	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+10:34:46 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   6288	     20	   1628	   7936	   1f00	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+10:35:16 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   6288	     20	   1628	   7936	   1f00	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+10:36:35 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6288	     20	   1628	   7936	   1f00	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+10:40:12 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   5980	     20	   1572	   7572	   1d94	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+10:40:47 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5980	     20	   1572	   7572	   1d94	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+10:41:02 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5980	     20	   1572	   7572	   1d94	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+10:53:52 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h:149,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h:29,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32l4xx_hal_conf.h:258,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:2:
+../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h:1413:31: error: expected identifier or '(' before 'ADC_TypeDef'
+ 1413 | #define ADC1                ((ADC_TypeDef *) ADC1_BASE)
+      |                               ^~~~~~~~~~~
+../Core/Src/main.c:101:3: note: in expansion of macro 'ADC1'
+  101 |   ADC1->CR |= ADC_CR_ADSTART; // Start ADC conversion
+      |   ^~~~
+../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h:1275:31: error: expected ')' before '(' token
+ 1275 | #define ADC1_BASE             (AHB2PERIPH_BASE + 0x08040000UL)
+      |                               ^
+../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h:1413:46: note: in expansion of macro 'ADC1_BASE'
+ 1413 | #define ADC1                ((ADC_TypeDef *) ADC1_BASE)
+      |                                              ^~~~~~~~~
+../Core/Src/main.c:101:3: note: in expansion of macro 'ADC1'
+  101 |   ADC1->CR |= ADC_CR_ADSTART; // Start ADC conversion
+      |   ^~~~
+../Core/Src/main.c:102:1: error: expected identifier or '(' before '}' token
+  102 | }
+      | ^
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j24 all" terminated with exit code 2. Build might be incomplete.
+10:54:29 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h:149,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h:29,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32l4xx_hal_conf.h:258,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:2:
+../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h:1413:31: error: expected identifier or '(' before 'ADC_TypeDef'
+ 1413 | #define ADC1                ((ADC_TypeDef *) ADC1_BASE)
+      |                               ^~~~~~~~~~~
+../Core/Src/main.c:101:3: note: in expansion of macro 'ADC1'
+  101 |   ADC1->CR |= ADC_CR_ADSTART; // Start ADC conversion
+      |   ^~~~
+../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h:1275:31: error: expected ')' before '(' token
+ 1275 | #define ADC1_BASE             (AHB2PERIPH_BASE + 0x08040000UL)
+      |                               ^
+../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h:1413:46: note: in expansion of macro 'ADC1_BASE'
+ 1413 | #define ADC1                ((ADC_TypeDef *) ADC1_BASE)
+      |                                              ^~~~~~~~~
+../Core/Src/main.c:101:3: note: in expansion of macro 'ADC1'
+  101 |   ADC1->CR |= ADC_CR_ADSTART; // Start ADC conversion
+      |   ^~~~
+../Core/Src/main.c:102:1: error: expected identifier or '(' before '}' token
+  102 | }
+      | ^
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j24 all" terminated with exit code 2. Build might be incomplete.
+10:54:46 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   5948	     20	   1572	   7540	   1d74	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+10:58:09 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   5948	     20	   1572	   7540	   1d74	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+11:00:05 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5948	     20	   1572	   7540	   1d74	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+11:17:01 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   5956	     20	   1572	   7548	   1d7c	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+11:17:32 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5956	     20	   1572	   7548	   1d7c	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+11:18:06 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   5948	     20	   1572	   7540	   1d74	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+11:19:52 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5948	     20	   1572	   7540	   1d74	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+11:31:12 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   5960	     20	   1572	   7552	   1d80	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+11:38:02 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   6268	     20	   1628	   7916	   1eec	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+11:43:22 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   6256	     20	   1628	   7904	   1ee0	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+11:44:35 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   6256	     20	   1628	   7904	   1ee0	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+11:45:16 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   6256	     20	   1628	   7904	   1ee0	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+11:45:51 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   6256	     20	   1628	   7904	   1ee0	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+12:05:00 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   6180	     20	   1628	   7828	   1e94	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+12:06:54 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6180	     20	   1628	   7828	   1e94	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+12:07:25 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6180	     20	   1628	   7828	   1e94	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+12:09:35 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   6192	     20	   1628	   7840	   1ea0	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+12:10:55 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'ADC_init':
+../Core/Src/main.c:143:5: warning: this 'while' clause does not guard... [-Wmisleading-indentation]
+  143 |     while(!(ADC1->ISR & ADC_ISR_ADRDY));
+      |     ^~~~~
+In file included from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h:149,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h:29,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32l4xx_hal_conf.h:258,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:2:
+../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h:1413:29: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'while'
+ 1413 | #define ADC1                ((ADC_TypeDef *) ADC1_BASE)
+      |                             ^
+../Core/Src/main.c:146:9: note: in expansion of macro 'ADC1'
+  146 |         ADC1->IER |= ADC_IER_EOC;
+      |         ^~~~
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   6232	     20	   1628	   7880	   1ec8	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+12:12:50 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   6256	     20	   1628	   7904	   1ee0	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+12:22:00 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   6260	     20	   1628	   7908	   1ee4	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+12:23:09 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   5952	     20	   1572	   7544	   1d78	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+12:25:03 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5952	     20	   1572	   7544	   1d78	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+12:30:29 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   6032	     20	   1572	   7624	   1dc8	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+12:34:46 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   6392	     20	   1628	   8040	   1f68	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+12:35:35 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   6316	     20	   1628	   7964	   1f1c	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+12:35:56 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   6392	     20	   1628	   8040	   1f68	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+12:36:32 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:48:26: error: expected ';' before 'sample_index'
+   48 |         USART_Print("/n")
+      |                          ^
+      |                          ;
+   49 |         sample_index = 0; // Reset the sample index
+      |         ~~~~~~~~~~~~      
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j24 all" terminated with exit code 2. Build might be incomplete.
+12:36:42 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   6408	     20	   1628	   8056	   1f78	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+12:37:12 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   6408	     20	   1628	   8056	   1f78	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+12:43:43 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   6408	     20	   1628	   8056	   1f78	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+13:03:20 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   6420	     20	   1628	   8068	   1f84	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+13:04:53 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   6420	     20	   1628	   8068	   1f84	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+13:42:50 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'Process_ADC_Values':
+../Core/Src/main.c:124:14: error: 'uint32' undeclared (first use in this function); did you mean 'uint32_t'?
+  124 |   min_val = (uint32)(LINEAR_REGRESSION_SLOPE * min_val - LINEAR_REGRESSION_INTERCEPT);
+      |              ^~~~~~
+      |              uint32_t
+../Core/Src/main.c:124:14: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:126:3: error: 'miavg_val' undeclared (first use in this function); did you mean 'avg_val'?
+  126 |   miavg_val = (uint32)(LINEAR_REGRESSION_SLOPE * avg_val - LINEAR_REGRESSION_INTERCEPT);
+      |   ^~~~~~~~~
+      |   avg_val
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j24 all" terminated with exit code 2. Build might be incomplete.
+13:43:16 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'Process_ADC_Values':
+../Core/Src/main.c:126:3: error: 'miavg_val' undeclared (first use in this function); did you mean 'avg_val'?
+  126 |   miavg_val = (uint32_t)(LINEAR_REGRESSION_SLOPE * avg_val - LINEAR_REGRESSION_INTERCEPT);
+      |   ^~~~~~~~~
+      |   avg_val
+../Core/Src/main.c:126:3: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j24 all" terminated with exit code 2. Build might be incomplete.
+13:43:23 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   8148	     20	   1628	   9796	   2644	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+13:45:25 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   8220	     20	   1628	   9868	   268c	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+13:52:49 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   8148	     20	   1628	   9796	   2644	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+13:57:58 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'Process_ADC_Values':
+../Core/Src/main.c:124:3: warning: implicit declaration of function 'ApplyCalibration' [-Wimplicit-function-declaration]
+  124 |   ApplyCalibration(&min_val);
+      |   ^~~~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:129:6: warning: conflicting types for 'ApplyCalibration'; have 'void(uint32_t *)' {aka 'void(long unsigned int *)'}
+  129 | void ApplyCalibration(uint32_t *value) {
+      |      ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:124:3: note: previous implicit declaration of 'ApplyCalibration' with type 'void(uint32_t *)' {aka 'void(long unsigned int *)'}
+  124 |   ApplyCalibration(&min_val);
+      |   ^~~~~~~~~~~~~~~~
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   8380	     20	   1628	  10028	   272c	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+14:02:50 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   8380	     20	   1628	  10028	   272c	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+14:06:11 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   6420	     20	   1628	   8068	   1f84	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+14:06:38 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   8380	     20	   1628	  10028	   272c	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+14:07:32 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   6420	     20	   1628	   8068	   1f84	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+14:14:57 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   6420	     20	   1628	   8068	   1f84	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+14:15:17 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   8380	     20	   1628	  10028	   272c	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+14:19:43 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   8380	     20	   1628	  10028	   272c	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+14:20:24 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   8380	     20	   1628	  10028	   272c	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+14:21:05 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   8380	     20	   1628	  10028	   272c	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+14:21:33 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   8380	     20	   1628	  10028	   272c	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+14:21:56 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   8348	     20	   1628	   9996	   270c	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+14:24:39 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   6420	     20	   1628	   8068	   1f84	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+14:26:08 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   6420	     20	   1628	   8068	   1f84	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+14:55:11 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   6416	     20	   1628	   8064	   1f80	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+14:56:50 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   6412	     20	   1628	   8060	   1f7c	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+14:57:28 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   6432	     20	   1628	   8080	   1f90	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+14:59:59 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   6436	     20	   1628	   8084	   1f94	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+15:02:55 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   8396	     20	   1628	  10044	   273c	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+15:05:19 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   6436	     20	   1628	   8084	   1f94	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
+15:12:15 **** Incremental Build of configuration Debug for project CPE 316 A6 ADC L476RG ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: CPE 316 A6 ADC L476RG.elf
+ 
+arm-none-eabi-size   CPE\ 316\ A6\ ADC\ L476RG.elf 
+arm-none-eabi-objdump -h -S  CPE\ 316\ A6\ ADC\ L476RG.elf  > "CPE 316 A6 ADC L476RG.list"
+   text	   data	    bss	    dec	    hex	filename
+   7748	     20	   1628	   9396	   24b4	CPE 316 A6 ADC L476RG.elf
+Finished building: default.size.stdout
+ 
+Finished building: CPE 316 A6 ADC L476RG.list
+ 
