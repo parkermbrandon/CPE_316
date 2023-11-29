@@ -1,0 +1,420 @@
+/* Includes ------------------------------------------------------------------*/
+#include "main.h"
+//#include "arm_math.h"
+#include <stdio.h>
+#include "ExternalDAC.h"
+#include "Keypad.h"
+#define F_CLK 24000000 // bus clock is 4 MHz
+#define SAMPLES_COUNT 20 // number of samples to collect
+#define ADC_MAX 0xFFF // 12-bit ADC max value
+#define V_REF 3314 // reference voltage in mV
+#define LINEAR_REGRESSION_SLOPE 1
+#define LINEAR_REGRESSION_INTERCEPT 0
+
+// Global variables
+volatile uint16_t ADC_val = 0;
+volatile uint16_t ADC_values[SAMPLES_COUNT];
+volatile uint8_t sample_index = 0;
+volatile uint8_t ADC_ready = 0;
+uint32_t min_val, max_val, avg_val;
+
+/* Private function prototypes -----------------------------------------------*/
+void SystemClock_Config(void);
+void ADC_init(void);
+void ADC1_2_IRQHandler(void);
+void UART_init(void);
+void USART_Print(const char* message);
+void USART_SendNumber(uint32_t num);
+void Process_ADC_Values(void);
+void Start_ADC_Conversion(void);
+void ApplyCalibration(uint32_t *value);
+void TIM2_init();
+extern "C" void TIM2_IRQHandler(void);
+
+/* Main function -------------------------------------------------------------*/
+int main(void) {
+  HAL_Init();
+  SystemClock_Config();
+  UART_init();
+  ADC_init();
+  __enable_irq();
+  TIM2_init();
+  keys.Keypad_init();
+  dac.DAC_init();
+
+  while (1) {
+    if (ADC_ready == 1) {
+      ADC_ready = 0; // Reset the flag
+      ADC1->CR |= ADC_CR_ADSTART; // Start next ADC conversion
+
+      	 //USART_SendNumber(ADC_val);
+
+      if (sample_index >= SAMPLES_COUNT) {
+        Process_ADC_Values(); // Process the collected samples
+        USART_Print("Min: ");
+        USART_SendNumber(min_val); // Send min value
+        USART_Print("mV ");
+        USART_Print("  Max: ");
+        USART_SendNumber(max_val); // Send max value
+        USART_Print("mV ");
+        USART_Print("  Avg: ");
+        USART_SendNumber(avg_val); // Send average value
+        USART_Print("mV ");
+        USART_Print("\r\n");
+        sample_index = 0; // Reset the sample index
+      }
+      //HAL_Delay(25);
+    }
+    HAL_Delay(20);
+  }
+}
+
+/* ADC Interrupt Handler */
+void ADC1_2_IRQHandler(void) {
+  if (ADC1->ISR & ADC_ISR_EOC) {
+    ADC_values[sample_index++] = ADC1->DR; // Save ADC value
+	//ADC_val = ADC1->DR;
+    ADC_ready = 1; // Set the flag
+    ADC1->ISR |= ADC_ISR_EOC; // Clear the EOC flag
+  }
+}
+
+void USART_Print(const char* message) {
+	uint8_t i;
+	for(i=0; message[i] != 0; i++){				// check for terminating NULL character
+		while(!(USART2->ISR & USART_ISR_TXE));	// wait for transmit buffer to be empty
+		USART2->TDR = message[i];				// transmit character to USART
+	}
+}
+
+void USART_SendNumber(uint32_t num) {
+  char numStr[11]; // Increased size for null terminator
+  uint8_t idx = 0;
+
+  // Convert number to string (reverse order)
+  do {
+    numStr[idx++] = (num % 10) + '0';
+    num /= 10;
+  } while (num > 0);
+
+  numStr[idx] = '\0'; // Null terminate the string
+
+  // Reverse the string to correct the order
+  for (int i = 0; i < idx / 2; i++) {
+    char temp = numStr[i];
+    numStr[i] = numStr[idx - 1 - i];
+    numStr[idx - 1 - i] = temp;
+  }
+
+  // Send the number string
+  USART_Print(numStr);
+}
+
+/* Process ADC Values to find Min, Max, and Average */
+void Process_ADC_Values(void) {
+  uint32_t sum = 0;
+  min_val = ADC_MAX;
+  max_val = 0;
+
+  for (uint8_t i = 0; i < SAMPLES_COUNT; i++) {
+    uint32_t val = ADC_values[i];
+    sum += val;
+    if (val < min_val) min_val = val;
+    if (val > max_val) max_val = val;
+  }
+
+  avg_val = sum / SAMPLES_COUNT;
+
+  // Convert to mV
+  min_val = (min_val * V_REF) / ADC_MAX;
+  max_val = (max_val * V_REF) / ADC_MAX;
+  avg_val = (avg_val * V_REF) / ADC_MAX;
+
+  // Apply linear regression calibration
+  ApplyCalibration(&min_val);
+  ApplyCalibration(&max_val);
+  ApplyCalibration(&avg_val);
+}
+
+void ApplyCalibration(uint32_t *value) {
+    double calibratedValue = LINEAR_REGRESSION_SLOPE * (*value) + LINEAR_REGRESSION_INTERCEPT * 1000; // Intercept scaled to mV
+    if (calibratedValue < 0) {
+        *value = 0; // Avoid underflow
+    } else {
+        *value = (uint32_t)calibratedValue;
+    }
+}
+
+/* Start ADC Conversion */
+void Start_ADC_Conversion(void) {
+  ADC1->CR |= ADC_CR_ADSTART; // Start ADC conversion
+}
+
+void ADC_init()
+{
+	 RCC->AHB2ENR |= RCC_AHB2ENR_ADCEN;
+
+	  ADC123_COMMON->CCR = ((ADC123_COMMON->CCR & ~(ADC_CCR_CKMODE)) | ADC_CCR_CKMODE_0);
+	  ADC1->CR &= ~(ADC_CR_DEEPPWD); // take the ADC out of deep power down mode
+	  ADC1->CR |= (ADC_CR_ADVREGEN);  // enable to voltage regulator gaurds the voltage
+	  for(uint16_t i =0; i<1000; i++)
+		  for(uint16_t j = 0;  j<100; j++); //delay at least 20us
+	  //calibrate, you need to digital calibrate
+	  ADC1->CR &= ~(ADC_CR_ADEN | ADC_CR_ADCALDIF); //ensure adc is not enabled, single ended calibration
+	  ADC1->CR |= ADC_CR_ADCAL;       // start calinration
+	  while(ADC1->CR & ADC_CR_ADCAL); // waiat for calibration
+
+	  //configure single ended mode before enabling ADC
+	  ADC1->DIFSEL &= ~(ADC_DIFSEL_DIFSEL_5); // PA0 is ADC1_IN5, single endede mode
+
+	  //enable ADC
+
+	  ADC1->ISR |= (ADC_ISR_ADRDY);
+	  ADC1->CR |= ADC_CR_ADEN;
+	  while(!(ADC1->ISR & ADC_ISR_ADRDY));
+	  ADC1->ISR |= (ADC_ISR_ADRDY);
+
+
+	  //configure ADC
+	  ADC1->SQR1 = (ADC1->SQR1 & ~(ADC_SQR1_SQ1_Msk | ADC_SQR1_L_Msk)) |(15 << ADC_SQR1_SQ1_Pos);
+
+	  // Set sample time for channel 5 to 47.5 ADC clock cycles
+	  //ADC1->SMPR1 = (ADC1->SMPR1 & ~(ADC_SMPR1_SMP5)) | (0x4 << ADC_SMPR1_SMP5_Pos);
+
+	   // Set sample time for channel 5 to 640.5 ADC clock cycles
+	   ADC1->SMPR1 = (ADC1->SMPR1 & ~(ADC_SMPR1_SMP5)) | (0x7 << ADC_SMPR1_SMP5_Pos);
+
+
+	  //ADC1->CFGR |= ADC_CFGR_CONT;
+	  ADC1->IER |= (ADC_IER_EOC);
+	  ADC1->ISR &= ~(ADC_ISR_EOC);
+	  NVIC->ISER[0] = (1 << (ADC1_2_IRQn & 0x1F));
+	  __enable_irq();
+
+	  //configure GPIO pin PB0
+	  RCC->AHB2ENR |= (RCC_AHB2ENR_GPIOBEN);
+	  GPIOB->AFR[0] = (GPIOB->AFR[0] & ~(GPIO_AFRL_AFSEL0)) | (7 << GPIO_AFRL_AFSEL0_Pos);
+	  GPIOB->MODER |= (GPIO_MODER_MODE0); // analog mode for PB0
+	  GPIOB->ASCR |= GPIO_ASCR_ASC0; //set PB0 to analog
+
+	  ADC1->CR |= ADC_CR_ADSTART; // start conversion
+}
+
+void UART_init(void){
+	RCC->AHB2ENR |= (RCC_AHB2ENR_GPIOAEN);
+	GPIOA->AFR[0] &= ~(GPIO_AFRL_AFSEL2 | GPIO_AFRL_AFSEL3);// mask AF selection
+	GPIOA->AFR[0] |= ((7 << GPIO_AFRL_AFSEL2_Pos ) |// select USART2 (AF7)
+			   (7 << GPIO_AFRL_AFSEL3_Pos));// for PA2 and PA3
+	GPIOA->OTYPER &= ~(GPIO_OTYPER_OT2 | GPIO_OTYPER_OT3);// push-pull output for PA2, PA3
+	GPIOA->PUPDR &= ~(GPIO_PUPDR_PUPD2 | GPIO_PUPDR_PUPD3);// no pull ups on PA2, PA3
+	GPIOA->OSPEEDR &= ~(GPIO_OSPEEDR_OSPEED2 | GPIO_OSPEEDR_OSPEED2);// low speed
+	GPIOA->MODER &= ~(GPIO_MODER_MODE2 | GPIO_MODER_MODE3);	// enable alternate function
+	GPIOA->MODER |= (GPIO_MODER_MODE2_1 | GPIO_MODER_MODE3_1);// for PA2 and PA3
+
+	// Configure USART2 connected to the debugger virtual COM port
+	RCC->APB1ENR1 |= RCC_APB1ENR1_USART2EN;// enable USART by turning on system clock
+	USART2->CR1 &= ~(USART_CR1_M1 | USART_CR1_M0);//set data to 8 bits
+	USART2->BRR = F_CLK / 115200;// baudrate for 115200
+	USART2->CR1 |= USART_CR1_UE;// enable USART
+	USART2->CR1 |= (USART_CR1_TE | USART_CR1_RE);// enable transmit and receive for USART
+
+	// enable interrupts for USART2 receive
+	USART2->CR1 |= USART_CR1_RXNEIE;// enable RXNE interrupt on USART2
+	USART2->ISR &= ~(USART_ISR_RXNE);// clear interrupt flagwhile (message[i] != 0)
+
+	NVIC->ISER[1] = (1 << (USART2_IRQn & 0x1F));// enable USART2 ISR
+	__enable_irq();
+}
+
+static int lastFrequency = -1;
+static int lastWaveform = -1;
+static int i = 0;  // Index for waveform array
+static int modulo_value = 720;  // Length of the lookup tables
+static int frequency = 100;
+static int waveform = 3;  // Default waveform
+static int dutyCycle = 50;  // Default duty cycle
+static bool keyWasPressed = false;
+static bool anyKeyPressed = false;
+uint32_t systemTime = 0;
+int stride_length = 1;
+
+// Initialize TIM2
+void TIM2_init() {
+    // Enable clock for TIM2
+    RCC->APB1ENR1 |= RCC_APB1ENR1_TIM2EN;
+    // Set the prescaler to 1
+    TIM2->PSC = 1;
+    // Set the Auto-Reload Register (ARR) value to 1114
+    TIM2->ARR = 1114;
+    // Enable Update Interrupt (UIE)
+    TIM2->DIER |= TIM_DIER_UIE;
+    // Enable the counter (CEN)
+    TIM2->CR1 |= TIM_CR1_CEN;
+    // Enable the TIM2 interrupt in the NVIC
+    NVIC_EnableIRQ(TIM2_IRQn);
+}
+
+
+void updateFrequency(char key)
+{
+    if (key >= '1' && key <= '5')
+    {
+        frequency = (key - '0') * 100;
+        switch (frequency)
+        {
+            case 100: stride_length = 1;  break;
+            case 200: stride_length = 2;  break;
+            case 300: stride_length = 3;  break;
+            case 400: stride_length = 4;  break;
+            case 500: stride_length = 5;  break;
+        }
+    }
+}
+
+void updateWaveform(char key)
+{
+    if (key >= '6' && key <= '9')
+    {
+        waveform = key - '6';
+    }
+}
+
+void updateDutyCycle(char key)
+{
+	if (key == '*' || key == '#' || key == '0')
+	{
+	    anyKeyPressed = true;
+	    if (!keyWasPressed)
+	    {
+	        if (key == '*')
+	        {
+	            dutyCycle = (dutyCycle <= 10) ? 10 : (dutyCycle - 10);
+	        }
+	        else if (key == '#')
+	        {
+	            dutyCycle = (dutyCycle >= 90) ? 90 : (dutyCycle + 10);
+	        }
+	        else if (key == '0')
+	        {
+	            dutyCycle = 50;
+	        }
+	        keyWasPressed = true;
+	    }
+	}
+	else
+	{
+	    if (!anyKeyPressed)
+	    {
+	        keyWasPressed = false;
+	    }
+	    anyKeyPressed = false;
+	}
+}
+
+bool shouldResetWaveform()
+{
+    if (lastWaveform != waveform || lastFrequency != frequency)
+    {
+        lastWaveform = waveform;
+        lastFrequency = frequency;
+        return true;
+    }
+    return false;
+}
+
+const uint16_t* getCurrentWave()
+{
+    switch (waveform)
+    {
+        case 0: return sine_wave; break;
+        case 1: return triangle_wave; break;
+        case 2: return sawtooth_wave; break;
+        case 3: return square_wave; break;
+    }
+    return nullptr;
+}
+
+extern "C" void TIM2_IRQHandler(void)
+{
+    if (TIM2->SR & TIM_SR_UIF)
+    {
+        TIM2->SR &= ~TIM_SR_UIF;
+        systemTime++;
+
+        char key = keys.tick();
+
+		updateFrequency(key);
+		updateWaveform(key);
+		updateDutyCycle(key);
+
+		if (shouldResetWaveform())
+		{
+			i = 0;
+		}
+
+		uint16_t value_A, value_B;
+		const uint16_t *current_wave = getCurrentWave();
+
+		if (current_wave)
+		{
+			if (waveform == 3) // If waveform is square update duty cycle
+			{
+				int high_time = (dutyCycle * modulo_value) / 100;
+				// Value of 3723 is 12 bit value that will output 3V from the DAC
+				value_A = (i < high_time) ? 3723 : 0;
+				value_B = value_A;
+			} else {
+				value_A = current_wave[i];
+				value_B = current_wave[i + 1];
+			}
+
+			dac.DAC_write(value_A, value_B);
+		}
+
+	   i = (i + stride_length * 2) % modulo_value;
+    }
+}
+
+
+void SystemClock_Config(void)
+{
+	  RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+	  RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+
+	  if (HAL_PWREx_ControlVoltageScaling(PWR_REGULATOR_VOLTAGE_SCALE1) != HAL_OK)
+	  {
+	    Error_Handler();
+	  }
+
+	  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_MSI;
+	  RCC_OscInitStruct.MSICalibrationValue = 0;
+	  RCC_OscInitStruct.MSIClockRange = RCC_MSIRANGE_9;
+	  RCC_OscInitStruct.MSIState = RCC_MSI_ON;
+	  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
+	  if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+	  {
+	    Error_Handler();
+	  }
+	  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
+	                              |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+	  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_MSI;
+	  RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+	  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
+	  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+
+	  if(HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0) != HAL_OK)
+	  {
+	    Error_Handler();
+	  }
+}
+
+
+void Error_Handler(void)
+{
+  __disable_irq();
+  while (1){}
+}
+
+#ifdef  USE_FULL_ASSERT
+void assert_failed(uint8_t *file, uint32_t line){}
+#endif

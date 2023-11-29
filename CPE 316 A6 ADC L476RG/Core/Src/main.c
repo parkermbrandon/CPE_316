@@ -25,6 +25,7 @@ void USART_SendNumber(uint32_t num);
 void Process_ADC_Values(void);
 void Start_ADC_Conversion(void);
 void ApplyCalibration(uint32_t *value);
+
 /* Main function -------------------------------------------------------------*/
 int main(void) {
   HAL_Init();
@@ -43,13 +44,13 @@ int main(void) {
         Process_ADC_Values(); // Process the collected samples
         USART_Print("Min: ");
         USART_SendNumber(min_val); // Send min value
-        USART_Print(" mV ");
-        USART_Print("Max: ");
+        USART_Print("mV ");
+        USART_Print("  Max: ");
         USART_SendNumber(max_val); // Send max value
-        USART_Print(" mV ");
-        USART_Print("Avg: ");
+        USART_Print("mV ");
+        USART_Print("  Avg: ");
         USART_SendNumber(avg_val); // Send average value
-        USART_Print(" mV ");
+        USART_Print("mV ");
         USART_Print("\r\n");
         sample_index = 0; // Reset the sample index
       }

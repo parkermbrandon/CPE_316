@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete 4 resources" deleteContents="false" description="Delete 4 resources" element1="/CPE 316 A7 FFT/Core/Src/ExternalDAC.cpp" element2="/CPE 316 A7 FFT/Core/Src/ExternalDAC.h" element3="/CPE 316 A7 FFT/Core/Src/Keypad.cpp" element4="/CPE 316 A7 FFT/Core/Src/Keypad.h" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="4" stamp="1701035026401"/>
+</session>

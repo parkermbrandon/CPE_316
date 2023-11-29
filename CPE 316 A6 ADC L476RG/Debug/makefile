@@ -76,7 +76,7 @@ main-build: CPE\ 316\ A6\ ADC\ L476RG.elf secondary-outputs
 
 # Tool invocations
 CPE\ 316\ A6\ ADC\ L476RG.elf CPE\ 316\ A6\ ADC\ L476RG.map: $(OBJS) $(USER_OBJS) C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE\ 316\ A6\ ADC\ L476RG\STM32L476RGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+	arm-none-eabi-g++ -o "CPE 316 A6 ADC L476RG.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A6 ADC L476RG\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A6 ADC L476RG.map" -Wl,--gc-sections -static -L"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A7 FFT\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

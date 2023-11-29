@@ -7,23 +7,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
   1 .text         00001c58  08000188  08000188  00010188  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .rodata       00000064  08001de0  08001de0  00011de0  2**2
+  2 .rodata       00000060  08001de0  08001de0  00011de0  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  3 .ARM.extab    00000000  08001e44  08001e44  0002000c  2**0
+  3 .ARM.extab    00000000  08001e40  08001e40  0002000c  2**0
                   CONTENTS
-  4 .ARM          00000000  08001e44  08001e44  0002000c  2**0
+  4 .ARM          00000000  08001e40  08001e40  0002000c  2**0
                   CONTENTS
-  5 .preinit_array 00000000  08001e44  08001e44  0002000c  2**0
+  5 .preinit_array 00000000  08001e40  08001e40  0002000c  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  6 .init_array   00000004  08001e44  08001e44  00011e44  2**2
+  6 .init_array   00000004  08001e40  08001e40  00011e40  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  7 .fini_array   00000004  08001e48  08001e48  00011e48  2**2
+  7 .fini_array   00000004  08001e44  08001e44  00011e44  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  8 .data         0000000c  20000000  08001e4c  00020000  2**2
+  8 .data         0000000c  20000000  08001e48  00020000  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  9 .bss          00000058  2000000c  08001e58  0002000c  2**2
+  9 .bss          00000058  2000000c  08001e54  0002000c  2**2
                   ALLOC
- 10 ._user_heap_stack 00000604  20000064  08001e58  00020064  2**0
+ 10 ._user_heap_stack 00000604  20000064  08001e54  00020064  2**0
                   ALLOC
  11 .ARM.attributes 00000030  00000000  00000000  0002000c  2**0
                   CONTENTS, READONLY
@@ -522,10 +522,10 @@ Disassembly of section .text:
  800068e:	4770      	bx	lr
 
 08000690 <main>:
-void USART_SendNumber(uint32_t num);
 void Process_ADC_Values(void);
 void Start_ADC_Conversion(void);
 void ApplyCalibration(uint32_t *value);
+
 /* Main function -------------------------------------------------------------*/
 int main(void) {
  8000690:	b580      	push	{r7, lr}
@@ -575,10 +575,10 @@ int main(void) {
  80006d6:	681b      	ldr	r3, [r3, #0]
  80006d8:	4618      	mov	r0, r3
  80006da:	f000 f88d 	bl	80007f8 <USART_SendNumber>
-        USART_Print(" mV ");
+        USART_Print("mV ");
  80006de:	4816      	ldr	r0, [pc, #88]	; (8000738 <main+0xa8>)
  80006e0:	f000 f862 	bl	80007a8 <USART_Print>
-        USART_Print("Max: ");
+        USART_Print("  Max: ");
  80006e4:	4815      	ldr	r0, [pc, #84]	; (800073c <main+0xac>)
  80006e6:	f000 f85f 	bl	80007a8 <USART_Print>
         USART_SendNumber(max_val); // Send max value
@@ -586,10 +586,10 @@ int main(void) {
  80006ec:	681b      	ldr	r3, [r3, #0]
  80006ee:	4618      	mov	r0, r3
  80006f0:	f000 f882 	bl	80007f8 <USART_SendNumber>
-        USART_Print(" mV ");
+        USART_Print("mV ");
  80006f4:	4810      	ldr	r0, [pc, #64]	; (8000738 <main+0xa8>)
  80006f6:	f000 f857 	bl	80007a8 <USART_Print>
-        USART_Print("Avg: ");
+        USART_Print("  Avg: ");
  80006fa:	4812      	ldr	r0, [pc, #72]	; (8000744 <main+0xb4>)
  80006fc:	f000 f854 	bl	80007a8 <USART_Print>
         USART_SendNumber(avg_val); // Send average value
@@ -597,7 +597,7 @@ int main(void) {
  8000702:	681b      	ldr	r3, [r3, #0]
  8000704:	4618      	mov	r0, r3
  8000706:	f000 f877 	bl	80007f8 <USART_SendNumber>
-        USART_Print(" mV ");
+        USART_Print("mV ");
  800070a:	480b      	ldr	r0, [pc, #44]	; (8000738 <main+0xa8>)
  800070c:	f000 f84c 	bl	80007a8 <USART_Print>
         USART_Print("\r\n");
@@ -621,11 +621,11 @@ int main(void) {
  8000730:	08001de0 	.word	0x08001de0
  8000734:	20000054 	.word	0x20000054
  8000738:	08001de8 	.word	0x08001de8
- 800073c:	08001df0 	.word	0x08001df0
+ 800073c:	08001dec 	.word	0x08001dec
  8000740:	20000058 	.word	0x20000058
- 8000744:	08001df8 	.word	0x08001df8
+ 8000744:	08001df4 	.word	0x08001df4
  8000748:	2000005c 	.word	0x2000005c
- 800074c:	08001e00 	.word	0x08001e00
+ 800074c:	08001dfc 	.word	0x08001dfc
 
 08000750 <ADC1_2_IRQHandler>:
   }
@@ -1779,7 +1779,7 @@ LoopForever:
   ldr r1, =_edata
  8000df8:	2000000c 	.word	0x2000000c
   ldr r2, =_sidata
- 8000dfc:	08001e4c 	.word	0x08001e4c
+ 8000dfc:	08001e48 	.word	0x08001e48
   ldr r2, =_sbss
  8000e00:	2000000c 	.word	0x2000000c
   ldr r4, =_ebss
@@ -2936,7 +2936,7 @@ HAL_StatusTypeDef HAL_RCC_OscConfig(RCC_OscInitTypeDef  *RCC_OscInitStruct)
  800144c:	e014      	b.n	8001478 <HAL_RCC_OscConfig+0x298>
  800144e:	bf00      	nop
  8001450:	40021000 	.word	0x40021000
- 8001454:	08001e04 	.word	0x08001e04
+ 8001454:	08001e00 	.word	0x08001e00
  8001458:	20000000 	.word	0x20000000
  800145c:	20000004 	.word	0x20000004
  8001460:	4ba0      	ldr	r3, [pc, #640]	; (80016e4 <HAL_RCC_OscConfig+0x504>)
@@ -4241,7 +4241,7 @@ HAL_StatusTypeDef HAL_RCC_ClockConfig(RCC_ClkInitTypeDef  *RCC_ClkInitStruct, ui
  8001b82:	bd80      	pop	{r7, pc}
  8001b84:	40022000 	.word	0x40022000
  8001b88:	40021000 	.word	0x40021000
- 8001b8c:	08001e04 	.word	0x08001e04
+ 8001b8c:	08001e00 	.word	0x08001e00
  8001b90:	20000000 	.word	0x20000000
  8001b94:	20000004 	.word	0x20000004
 
@@ -4446,7 +4446,7 @@ uint32_t HAL_RCC_GetSysClockFreq(void)
  8001c9c:	4770      	bx	lr
  8001c9e:	bf00      	nop
  8001ca0:	40021000 	.word	0x40021000
- 8001ca4:	08001e14 	.word	0x08001e14
+ 8001ca4:	08001e10 	.word	0x08001e10
  8001ca8:	00f42400 	.word	0x00f42400
  8001cac:	007a1200 	.word	0x007a1200
 
@@ -4643,10 +4643,10 @@ static HAL_StatusTypeDef RCC_SetFlashLatencyFromMSIRange(uint32_t msirange)
  8001db2:	4798      	blx	r3
  8001db4:	3601      	adds	r6, #1
  8001db6:	e7f2      	b.n	8001d9e <__libc_init_array+0x1e>
- 8001db8:	08001e44 	.word	0x08001e44
- 8001dbc:	08001e44 	.word	0x08001e44
- 8001dc0:	08001e44 	.word	0x08001e44
- 8001dc4:	08001e48 	.word	0x08001e48
+ 8001db8:	08001e40 	.word	0x08001e40
+ 8001dbc:	08001e40 	.word	0x08001e40
+ 8001dc0:	08001e40 	.word	0x08001e40
+ 8001dc4:	08001e44 	.word	0x08001e44
 
 08001dc8 <_init>:
  8001dc8:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
