@@ -64,7 +64,7 @@ DMA_HandleTypeDef hdma_sai2_b;
 UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
-TIM_HandleTypeDef htim2;
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -189,9 +189,6 @@ int main(void)
   SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
-  MX_TIM2_Init();
-  // Start the timer
-  HAL_TIM_Base_Start(&htim2);
 
   /* USER CODE END SysInit */
 
@@ -288,46 +285,41 @@ void SystemClock_Config(void)
   */
 static void MX_DAC1_Init(void)
 {
-    /* USER CODE BEGIN DAC1_Init 0 */
 
-    /* USER CODE END DAC1_Init 0 */
+  /* USER CODE BEGIN DAC1_Init 0 */
 
-    DAC_ChannelConfTypeDef sConfig = {0};
+  /* USER CODE END DAC1_Init 0 */
 
-    /* USER CODE BEGIN DAC1_Init 1 */
+  DAC_ChannelConfTypeDef sConfig = {0};
 
-    /* USER CODE END DAC1_Init 1 */
+  /* USER CODE BEGIN DAC1_Init 1 */
 
-    /** DAC Initialization */
-    hdac1.Instance = DAC1;
-    if (HAL_DAC_Init(&hdac1) != HAL_OK)
-    {
-        Error_Handler();
-    }
+  /* USER CODE END DAC1_Init 1 */
 
-    /** DAC channel OUT1 config */
-    sConfig.DAC_SampleAndHold = DAC_SAMPLEANDHOLD_DISABLE;
-    sConfig.DAC_Trigger = DAC_TRIGGER_T2_TRGO; // Set TIM2 TRGO as the trigger source
-    sConfig.DAC_OutputBuffer = DAC_OUTPUTBUFFER_ENABLE;
-    sConfig.DAC_ConnectOnChipPeripheral = DAC_CHIPCONNECT_DISABLE;
-    sConfig.DAC_UserTrimming = DAC_TRIMMING_FACTORY;
-    if (HAL_DAC_ConfigChannel(&hdac1, &sConfig, DAC_CHANNEL_1) != HAL_OK)
-    {
-        Error_Handler();
-    }
+  /** DAC Initialization
+  */
+  hdac1.Instance = DAC1;
+  if (HAL_DAC_Init(&hdac1) != HAL_OK)
+  {
+    Error_Handler();
+  }
 
-    // Start the DAC with the trigger enabled
-    if (HAL_DAC_Start(&hdac1, DAC_CHANNEL_1) != HAL_OK)
-    {
-        // Handling of possible start error
-        Error_Handler();
-    }
+  /** DAC channel OUT1 config
+  */
+  sConfig.DAC_SampleAndHold = DAC_SAMPLEANDHOLD_DISABLE;
+  sConfig.DAC_Trigger = DAC_TRIGGER_NONE;
+  sConfig.DAC_OutputBuffer = DAC_OUTPUTBUFFER_ENABLE;
+  sConfig.DAC_ConnectOnChipPeripheral = DAC_CHIPCONNECT_DISABLE;
+  sConfig.DAC_UserTrimming = DAC_TRIMMING_FACTORY;
+  if (HAL_DAC_ConfigChannel(&hdac1, &sConfig, DAC_CHANNEL_1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN DAC1_Init 2 */
 
-    /* USER CODE BEGIN DAC1_Init 2 */
+  /* USER CODE END DAC1_Init 2 */
 
-    /* USER CODE END DAC1_Init 2 */
 }
-
 
 /**
   * @brief SAI2 Initialization Function
@@ -489,27 +481,6 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-void MX_TIM2_Init(void) {
-    uint32_t timerClockFrequency = 59200000; // 59.2 MHz, assuming APB1 timer clock
-    uint32_t targetFrequency = 54411; // 54.411 kHz
-
-    // Calculating prescaler and period
-    uint32_t prescaler = (timerClockFrequency / targetFrequency) / 65536;
-    uint32_t period = (timerClockFrequency / (prescaler + 1)) / targetFrequency - 1;
-
-    htim2.Instance = TIM2;
-    htim2.Init.Prescaler = prescaler;
-    htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
-    htim2.Init.Period = period;
-    htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
-    htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
-
-    if (HAL_TIM_Base_Init(&htim2) != HAL_OK) {
-        // Initialization Error
-        Error_Handler();
-    }
-
-}
 
 /* USER CODE END 4 */
 
