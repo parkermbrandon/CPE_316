@@ -53,8 +53,13 @@ void PrintDMAandSAIState();
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
+DAC_HandleTypeDef hdac1;
+DMA_HandleTypeDef hdma_dac_ch1;
+
 SAI_HandleTypeDef hsai_BlockA2;
+SAI_HandleTypeDef hsai_BlockB2;
 DMA_HandleTypeDef hdma_sai2_a;
+DMA_HandleTypeDef hdma_sai2_b;
 
 UART_HandleTypeDef huart2;
 
@@ -68,6 +73,7 @@ static void MX_GPIO_Init(void);
 static void MX_DMA_Init(void);
 static void MX_USART2_UART_Init(void);
 static void MX_SAI2_Init(void);
+static void MX_DAC1_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -78,28 +84,8 @@ static void MX_SAI2_Init(void);
 // Callback function for completed DMA transfer
 void HAL_SAI_RxCpltCallback(SAI_HandleTypeDef *hsai)
 {
-//    DebugPrint("Before Swap - Current Buffer: %s, Processing Buffer: %s\n",
-//               (currentBuffer == audioBuffer1) ? "Buffer1" : "Buffer2",
-//               (processingBuffer == audioBuffer1) ? "Buffer1" : "Buffer2");
-//
-//    DebugPrint("CpltCallback - DMA Counter Before Swap: %lu\n",
-//                   __HAL_DMA_GET_COUNTER(&hdma_sai2_a));
-
-    // Buffer swap logic
-//    uint32_t *temp = processingBuffer;
-//    processingBuffer = currentBuffer;
-//    currentBuffer = temp;
-//
-//    DebugPrint("After Swap - Current Buffer: %s, Processing Buffer: %s\n",
-//               (currentBuffer == audioBuffer1) ? "Buffer1" : "Buffer2",
-//               (processingBuffer == audioBuffer1) ? "Buffer1" : "Buffer2");
-//
-//    DebugPrint("CpltCallback - DMA Counter After Swap: %lu\n",
-//                __HAL_DMA_GET_COUNTER(&hdma_sai2_a));
-
     // Start receiving into the new currentBuffer
     HAL_SAI_Receive_DMA(&hsai_BlockA2, (uint8_t*)audioBuffer1, AUDIO_BUFFER_SIZE);
-    //PrintDMAandSAIState();
 
     // Signal or start processing data in processingBuffer
     ProcessAudioData(audioBuffer1, AUDIO_BUFFER_SIZE);
@@ -108,54 +94,8 @@ void HAL_SAI_RxCpltCallback(SAI_HandleTypeDef *hsai)
 // Callback function for half completed DMA transfer
 void HAL_SAI_RxHalfCpltCallback(SAI_HandleTypeDef *hsai)
 {
-    // Handle the half completed part of the buffer
-//	DebugPrint("Half Buffer Complete - Current Buffer: %s\n",
-//	               (currentBuffer == audioBuffer1) ? "Buffer1" : "Buffer2");
-//
-//	DebugPrint("HalfCpltCallback - DMA Counter: %lu\n",
-//	               __HAL_DMA_GET_COUNTER(&hdma_sai2_a));
-//
-//	PrintDMAandSAIState();
-}
 
-//void ProcessAudioData(uint32_t* buffer, uint32_t size)
-//{
-//    // Process the data in the buffer
-//    // Example: Copy to another buffer, send over UART, perform audio analysis, etc.
-//    // Make sure this processing completes before the next buffer swap
-//    for (uint16_t i = 0; i < size; i++) {
-//        int32_t sample = (int32_t)(buffer[i] >> 8); // Assuming left-aligned data
-//        // If the data is signed, perform sign extension
-//        if (sample & 0x00800000) { // Check if the 24th bit is set (negative number)
-//            sample |= 0xFF000000; // Extend the sign to 32 bits
-//        }
-////	 uint32_t sum = 0;
-////
-////	    // Calculate the average of the audio samples
-////	    for (uint16_t i = 0; i < size; ++i)
-////	    {
-////	        sum += buffer[i];
-////	    }
-////	    uint32_t average = sum / size;
-////
-////	    // Prepare a string to send over UART
-////	    char uartBuffer[50];
-////	    snprintf(uartBuffer, sizeof(uartBuffer), "Average Audio Level: %lu\r\n", average);
-////
-////	    // Transmit the data over UART
-////	    TransmitDataOverUART(uartBuffer);
-//
-//	    // Limit the number of samples to print to avoid too much data
-//	       const uint16_t numSamplesToPrint = 10;
-//
-//	       // Print the first few samples of the buffer for inspection
-//	       for (uint16_t i = 0; i < numSamplesToPrint; ++i)
-//	       {
-//	           char uartBuffer[100];
-//	           snprintf(uartBuffer, sizeof(uartBuffer), "Sample %d: %lu\r\n", i, buffer[i]);
-//	           TransmitDataOverUART(uartBuffer);
-//	       }
-//}
+}
 
 void ProcessAudioData(uint32_t* buffer, uint32_t size) {
     for (uint32_t i = 0; i < size; ++i) {
@@ -254,6 +194,7 @@ int main(void)
   MX_DMA_Init();
   MX_USART2_UART_Init();
   MX_SAI2_Init();
+  MX_DAC1_Init();
   /* USER CODE BEGIN 2 */
 
   currentBuffer = audioBuffer1;
@@ -335,6 +276,49 @@ void SystemClock_Config(void)
 }
 
 /**
+  * @brief DAC1 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_DAC1_Init(void)
+{
+
+  /* USER CODE BEGIN DAC1_Init 0 */
+
+  /* USER CODE END DAC1_Init 0 */
+
+  DAC_ChannelConfTypeDef sConfig = {0};
+
+  /* USER CODE BEGIN DAC1_Init 1 */
+
+  /* USER CODE END DAC1_Init 1 */
+
+  /** DAC Initialization
+  */
+  hdac1.Instance = DAC1;
+  if (HAL_DAC_Init(&hdac1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** DAC channel OUT1 config
+  */
+  sConfig.DAC_SampleAndHold = DAC_SAMPLEANDHOLD_DISABLE;
+  sConfig.DAC_Trigger = DAC_TRIGGER_NONE;
+  sConfig.DAC_OutputBuffer = DAC_OUTPUTBUFFER_ENABLE;
+  sConfig.DAC_ConnectOnChipPeripheral = DAC_CHIPCONNECT_DISABLE;
+  sConfig.DAC_UserTrimming = DAC_TRIMMING_FACTORY;
+  if (HAL_DAC_ConfigChannel(&hdac1, &sConfig, DAC_CHANNEL_1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN DAC1_Init 2 */
+
+  /* USER CODE END DAC1_Init 2 */
+
+}
+
+/**
   * @brief SAI2 Initialization Function
   * @param None
   * @retval None
@@ -360,6 +344,21 @@ static void MX_SAI2_Init(void)
   hsai_BlockA2.Init.MonoStereoMode = SAI_MONOMODE;
   hsai_BlockA2.Init.CompandingMode = SAI_NOCOMPANDING;
   if (HAL_SAI_InitProtocol(&hsai_BlockA2, SAI_I2S_STANDARD, SAI_PROTOCOL_DATASIZE_32BIT, 2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  hsai_BlockB2.Instance = SAI2_Block_B;
+  hsai_BlockB2.Init.AudioMode = SAI_MODEMASTER_TX;
+  hsai_BlockB2.Init.Synchro = SAI_ASYNCHRONOUS;
+  hsai_BlockB2.Init.OutputDrive = SAI_OUTPUTDRIVE_DISABLE;
+  hsai_BlockB2.Init.NoDivider = SAI_MASTERDIVIDER_ENABLE;
+  hsai_BlockB2.Init.FIFOThreshold = SAI_FIFOTHRESHOLD_EMPTY;
+  hsai_BlockB2.Init.AudioFrequency = SAI_AUDIO_FREQUENCY_48K;
+  hsai_BlockB2.Init.SynchroExt = SAI_SYNCEXT_DISABLE;
+  hsai_BlockB2.Init.MonoStereoMode = SAI_MONOMODE;
+  hsai_BlockB2.Init.CompandingMode = SAI_NOCOMPANDING;
+  hsai_BlockB2.Init.TriState = SAI_OUTPUT_NOTRELEASED;
+  if (HAL_SAI_InitProtocol(&hsai_BlockB2, SAI_I2S_STANDARD, SAI_PROTOCOL_DATASIZE_16BIT, 2) != HAL_OK)
   {
     Error_Handler();
   }
@@ -429,9 +428,15 @@ static void MX_DMA_Init(void)
   __HAL_RCC_DMA1_CLK_ENABLE();
 
   /* DMA interrupt init */
+  /* DMA1_Channel3_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Channel3_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel3_IRQn);
   /* DMA1_Channel6_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(DMA1_Channel6_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(DMA1_Channel6_IRQn);
+  /* DMA1_Channel7_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Channel7_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel7_IRQn);
 
 }
 
