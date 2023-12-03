@@ -89,9 +89,6 @@ void HAL_SAI_RxCpltCallback(SAI_HandleTypeDef *hsai)
 
     // Signal or start processing data in processingBuffer
     ProcessAudioData(audioBuffer1, AUDIO_BUFFER_SIZE);
-
-    // Start transferring processed data to DAC using DMA
-    HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, (uint32_t*)audioBuffer1, AUDIO_BUFFER_SIZE, DAC_ALIGN_12B_R);
 }
 
 // Callback function for half completed DMA transfer
@@ -102,12 +99,12 @@ void HAL_SAI_RxHalfCpltCallback(SAI_HandleTypeDef *hsai)
 
 void ProcessAudioData(uint32_t* buffer, uint32_t size) {
     for (uint32_t i = 0; i < size; ++i) {
-       // Shift right to align 18-bit data within 32-bit word
-        int32_t sample = buffer[i] >> 14;
+        // Assuming left-aligned data
+        int32_t sample = buffer[i] >> 8; // Shift right to align 24-bit data
 
-        // If the data is signed (2's complement), perform sign extension for negative values
-        if (sample & 0x20000) { // Check if the 18th bit (sign bit for 18-bit data) is set
-            sample |= 0xFFFC0000; // Extend the sign to 32 bits
+        // If the data is signed, perform sign extension for negative values
+        if (sample & 0x00800000) { // Check if the 24th bit (sign bit) is set
+            sample |= 0xFF000000; // Extend the sign to 32 bits
         }
 
         // Process the sample as required
