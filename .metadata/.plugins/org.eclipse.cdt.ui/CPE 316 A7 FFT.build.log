@@ -1,21 +1,25 @@
-14:55:22 **** Incremental Build of configuration Debug for project CPE 316 A7 FFT ****
+18:17:13 **** Incremental Build of configuration Debug for project CPE 316 A7 FFT ****
 make -j24 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/CMSIS/DSP/Include -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c:5: warning: "ARM_MATH_CM4" redefined
     5 | #define ARM_MATH_CM4
       | 
 <command-line>: note: this is the location of the previous definition
-arm-none-eabi-g++ -o "CPE 316 A7 FFT.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A7 FFT\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A7 FFT.map" -Wl,--gc-sections -static -L"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A7 FFT\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
-Finished building target: CPE 316 A7 FFT.elf
- 
-arm-none-eabi-size   CPE\ 316\ A7\ FFT.elf 
-arm-none-eabi-objdump -h -S  CPE\ 316\ A7\ FFT.elf  > "CPE 316 A7 FFT.list"
-   text	   data	    bss	    dec	    hex	filename
-  86064	     20	   1652	  87736	  156b8	CPE 316 A7 FFT.elf
-Finished building: default.size.stdout
- 
-Finished building: CPE 316 A7 FFT.list
- 
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:50:3: error: unknown type name 'arm_rfft_'
+   50 |   arm_rfft_
+      |   ^~~~~~~~~
+../Core/Src/main.c:52:17: error: expected declaration specifiers or '...' before '&' token
+   52 |   fast_init_f32(&fftHandler, FFT_BUFFER_SIZE);
+      |                 ^
+../Core/Src/main.c:14:25: error: expected declaration specifiers or '...' before numeric constant
+   14 | #define FFT_BUFFER_SIZE 2048
+      |                         ^~~~
+../Core/Src/main.c:52:30: note: in expansion of macro 'FFT_BUFFER_SIZE'
+   52 |   fast_init_f32(&fftHandler, FFT_BUFFER_SIZE);
+      |                              ^~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j24 all" terminated with exit code 2. Build might be incomplete.
 
-14:55:23 Build Finished. 0 errors, 1 warnings. (took 715ms)
+18:17:14 Build Failed. 4 errors, 1 warnings. (took 356ms)
 

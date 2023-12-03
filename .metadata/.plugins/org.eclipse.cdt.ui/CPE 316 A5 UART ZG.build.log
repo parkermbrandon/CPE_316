@@ -1,17 +1,10 @@
-19:36:25 **** Incremental Build of configuration Debug for project CPE 316 A5 UART ZG ****
+18:17:11 **** Build of configuration Debug for project CPE 316 A5 UART ZG ****
 make -j24 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L496xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-g++ -o "CPE 316 A5 UART ZG.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A5 UART ZG\STM32L496ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A5 UART ZG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
-Finished building target: CPE 316 A5 UART ZG.elf
- 
 arm-none-eabi-size   CPE\ 316\ A5\ UART\ ZG.elf 
-arm-none-eabi-objdump -h -S  CPE\ 316\ A5\ UART\ ZG.elf  > "CPE 316 A5 UART ZG.list"
    text	   data	    bss	    dec	    hex	filename
    5924	     20	   1572	   7516	   1d5c	CPE 316 A5 UART ZG.elf
 Finished building: default.size.stdout
  
-Finished building: CPE 316 A5 UART ZG.list
- 
 
-19:36:25 Build Finished. 0 errors, 0 warnings. (took 662ms)
+18:17:11 Build Finished. 0 errors, 0 warnings. (took 258ms)
 

@@ -36,7 +36,7 @@
 #define AUDIO_BUFFER_SIZE  1024  // Adjust the size as needed
 
 uint32_t audioBuffer1[AUDIO_BUFFER_SIZE];
-uint32_t audioBuffer2[AUDIO_BUFFER_SIZE];
+//uint32_t audioBuffer2[AUDIO_BUFFER_SIZE];
 uint32_t *currentBuffer;
 uint32_t *processingBuffer;
 
@@ -86,9 +86,9 @@ void HAL_SAI_RxCpltCallback(SAI_HandleTypeDef *hsai)
 //                   __HAL_DMA_GET_COUNTER(&hdma_sai2_a));
 
     // Buffer swap logic
-    uint32_t *temp = processingBuffer;
-    processingBuffer = currentBuffer;
-    currentBuffer = temp;
+//    uint32_t *temp = processingBuffer;
+//    processingBuffer = currentBuffer;
+//    currentBuffer = temp;
 //
 //    DebugPrint("After Swap - Current Buffer: %s, Processing Buffer: %s\n",
 //               (currentBuffer == audioBuffer1) ? "Buffer1" : "Buffer2",
@@ -98,11 +98,11 @@ void HAL_SAI_RxCpltCallback(SAI_HandleTypeDef *hsai)
 //                __HAL_DMA_GET_COUNTER(&hdma_sai2_a));
 
     // Start receiving into the new currentBuffer
-    HAL_SAI_Receive_DMA(&hsai_BlockA2, (uint8_t*)currentBuffer, AUDIO_BUFFER_SIZE);
+    HAL_SAI_Receive_DMA(&hsai_BlockA2, (uint8_t*)audioBuffer1, AUDIO_BUFFER_SIZE);
     //PrintDMAandSAIState();
 
     // Signal or start processing data in processingBuffer
-    ProcessAudioData(processingBuffer, AUDIO_BUFFER_SIZE);
+    ProcessAudioData(audioBuffer1, AUDIO_BUFFER_SIZE);
 }
 
 // Callback function for half completed DMA transfer
@@ -118,38 +118,67 @@ void HAL_SAI_RxHalfCpltCallback(SAI_HandleTypeDef *hsai)
 //	PrintDMAandSAIState();
 }
 
-void ProcessAudioData(uint32_t* buffer, uint32_t size)
-{
-    // Process the data in the buffer
-    // Example: Copy to another buffer, send over UART, perform audio analysis, etc.
-    // Make sure this processing completes before the next buffer swap
-//	 uint32_t sum = 0;
+//void ProcessAudioData(uint32_t* buffer, uint32_t size)
+//{
+//    // Process the data in the buffer
+//    // Example: Copy to another buffer, send over UART, perform audio analysis, etc.
+//    // Make sure this processing completes before the next buffer swap
+//    for (uint16_t i = 0; i < size; i++) {
+//        int32_t sample = (int32_t)(buffer[i] >> 8); // Assuming left-aligned data
+//        // If the data is signed, perform sign extension
+//        if (sample & 0x00800000) { // Check if the 24th bit is set (negative number)
+//            sample |= 0xFF000000; // Extend the sign to 32 bits
+//        }
+////	 uint32_t sum = 0;
+////
+////	    // Calculate the average of the audio samples
+////	    for (uint16_t i = 0; i < size; ++i)
+////	    {
+////	        sum += buffer[i];
+////	    }
+////	    uint32_t average = sum / size;
+////
+////	    // Prepare a string to send over UART
+////	    char uartBuffer[50];
+////	    snprintf(uartBuffer, sizeof(uartBuffer), "Average Audio Level: %lu\r\n", average);
+////
+////	    // Transmit the data over UART
+////	    TransmitDataOverUART(uartBuffer);
 //
-//	    // Calculate the average of the audio samples
-//	    for (uint16_t i = 0; i < size; ++i)
-//	    {
-//	        sum += buffer[i];
-//	    }
-//	    uint32_t average = sum / size;
+//	    // Limit the number of samples to print to avoid too much data
+//	       const uint16_t numSamplesToPrint = 10;
 //
-//	    // Prepare a string to send over UART
-//	    char uartBuffer[50];
-//	    snprintf(uartBuffer, sizeof(uartBuffer), "Average Audio Level: %lu\r\n", average);
-//
-//	    // Transmit the data over UART
-//	    TransmitDataOverUART(uartBuffer);
+//	       // Print the first few samples of the buffer for inspection
+//	       for (uint16_t i = 0; i < numSamplesToPrint; ++i)
+//	       {
+//	           char uartBuffer[100];
+//	           snprintf(uartBuffer, sizeof(uartBuffer), "Sample %d: %lu\r\n", i, buffer[i]);
+//	           TransmitDataOverUART(uartBuffer);
+//	       }
+//}
 
-	    // Limit the number of samples to print to avoid too much data
-	       const uint16_t numSamplesToPrint = 10;
+void ProcessAudioData(uint32_t* buffer, uint32_t size) {
+    for (uint32_t i = 0; i < size; ++i) {
+        // Assuming left-aligned data
+        int32_t sample = buffer[i] >> 8; // Shift right to align 24-bit data
 
-	       // Print the first few samples of the buffer for inspection
-	       for (uint16_t i = 0; i < numSamplesToPrint; ++i)
-	       {
-	           char uartBuffer[50];
-	           snprintf(uartBuffer, sizeof(uartBuffer), "Sample %d: %lu\r\n", i, buffer[i]);
-	           TransmitDataOverUART(uartBuffer);
-	       }
+        // If the data is signed, perform sign extension for negative values
+        if (sample & 0x00800000) { // Check if the 24th bit (sign bit) is set
+            sample |= 0xFF000000; // Extend the sign to 32 bits
+        }
+
+        // Process the sample as required
+        // Example: Print the first few samples
+        if (i < 10) {
+            char uartBuffer[50];
+            snprintf(uartBuffer, sizeof(uartBuffer), "Sample %d: %ld\r\n", i, sample);
+            TransmitDataOverUART(uartBuffer);
+        }
+
+        // Further processing can be added here
+    }
 }
+
 
 void DebugPrint(const char* format, ...) {
     char debugBuffer[128];  // Adjust size as needed
@@ -170,7 +199,7 @@ void PrintBufferContents(uint32_t* buffer, uint32_t size) {
     DebugPrint("Buffer Contents: ");
     char temp[10]; // Temporary string for individual numbers
     for (uint16_t i = 0; i < size && i < 10; ++i) { // Print first 10 samples
-        snprintf(temp, sizeof(temp), "%hu ", buffer[i]);
+        snprintf(temp, sizeof(temp), "%lu ", buffer[i]);
         TransmitDataOverUART(temp);
     }
     TransmitDataOverUART("\n");
@@ -228,7 +257,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
   currentBuffer = audioBuffer1;
-  processingBuffer = audioBuffer2;
+  //processingBuffer = audioBuffer2;
 
   HAL_SAI_Receive_DMA(&hsai_BlockA2, (uint8_t*)audioBuffer1, AUDIO_BUFFER_SIZE);
 
