@@ -1,72 +1,371 @@
-14:51:12 **** Incremental Build of configuration Debug for project CPE 316 A7 FFT ****
+16:30:16 **** Incremental Build of configuration Debug for project P2 Audio Processor ****
 make -j24 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/CMSIS/DSP/Include -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c:5: warning: "ARM_MATH_CM4" redefined
-    5 | #define ARM_MATH_CM4
-      | 
-<command-line>: note: this is the location of the previous definition
-../Core/Src/main.c:28:19: error: 'index' redeclared as different kind of symbol
-   28 | volatile uint16_t index = 0;
-      |                   ^~~~~
-In file included from C:\ST\STM32CubeIDE_1.13.2\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626\tools\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/string.h:24,
-                 from ../Core/Inc/arm_math.h:321,
-                 from ../Core/Src/main.c:4:
-C:\ST\STM32CubeIDE_1.13.2\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626\tools\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/strings.h:64:10: note: previous declaration of 'index' with type 'char *(const char *, int)'
-   64 | char    *index(const char *, int) __pure;                       /* LEGACY */
-      |          ^~~~~
-make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
-"make -j24 all" terminated with exit code 2. Build might be incomplete.
-14:51:47 **** Incremental Build of configuration Debug for project CPE 316 A7 FFT ****
-make -j24 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/CMSIS/DSP/Include -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c:5: warning: "ARM_MATH_CM4" redefined
-    5 | #define ARM_MATH_CM4
-      | 
-<command-line>: note: this is the location of the previous definition
-arm-none-eabi-g++ -o "CPE 316 A7 FFT.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A7 FFT\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A7 FFT.map" -Wl,--gc-sections -static -L"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A7 FFT\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
-Finished building target: CPE 316 A7 FFT.elf
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "P2 Audio Processor.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="P2 Audio Processor.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: P2 Audio Processor.elf
  
-arm-none-eabi-size   CPE\ 316\ A7\ FFT.elf 
-arm-none-eabi-objdump -h -S  CPE\ 316\ A7\ FFT.elf  > "CPE 316 A7 FFT.list"
+arm-none-eabi-size   P2\ Audio\ Processor.elf 
+arm-none-eabi-objdump -h -S  P2\ Audio\ Processor.elf  > "P2 Audio Processor.list"
    text	   data	    bss	    dec	    hex	filename
-  86080	     20	   9844	  95944	  176c8	CPE 316 A7 FFT.elf
+  23764	    100	   6348	  30212	   7604	P2 Audio Processor.elf
 Finished building: default.size.stdout
  
-Finished building: CPE 316 A7 FFT.list
+Finished building: P2 Audio Processor.list
  
-14:54:56 **** Incremental Build of configuration Debug for project CPE 316 A7 FFT ****
+16:30:20 **** Incremental Build of configuration Debug for project P2 Audio Processor ****
 make -j24 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/CMSIS/DSP/Include -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c:5: warning: "ARM_MATH_CM4" redefined
-    5 | #define ARM_MATH_CM4
-      | 
-<command-line>: note: this is the location of the previous definition
-arm-none-eabi-g++ -o "CPE 316 A7 FFT.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A7 FFT\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A7 FFT.map" -Wl,--gc-sections -static -L"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A7 FFT\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
-Finished building target: CPE 316 A7 FFT.elf
- 
-arm-none-eabi-size   CPE\ 316\ A7\ FFT.elf 
-arm-none-eabi-objdump -h -S  CPE\ 316\ A7\ FFT.elf  > "CPE 316 A7 FFT.list"
+arm-none-eabi-size   P2\ Audio\ Processor.elf 
    text	   data	    bss	    dec	    hex	filename
-  86076	     20	   9844	  95940	  176c4	CPE 316 A7 FFT.elf
+  23764	    100	   6348	  30212	   7604	P2 Audio Processor.elf
 Finished building: default.size.stdout
  
-Finished building: CPE 316 A7 FFT.list
- 
-14:55:22 **** Incremental Build of configuration Debug for project CPE 316 A7 FFT ****
+16:41:33 **** Incremental Build of configuration Debug for project P2 Audio Processor ****
 make -j24 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/CMSIS/DSP/Include -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c:5: warning: "ARM_MATH_CM4" redefined
-    5 | #define ARM_MATH_CM4
-      | 
-<command-line>: note: this is the location of the previous definition
-arm-none-eabi-g++ -o "CPE 316 A7 FFT.elf" @"objects.list"  -larm_cortexM4lf_math -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A7 FFT\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="CPE 316 A7 FFT.map" -Wl,--gc-sections -static -L"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 316 A7 FFT\Drivers\CMSIS\Lib\GCC" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
-Finished building target: CPE 316 A7 FFT.elf
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "P2 Audio Processor.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="P2 Audio Processor.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: P2 Audio Processor.elf
  
-arm-none-eabi-size   CPE\ 316\ A7\ FFT.elf 
-arm-none-eabi-objdump -h -S  CPE\ 316\ A7\ FFT.elf  > "CPE 316 A7 FFT.list"
+arm-none-eabi-size   P2\ Audio\ Processor.elf 
+arm-none-eabi-objdump -h -S  P2\ Audio\ Processor.elf  > "P2 Audio Processor.list"
    text	   data	    bss	    dec	    hex	filename
-  86064	     20	   1652	  87736	  156b8	CPE 316 A7 FFT.elf
+  23764	    100	   6348	  30212	   7604	P2 Audio Processor.elf
 Finished building: default.size.stdout
  
-Finished building: CPE 316 A7 FFT.list
+Finished building: P2 Audio Processor.list
+ 
+16:44:18 **** Incremental Build of configuration Debug for project P2 Audio Processor ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "P2 Audio Processor.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="P2 Audio Processor.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: P2 Audio Processor.elf
+ 
+arm-none-eabi-size   P2\ Audio\ Processor.elf 
+arm-none-eabi-objdump -h -S  P2\ Audio\ Processor.elf  > "P2 Audio Processor.list"
+   text	   data	    bss	    dec	    hex	filename
+  23248	    100	   6348	  29696	   7400	P2 Audio Processor.elf
+Finished building: default.size.stdout
+ 
+Finished building: P2 Audio Processor.list
+ 
+16:46:00 **** Incremental Build of configuration Debug for project P2 Audio Processor ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "P2 Audio Processor.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="P2 Audio Processor.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: P2 Audio Processor.elf
+ 
+arm-none-eabi-size   P2\ Audio\ Processor.elf 
+arm-none-eabi-objdump -h -S  P2\ Audio\ Processor.elf  > "P2 Audio Processor.list"
+   text	   data	    bss	    dec	    hex	filename
+  23072	    100	   6348	  29520	   7350	P2 Audio Processor.elf
+Finished building: default.size.stdout
+ 
+Finished building: P2 Audio Processor.list
+ 
+16:48:22 **** Incremental Build of configuration Debug for project P2 Audio Processor ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "P2 Audio Processor.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="P2 Audio Processor.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: P2 Audio Processor.elf
+ 
+arm-none-eabi-size   P2\ Audio\ Processor.elf 
+arm-none-eabi-objdump -h -S  P2\ Audio\ Processor.elf  > "P2 Audio Processor.list"
+   text	   data	    bss	    dec	    hex	filename
+  23072	    100	   6348	  29520	   7350	P2 Audio Processor.elf
+Finished building: default.size.stdout
+ 
+Finished building: P2 Audio Processor.list
+ 
+16:55:50 **** Incremental Build of configuration Debug for project P2 Audio Processor ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "P2 Audio Processor.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="P2 Audio Processor.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: P2 Audio Processor.elf
+ 
+arm-none-eabi-size   P2\ Audio\ Processor.elf 
+arm-none-eabi-objdump -h -S  P2\ Audio\ Processor.elf  > "P2 Audio Processor.list"
+   text	   data	    bss	    dec	    hex	filename
+  23072	    100	   6348	  29520	   7350	P2 Audio Processor.elf
+Finished building: default.size.stdout
+ 
+Finished building: P2 Audio Processor.list
+ 
+16:58:48 **** Incremental Build of configuration Debug for project P2 Audio Processor ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "P2 Audio Processor.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="P2 Audio Processor.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: P2 Audio Processor.elf
+ 
+arm-none-eabi-size   P2\ Audio\ Processor.elf 
+arm-none-eabi-objdump -h -S  P2\ Audio\ Processor.elf  > "P2 Audio Processor.list"
+   text	   data	    bss	    dec	    hex	filename
+  23068	    100	   6348	  29516	   734c	P2 Audio Processor.elf
+Finished building: default.size.stdout
+ 
+Finished building: P2 Audio Processor.list
+ 
+17:02:24 **** Incremental Build of configuration Debug for project P2 Audio Processor ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "P2 Audio Processor.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="P2 Audio Processor.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: P2 Audio Processor.elf
+ 
+arm-none-eabi-size   P2\ Audio\ Processor.elf 
+arm-none-eabi-objdump -h -S  P2\ Audio\ Processor.elf  > "P2 Audio Processor.list"
+   text	   data	    bss	    dec	    hex	filename
+  23072	    100	   6348	  29520	   7350	P2 Audio Processor.elf
+Finished building: default.size.stdout
+ 
+Finished building: P2 Audio Processor.list
+ 
+17:04:03 **** Incremental Build of configuration Debug for project P2 Audio Processor ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "P2 Audio Processor.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="P2 Audio Processor.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: P2 Audio Processor.elf
+ 
+arm-none-eabi-size   P2\ Audio\ Processor.elf 
+arm-none-eabi-objdump -h -S  P2\ Audio\ Processor.elf  > "P2 Audio Processor.list"
+   text	   data	    bss	    dec	    hex	filename
+  23072	    100	   6348	  29520	   7350	P2 Audio Processor.elf
+Finished building: default.size.stdout
+ 
+Finished building: P2 Audio Processor.list
+ 
+17:05:29 **** Incremental Build of configuration Debug for project P2 Audio Processor ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "P2 Audio Processor.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="P2 Audio Processor.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: P2 Audio Processor.elf
+ 
+arm-none-eabi-size   P2\ Audio\ Processor.elf 
+arm-none-eabi-objdump -h -S  P2\ Audio\ Processor.elf  > "P2 Audio Processor.list"
+   text	   data	    bss	    dec	    hex	filename
+  23072	    100	   6348	  29520	   7350	P2 Audio Processor.elf
+Finished building: default.size.stdout
+ 
+Finished building: P2 Audio Processor.list
+ 
+17:06:33 **** Incremental Build of configuration Debug for project P2 Audio Processor ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "P2 Audio Processor.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="P2 Audio Processor.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: P2 Audio Processor.elf
+ 
+arm-none-eabi-size   P2\ Audio\ Processor.elf 
+arm-none-eabi-objdump -h -S  P2\ Audio\ Processor.elf  > "P2 Audio Processor.list"
+   text	   data	    bss	    dec	    hex	filename
+  23072	    100	   6348	  29520	   7350	P2 Audio Processor.elf
+Finished building: default.size.stdout
+ 
+Finished building: P2 Audio Processor.list
+ 
+17:07:34 **** Incremental Build of configuration Debug for project P2 Audio Processor ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "P2 Audio Processor.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="P2 Audio Processor.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: P2 Audio Processor.elf
+ 
+arm-none-eabi-size   P2\ Audio\ Processor.elf 
+arm-none-eabi-objdump -h -S  P2\ Audio\ Processor.elf  > "P2 Audio Processor.list"
+   text	   data	    bss	    dec	    hex	filename
+  23072	    100	   6348	  29520	   7350	P2 Audio Processor.elf
+Finished building: default.size.stdout
+ 
+Finished building: P2 Audio Processor.list
+ 
+17:08:56 **** Incremental Build of configuration Debug for project P2 Audio Processor ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "P2 Audio Processor.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="P2 Audio Processor.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: P2 Audio Processor.elf
+ 
+arm-none-eabi-size   P2\ Audio\ Processor.elf 
+arm-none-eabi-objdump -h -S  P2\ Audio\ Processor.elf  > "P2 Audio Processor.list"
+   text	   data	    bss	    dec	    hex	filename
+  23072	    100	   6348	  29520	   7350	P2 Audio Processor.elf
+Finished building: default.size.stdout
+ 
+Finished building: P2 Audio Processor.list
+ 
+17:10:10 **** Incremental Build of configuration Debug for project P2 Audio Processor ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "P2 Audio Processor.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="P2 Audio Processor.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: P2 Audio Processor.elf
+ 
+arm-none-eabi-size   P2\ Audio\ Processor.elf 
+arm-none-eabi-objdump -h -S  P2\ Audio\ Processor.elf  > "P2 Audio Processor.list"
+   text	   data	    bss	    dec	    hex	filename
+  23072	    100	   6348	  29520	   7350	P2 Audio Processor.elf
+Finished building: default.size.stdout
+ 
+Finished building: P2 Audio Processor.list
+ 
+17:11:23 **** Incremental Build of configuration Debug for project P2 Audio Processor ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "P2 Audio Processor.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="P2 Audio Processor.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: P2 Audio Processor.elf
+ 
+arm-none-eabi-size   P2\ Audio\ Processor.elf 
+arm-none-eabi-objdump -h -S  P2\ Audio\ Processor.elf  > "P2 Audio Processor.list"
+   text	   data	    bss	    dec	    hex	filename
+  23072	    100	   6348	  29520	   7350	P2 Audio Processor.elf
+Finished building: default.size.stdout
+ 
+Finished building: P2 Audio Processor.list
+ 
+17:25:37 **** Incremental Build of configuration Debug for project P2 Audio Processor ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "P2 Audio Processor.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="P2 Audio Processor.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: P2 Audio Processor.elf
+ 
+arm-none-eabi-size   P2\ Audio\ Processor.elf 
+arm-none-eabi-objdump -h -S  P2\ Audio\ Processor.elf  > "P2 Audio Processor.list"
+   text	   data	    bss	    dec	    hex	filename
+  23072	    100	   6348	  29520	   7350	P2 Audio Processor.elf
+Finished building: default.size.stdout
+ 
+Finished building: P2 Audio Processor.list
+ 
+17:26:21 **** Incremental Build of configuration Debug for project P2 Audio Processor ****
+make -j24 all 
+arm-none-eabi-size   P2\ Audio\ Processor.elf 
+   text	   data	    bss	    dec	    hex	filename
+  23072	    100	   6348	  29520	   7350	P2 Audio Processor.elf
+Finished building: default.size.stdout
+ 
+17:28:58 **** Incremental Build of configuration Debug for project P2 Audio Processor ****
+make -j24 all 
+arm-none-eabi-size   P2\ Audio\ Processor.elf 
+   text	   data	    bss	    dec	    hex	filename
+  23072	    100	   6348	  29520	   7350	P2 Audio Processor.elf
+Finished building: default.size.stdout
+ 
+17:36:03 **** Incremental Build of configuration Debug for project P2 Audio Processor ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'PrintBufferContents':
+../Core/Src/main.c:162:41: warning: format '%hu' expects argument of type 'int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  162 |         snprintf(temp, sizeof(temp), "%hu ", buffer[i]);
+      |                                       ~~^    ~~~~~~~~~
+      |                                         |          |
+      |                                         int        uint32_t {aka long unsigned int}
+      |                                       %lu
+arm-none-eabi-gcc -o "P2 Audio Processor.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="P2 Audio Processor.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: P2 Audio Processor.elf
+ 
+arm-none-eabi-size   P2\ Audio\ Processor.elf 
+arm-none-eabi-objdump -h -S  P2\ Audio\ Processor.elf  > "P2 Audio Processor.list"
+   text	   data	    bss	    dec	    hex	filename
+  23068	    100	  10444	  33612	   834c	P2 Audio Processor.elf
+Finished building: default.size.stdout
+ 
+Finished building: P2 Audio Processor.list
+ 
+17:40:28 **** Incremental Build of configuration Debug for project P2 Audio Processor ****
+make -j24 all 
+arm-none-eabi-size   P2\ Audio\ Processor.elf 
+   text	   data	    bss	    dec	    hex	filename
+  23068	    100	  10444	  33612	   834c	P2 Audio Processor.elf
+Finished building: default.size.stdout
+ 
+17:43:05 **** Incremental Build of configuration Debug for project P2 Audio Processor ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'PrintBufferContents':
+../Core/Src/main.c:173:41: warning: format '%hu' expects argument of type 'int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  173 |         snprintf(temp, sizeof(temp), "%hu ", buffer[i]);
+      |                                       ~~^    ~~~~~~~~~
+      |                                         |          |
+      |                                         int        uint32_t {aka long unsigned int}
+      |                                       %lu
+arm-none-eabi-gcc -o "P2 Audio Processor.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="P2 Audio Processor.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: P2 Audio Processor.elf
+ 
+arm-none-eabi-size   P2\ Audio\ Processor.elf 
+arm-none-eabi-objdump -h -S  P2\ Audio\ Processor.elf  > "P2 Audio Processor.list"
+   text	   data	    bss	    dec	    hex	filename
+  23040	    100	  10444	  33584	   8330	P2 Audio Processor.elf
+Finished building: default.size.stdout
+ 
+Finished building: P2 Audio Processor.list
+ 
+17:47:08 **** Incremental Build of configuration Debug for project P2 Audio Processor ****
+make -j24 all 
+arm-none-eabi-size   P2\ Audio\ Processor.elf 
+   text	   data	    bss	    dec	    hex	filename
+  23040	    100	  10444	  33584	   8330	P2 Audio Processor.elf
+Finished building: default.size.stdout
+ 
+17:52:50 **** Incremental Build of configuration Debug for project P2 Audio Processor ****
+make -j24 all 
+arm-none-eabi-size   P2\ Audio\ Processor.elf 
+   text	   data	    bss	    dec	    hex	filename
+  23040	    100	  10444	  33584	   8330	P2 Audio Processor.elf
+Finished building: default.size.stdout
+ 
+17:54:50 **** Incremental Build of configuration Debug for project P2 Audio Processor ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'PrintBufferContents':
+../Core/Src/main.c:173:41: warning: format '%hu' expects argument of type 'int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  173 |         snprintf(temp, sizeof(temp), "%hu ", buffer[i]);
+      |                                       ~~^    ~~~~~~~~~
+      |                                         |          |
+      |                                         int        uint32_t {aka long unsigned int}
+      |                                       %lu
+arm-none-eabi-gcc -o "P2 Audio Processor.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="P2 Audio Processor.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: P2 Audio Processor.elf
+ 
+arm-none-eabi-size   P2\ Audio\ Processor.elf 
+arm-none-eabi-objdump -h -S  P2\ Audio\ Processor.elf  > "P2 Audio Processor.list"
+   text	   data	    bss	    dec	    hex	filename
+  23040	    100	  10444	  33584	   8330	P2 Audio Processor.elf
+Finished building: default.size.stdout
+ 
+Finished building: P2 Audio Processor.list
+ 
+17:56:15 **** Incremental Build of configuration Debug for project P2 Audio Processor ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'PrintBufferContents':
+../Core/Src/main.c:173:41: warning: format '%hu' expects argument of type 'int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  173 |         snprintf(temp, sizeof(temp), "%hu ", buffer[i]);
+      |                                       ~~^    ~~~~~~~~~
+      |                                         |          |
+      |                                         int        uint32_t {aka long unsigned int}
+      |                                       %lu
+arm-none-eabi-gcc -o "P2 Audio Processor.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="P2 Audio Processor.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: P2 Audio Processor.elf
+ 
+arm-none-eabi-size   P2\ Audio\ Processor.elf 
+arm-none-eabi-objdump -h -S  P2\ Audio\ Processor.elf  > "P2 Audio Processor.list"
+   text	   data	    bss	    dec	    hex	filename
+  23032	    100	   3276	  26408	   6728	P2 Audio Processor.elf
+Finished building: default.size.stdout
+ 
+Finished building: P2 Audio Processor.list
+ 
+17:56:55 **** Incremental Build of configuration Debug for project P2 Audio Processor ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'PrintBufferContents':
+../Core/Src/main.c:173:41: warning: format '%hu' expects argument of type 'int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  173 |         snprintf(temp, sizeof(temp), "%hu ", buffer[i]);
+      |                                       ~~^    ~~~~~~~~~
+      |                                         |          |
+      |                                         int        uint32_t {aka long unsigned int}
+      |                                       %lu
+arm-none-eabi-gcc -o "P2 Audio Processor.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="P2 Audio Processor.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: P2 Audio Processor.elf
+ 
+arm-none-eabi-size   P2\ Audio\ Processor.elf 
+arm-none-eabi-objdump -h -S  P2\ Audio\ Processor.elf  > "P2 Audio Processor.list"
+   text	   data	    bss	    dec	    hex	filename
+  23040	    100	  18636	  41776	   a330	P2 Audio Processor.elf
+Finished building: default.size.stdout
+ 
+Finished building: P2 Audio Processor.list
  
