@@ -171,6 +171,21 @@ void DAC_write(uint16_t value) {
     //HAL_SPI_Transmit_DMA(&hspi1, (uint8_t*)&spi_data, 1);
     HAL_SPI_Transmit(&hspi1, (uint8_t*)&spi_data, 1, HAL_MAX_DELAY);
 }
+
+// Callback for button B1 recording
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
+    if(GPIO_Pin == B1_Pin)
+    {
+        // Start receiving into the new currentBuffer
+        HAL_SAI_Receive_DMA(&hsai_BlockA2, (uint8_t*)audioBuffer1, AUDIO_BUFFER_SIZE);
+
+        // Signal or start processing data in processingBuffer
+        ProcessAudioData(audioBuffer1, AUDIO_BUFFER_SIZE);
+    }
+}
+
+///HEEELLLLLOOOOO
+
 /* USER CODE END 0 */
 
 /**
