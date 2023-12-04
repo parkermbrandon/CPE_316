@@ -1,24 +1,10 @@
-18:12:05 **** Incremental Build of configuration Debug for project P2 Audio Processor ****
+06:26:11 **** Incremental Build of configuration Debug for project P2 Audio Processor ****
 make -j24 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'ProcessAudioData':
-../Core/Src/main.c:123:69: warning: format '%ld' expects argument of type 'long int', but argument 5 has type 'int' [-Wformat=]
-  123 |             snprintf(uartBuffer, sizeof(uartBuffer), "Sample %lu: %ld\r\n", (unsigned long)i, dacSample);
-      |                                                                   ~~^                         ~~~~~~~~~
-      |                                                                     |                         |
-      |                                                                     long int                  int
-      |                                                                   %d
-arm-none-eabi-gcc -o "P2 Audio Processor.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="P2 Audio Processor.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: P2 Audio Processor.elf
- 
 arm-none-eabi-size   P2\ Audio\ Processor.elf 
-arm-none-eabi-objdump -h -S  P2\ Audio\ Processor.elf  > "P2 Audio Processor.list"
    text	   data	    bss	    dec	    hex	filename
-  25612	    100	   6724	  32436	   7eb4	P2 Audio Processor.elf
+  25472	    100	   6652	  32224	   7de0	P2 Audio Processor.elf
 Finished building: default.size.stdout
  
-Finished building: P2 Audio Processor.list
- 
 
-18:12:05 Build Finished. 0 errors, 1 warnings. (took 776ms)
+06:26:11 Build Finished. 0 errors, 0 warnings. (took 192ms)
 

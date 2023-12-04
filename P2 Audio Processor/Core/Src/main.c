@@ -61,7 +61,6 @@ DMA_HandleTypeDef hdma_sai2_a;
 DMA_HandleTypeDef hdma_sai2_b;
 
 SPI_HandleTypeDef hspi1;
-DMA_HandleTypeDef hdma_spi1_tx;
 
 UART_HandleTypeDef huart2;
 
@@ -91,9 +90,6 @@ void HAL_SAI_RxCpltCallback(SAI_HandleTypeDef *hsai)
 
     // Signal or start processing data in processingBuffer
     ProcessAudioData(audioBuffer1, AUDIO_BUFFER_SIZE);
-
-    // Start transferring processed data to DAC using DMA
-    //HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, (uint32_t*)audioBuffer1, AUDIO_BUFFER_SIZE, DAC_ALIGN_12B_R);
 }
 
 // Callback function for half completed DMA transfer
@@ -114,18 +110,17 @@ void ProcessAudioData(uint32_t* buffer, uint32_t size) {
 
         // Downsample to 12 bits while preserving the sign
         //uint16_t dacSample = (sample / 64) + 2048;
-        int16_t dacSample = sample >> 6;
+        //int16_t dacSample = sample >> 6;
 
-        // Process the sample as required
-        // Example: Print the first few samples
+        // Print the first few samples
         if (i < 10) {
             char uartBuffer[50];
-            snprintf(uartBuffer, sizeof(uartBuffer), "Sample %lu: %ld\r\n", (unsigned long)i, dacSample);
+            snprintf(uartBuffer, sizeof(uartBuffer), "Sample %lu: %ld\r\n", (unsigned long)i, sample);
             TransmitDataOverUART(uartBuffer);
         }
 
         // Further processing can be added here
-        DAC_write(dacSample);
+        DAC_write(sample);
     }
 }
 
@@ -173,7 +168,7 @@ void PrintDMAandSAIState() {
 
 void DAC_write(uint16_t value) {
     uint16_t spi_data = (value & 0x0FFF) | 0x3000;  // 12-bit value, OR 0x3000 sets the Gain and buffer in the DAC see page 18 of datasheet
-    //HAL_SPI_Transmit_IT(&hspi1, (uint8_t*)&spi_data, 1);
+    //HAL_SPI_Transmit_DMA(&hspi1, (uint8_t*)&spi_data, 1);
     HAL_SPI_Transmit(&hspi1, (uint8_t*)&spi_data, 1, HAL_MAX_DELAY);
 }
 /* USER CODE END 0 */
@@ -442,9 +437,6 @@ static void MX_DMA_Init(void)
   __HAL_RCC_DMA1_CLK_ENABLE();
 
   /* DMA interrupt init */
-  /* DMA1_Channel3_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(DMA1_Channel3_IRQn, 0, 0);
-  HAL_NVIC_EnableIRQ(DMA1_Channel3_IRQn);
   /* DMA1_Channel6_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(DMA1_Channel6_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(DMA1_Channel6_IRQn);
