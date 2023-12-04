@@ -45,6 +45,8 @@ void TransmitDataOverUART(const char* data);
 void DebugPrint(const char* format, ...);
 void HAL_SAI_ErrorCallback(SAI_HandleTypeDef *hsai);
 void PrintDMAandSAIState();
+void DAC_write(uint16_t value_A);
+void DAC_init(void);
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -53,18 +55,18 @@ void PrintDMAandSAIState();
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
-DAC_HandleTypeDef hdac1;
-DMA_HandleTypeDef hdma_dac_ch1;
-
 SAI_HandleTypeDef hsai_BlockA2;
 SAI_HandleTypeDef hsai_BlockB2;
 DMA_HandleTypeDef hdma_sai2_a;
 DMA_HandleTypeDef hdma_sai2_b;
 
+SPI_HandleTypeDef hspi1;
+DMA_HandleTypeDef hdma_spi1_tx;
+
 UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
-TIM_HandleTypeDef htim2;
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -73,7 +75,7 @@ static void MX_GPIO_Init(void);
 static void MX_DMA_Init(void);
 static void MX_USART2_UART_Init(void);
 static void MX_SAI2_Init(void);
-static void MX_DAC1_Init(void);
+static void MX_SPI1_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -91,7 +93,7 @@ void HAL_SAI_RxCpltCallback(SAI_HandleTypeDef *hsai)
     ProcessAudioData(audioBuffer1, AUDIO_BUFFER_SIZE);
 
     // Start transferring processed data to DAC using DMA
-    HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, (uint32_t*)audioBuffer1, AUDIO_BUFFER_SIZE, DAC_ALIGN_12B_R);
+    //HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, (uint32_t*)audioBuffer1, AUDIO_BUFFER_SIZE, DAC_ALIGN_12B_R);
 }
 
 // Callback function for half completed DMA transfer
@@ -110,15 +112,20 @@ void ProcessAudioData(uint32_t* buffer, uint32_t size) {
             sample |= 0xFFFC0000; // Extend the sign to 32 bits
         }
 
+        // Downsample to 12 bits while preserving the sign
+        //uint16_t dacSample = (sample / 64) + 2048;
+        int16_t dacSample = sample >> 6;
+
         // Process the sample as required
         // Example: Print the first few samples
         if (i < 10) {
             char uartBuffer[50];
-            snprintf(uartBuffer, sizeof(uartBuffer), "Sample %d: %ld\r\n", i, sample);
+            snprintf(uartBuffer, sizeof(uartBuffer), "Sample %lu: %ld\r\n", (unsigned long)i, dacSample);
             TransmitDataOverUART(uartBuffer);
         }
 
         // Further processing can be added here
+        DAC_write(dacSample);
     }
 }
 
@@ -164,6 +171,11 @@ void PrintDMAandSAIState() {
     DebugPrint("SAI State: %d\n", saiState);
 }
 
+void DAC_write(uint16_t value) {
+    uint16_t spi_data = (value & 0x0FFF) | 0x3000;  // 12-bit value, OR 0x3000 sets the Gain and buffer in the DAC see page 18 of datasheet
+    //HAL_SPI_Transmit_IT(&hspi1, (uint8_t*)&spi_data, 1);
+    HAL_SPI_Transmit(&hspi1, (uint8_t*)&spi_data, 1, HAL_MAX_DELAY);
+}
 /* USER CODE END 0 */
 
 /**
@@ -182,6 +194,7 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
+  void DAC_init();
 
   /* USER CODE END Init */
 
@@ -189,9 +202,7 @@ int main(void)
   SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
-  MX_TIM2_Init();
   // Start the timer
-  HAL_TIM_Base_Start(&htim2);
 
   /* USER CODE END SysInit */
 
@@ -200,7 +211,7 @@ int main(void)
   MX_DMA_Init();
   MX_USART2_UART_Init();
   MX_SAI2_Init();
-  MX_DAC1_Init();
+  MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
 
   currentBuffer = audioBuffer1;
@@ -282,54 +293,6 @@ void SystemClock_Config(void)
 }
 
 /**
-  * @brief DAC1 Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_DAC1_Init(void)
-{
-    /* USER CODE BEGIN DAC1_Init 0 */
-
-    /* USER CODE END DAC1_Init 0 */
-
-    DAC_ChannelConfTypeDef sConfig = {0};
-
-    /* USER CODE BEGIN DAC1_Init 1 */
-
-    /* USER CODE END DAC1_Init 1 */
-
-    /** DAC Initialization */
-    hdac1.Instance = DAC1;
-    if (HAL_DAC_Init(&hdac1) != HAL_OK)
-    {
-        Error_Handler();
-    }
-
-    /** DAC channel OUT1 config */
-    sConfig.DAC_SampleAndHold = DAC_SAMPLEANDHOLD_DISABLE;
-    sConfig.DAC_Trigger = DAC_TRIGGER_T2_TRGO; // Set TIM2 TRGO as the trigger source
-    sConfig.DAC_OutputBuffer = DAC_OUTPUTBUFFER_ENABLE;
-    sConfig.DAC_ConnectOnChipPeripheral = DAC_CHIPCONNECT_DISABLE;
-    sConfig.DAC_UserTrimming = DAC_TRIMMING_FACTORY;
-    if (HAL_DAC_ConfigChannel(&hdac1, &sConfig, DAC_CHANNEL_1) != HAL_OK)
-    {
-        Error_Handler();
-    }
-
-    // Start the DAC with the trigger enabled
-    if (HAL_DAC_Start(&hdac1, DAC_CHANNEL_1) != HAL_OK)
-    {
-        // Handling of possible start error
-        Error_Handler();
-    }
-
-    /* USER CODE BEGIN DAC1_Init 2 */
-
-    /* USER CODE END DAC1_Init 2 */
-}
-
-
-/**
   * @brief SAI2 Initialization Function
   * @param None
   * @retval None
@@ -391,6 +354,46 @@ static void MX_SAI2_Init(void)
   __HAL_LINKDMA(&hsai_BlockA2, hdmarx, hdma_sai2_a);
 
   /* USER CODE END SAI2_Init 2 */
+
+}
+
+/**
+  * @brief SPI1 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_SPI1_Init(void)
+{
+
+  /* USER CODE BEGIN SPI1_Init 0 */
+
+  /* USER CODE END SPI1_Init 0 */
+
+  /* USER CODE BEGIN SPI1_Init 1 */
+
+  /* USER CODE END SPI1_Init 1 */
+  /* SPI1 parameter configuration*/
+  hspi1.Instance = SPI1;
+  hspi1.Init.Mode = SPI_MODE_MASTER;
+  hspi1.Init.Direction = SPI_DIRECTION_2LINES;
+  hspi1.Init.DataSize = SPI_DATASIZE_16BIT;
+  hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
+  hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
+  hspi1.Init.NSS = SPI_NSS_HARD_OUTPUT;
+  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_4;
+  hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
+  hspi1.Init.TIMode = SPI_TIMODE_DISABLE;
+  hspi1.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
+  hspi1.Init.CRCPolynomial = 7;
+  hspi1.Init.CRCLength = SPI_CRC_LENGTH_DATASIZE;
+  hspi1.Init.NSSPMode = SPI_NSS_PULSE_ENABLE;
+  if (HAL_SPI_Init(&hspi1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN SPI1_Init 2 */
+
+  /* USER CODE END SPI1_Init 2 */
 
 }
 
@@ -468,48 +471,17 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
-  /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_RESET);
-
   /*Configure GPIO pin : B1_Pin */
   GPIO_InitStruct.Pin = B1_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(B1_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : LD2_Pin */
-  GPIO_InitStruct.Pin = LD2_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(LD2_GPIO_Port, &GPIO_InitStruct);
-
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 /* USER CODE END MX_GPIO_Init_2 */
 }
 
 /* USER CODE BEGIN 4 */
-void MX_TIM2_Init(void) {
-    uint32_t timerClockFrequency = 59200000; // 59.2 MHz, assuming APB1 timer clock
-    uint32_t targetFrequency = 54411; // 54.411 kHz
-
-    // Calculating prescaler and period
-    uint32_t prescaler = (timerClockFrequency / targetFrequency) / 65536;
-    uint32_t period = (timerClockFrequency / (prescaler + 1)) / targetFrequency - 1;
-
-    htim2.Instance = TIM2;
-    htim2.Init.Prescaler = prescaler;
-    htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
-    htim2.Init.Period = period;
-    htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
-    htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
-
-    if (HAL_TIM_Base_Init(&htim2) != HAL_OK) {
-        // Initialization Error
-        Error_Handler();
-    }
-
-}
 
 /* USER CODE END 4 */
 

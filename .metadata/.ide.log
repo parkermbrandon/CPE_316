@@ -805,3 +805,1093 @@
 2023-12-03 08:58:21,128 [INFO] ProjectBuilder:4626 - Time for Generating toolchain IDE Files: 946mS.
 2023-12-03 08:58:21,129 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 1mS.
 2023-12-03 08:58:21,131 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 0mS.
+2023-12-03 10:06:48,669 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,497x375,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-12-03 12:04:04,805 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 912454776 Bytes (1073741824)
+2023-12-03 12:12:39,019 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 764000584 Bytes (1073741824)
+2023-12-03 12:30:16,679 [INFO] Gpio:273 - dependency for GPIO [RCC, SAI2, SYS, USART2]
+2023-12-03 12:30:26,621 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 673450920 Bytes (1073741824)
+2023-12-03 15:30:15,390 [INFO] Gpio:273 - dependency for GPIO [RCC, SAI2, SYS, USART2]
+2023-12-03 15:30:15,418 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-12-03 15:30:17,289 [INFO] Gpio:273 - dependency for GPIO [RCC, SAI2, SYS, USART2]
+2023-12-03 15:33:08,457 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 751375976 Bytes (1073741824)
+2023-12-03 15:33:16,032 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 781784680 Bytes (1073741824)
+2023-12-03 15:33:16,158 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 856233576 Bytes (1073741824)
+2023-12-03 15:33:16,292 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-12-03 15:33:16,292 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-12-03 15:33:16,292 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-12-03 15:33:16,292 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2023-12-03 15:33:16,292 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: DMA
+2023-12-03 15:33:16,292 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-12-03 15:33:16,292 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SAI
+2023-12-03 15:33:16,303 [INFO] CodeGenerator:799 - code generatio: config db path: C:\ST\STM32CubeIDE_1.13.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.2.202309101412\\db\
+2023-12-03 15:33:16,311 [INFO] Argument:319 - Argument : hdmavalue: null
+2023-12-03 15:33:16,311 [INFO] Argument:321 - 	 sub Args: 
+2023-12-03 15:33:16,311 [INFO] Argument:319 - Argument : Instancevalue: DMA1_Channel6
+2023-12-03 15:33:16,311 [INFO] Argument:329 - Argument : Instancevalue: DMA1_Channel6
+2023-12-03 15:33:16,311 [INFO] Argument:319 - Argument : Initvalue: null
+2023-12-03 15:33:16,311 [INFO] Argument:321 - 	 sub Args: 
+2023-12-03 15:33:16,312 [INFO] Argument:319 - Argument : Requestvalue: DMA_REQUEST_1
+2023-12-03 15:33:16,312 [INFO] Argument:329 - Argument : Requestvalue: DMA_REQUEST_1
+2023-12-03 15:33:16,312 [INFO] Argument:319 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2023-12-03 15:33:16,312 [INFO] Argument:329 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2023-12-03 15:33:16,312 [INFO] Argument:319 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2023-12-03 15:33:16,312 [INFO] Argument:329 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2023-12-03 15:33:16,312 [INFO] Argument:319 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2023-12-03 15:33:16,312 [INFO] Argument:329 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2023-12-03 15:33:16,312 [INFO] Argument:319 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_WORD
+2023-12-03 15:33:16,312 [INFO] Argument:329 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_WORD
+2023-12-03 15:33:16,312 [INFO] Argument:319 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_WORD
+2023-12-03 15:33:16,312 [INFO] Argument:329 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_WORD
+2023-12-03 15:33:16,312 [INFO] Argument:319 - Argument : Modevalue: DMA_CIRCULAR
+2023-12-03 15:33:16,312 [INFO] Argument:329 - Argument : Modevalue: DMA_CIRCULAR
+2023-12-03 15:33:16,312 [INFO] Argument:319 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2023-12-03 15:33:16,312 [INFO] Argument:329 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2023-12-03 15:33:16,312 [INFO] Argument:319 - Argument : Lockvalue: null
+2023-12-03 15:33:16,312 [INFO] Argument:329 - Argument : Lockvalue: null
+2023-12-03 15:33:16,312 [INFO] Argument:319 - Argument : Statevalue: null
+2023-12-03 15:33:16,312 [INFO] Argument:329 - Argument : Statevalue: null
+2023-12-03 15:33:16,312 [INFO] Argument:319 - Argument : Parentvalue: null
+2023-12-03 15:33:16,312 [INFO] Argument:329 - Argument : Parentvalue: null
+2023-12-03 15:33:16,312 [INFO] Argument:319 - Argument : XferCpltCallbackvalue: null
+2023-12-03 15:33:16,312 [INFO] Argument:329 - Argument : XferCpltCallbackvalue: null
+2023-12-03 15:33:16,312 [INFO] Argument:319 - Argument : XferHalfCpltCallbackvalue: null
+2023-12-03 15:33:16,312 [INFO] Argument:329 - Argument : XferHalfCpltCallbackvalue: null
+2023-12-03 15:33:16,312 [INFO] Argument:319 - Argument : XferErrorCallbackvalue: null
+2023-12-03 15:33:16,312 [INFO] Argument:329 - Argument : XferErrorCallbackvalue: null
+2023-12-03 15:33:16,312 [INFO] Argument:319 - Argument : XferAbortCallbackvalue: null
+2023-12-03 15:33:16,312 [INFO] Argument:329 - Argument : XferAbortCallbackvalue: null
+2023-12-03 15:33:16,312 [INFO] Argument:319 - Argument : ErrorCodevalue: null
+2023-12-03 15:33:16,312 [INFO] Argument:329 - Argument : ErrorCodevalue: null
+2023-12-03 15:33:16,312 [INFO] Argument:319 - Argument : DmaBaseAddressvalue: null
+2023-12-03 15:33:16,312 [INFO] Argument:329 - Argument : DmaBaseAddressvalue: null
+2023-12-03 15:33:16,312 [INFO] Argument:319 - Argument : ChannelIndexvalue: null
+2023-12-03 15:33:16,312 [INFO] Argument:329 - Argument : ChannelIndexvalue: null
+2023-12-03 15:33:16,312 [INFO] Argument:319 - Argument : hdmavalue: null
+2023-12-03 15:33:16,312 [INFO] Argument:321 - 	 sub Args: 
+2023-12-03 15:33:16,312 [INFO] Argument:319 - Argument : Instancevalue: DMA1_Channel6
+2023-12-03 15:33:16,312 [INFO] Argument:329 - Argument : Instancevalue: DMA1_Channel6
+2023-12-03 15:33:16,312 [INFO] Argument:319 - Argument : Initvalue: null
+2023-12-03 15:33:16,312 [INFO] Argument:321 - 	 sub Args: 
+2023-12-03 15:33:16,312 [INFO] Argument:319 - Argument : Requestvalue: DMA_REQUEST_1
+2023-12-03 15:33:16,312 [INFO] Argument:329 - Argument : Requestvalue: DMA_REQUEST_1
+2023-12-03 15:33:16,312 [INFO] Argument:319 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2023-12-03 15:33:16,312 [INFO] Argument:329 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2023-12-03 15:33:16,312 [INFO] Argument:319 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2023-12-03 15:33:16,312 [INFO] Argument:329 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2023-12-03 15:33:16,312 [INFO] Argument:319 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2023-12-03 15:33:16,312 [INFO] Argument:329 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2023-12-03 15:33:16,312 [INFO] Argument:319 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_WORD
+2023-12-03 15:33:16,312 [INFO] Argument:329 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_WORD
+2023-12-03 15:33:16,312 [INFO] Argument:319 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_WORD
+2023-12-03 15:33:16,312 [INFO] Argument:329 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_WORD
+2023-12-03 15:33:16,312 [INFO] Argument:319 - Argument : Modevalue: DMA_CIRCULAR
+2023-12-03 15:33:16,312 [INFO] Argument:329 - Argument : Modevalue: DMA_CIRCULAR
+2023-12-03 15:33:16,312 [INFO] Argument:319 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2023-12-03 15:33:16,312 [INFO] Argument:329 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2023-12-03 15:33:16,312 [INFO] Argument:319 - Argument : Lockvalue: null
+2023-12-03 15:33:16,312 [INFO] Argument:329 - Argument : Lockvalue: null
+2023-12-03 15:33:16,312 [INFO] Argument:319 - Argument : Statevalue: null
+2023-12-03 15:33:16,312 [INFO] Argument:329 - Argument : Statevalue: null
+2023-12-03 15:33:16,312 [INFO] Argument:319 - Argument : Parentvalue: null
+2023-12-03 15:33:16,312 [INFO] Argument:329 - Argument : Parentvalue: null
+2023-12-03 15:33:16,312 [INFO] Argument:319 - Argument : XferCpltCallbackvalue: null
+2023-12-03 15:33:16,312 [INFO] Argument:329 - Argument : XferCpltCallbackvalue: null
+2023-12-03 15:33:16,312 [INFO] Argument:319 - Argument : XferHalfCpltCallbackvalue: null
+2023-12-03 15:33:16,312 [INFO] Argument:329 - Argument : XferHalfCpltCallbackvalue: null
+2023-12-03 15:33:16,312 [INFO] Argument:319 - Argument : XferErrorCallbackvalue: null
+2023-12-03 15:33:16,312 [INFO] Argument:329 - Argument : XferErrorCallbackvalue: null
+2023-12-03 15:33:16,312 [INFO] Argument:319 - Argument : XferAbortCallbackvalue: null
+2023-12-03 15:33:16,312 [INFO] Argument:329 - Argument : XferAbortCallbackvalue: null
+2023-12-03 15:33:16,312 [INFO] Argument:319 - Argument : ErrorCodevalue: null
+2023-12-03 15:33:16,312 [INFO] Argument:329 - Argument : ErrorCodevalue: null
+2023-12-03 15:33:16,312 [INFO] Argument:319 - Argument : DmaBaseAddressvalue: null
+2023-12-03 15:33:16,312 [INFO] Argument:329 - Argument : DmaBaseAddressvalue: null
+2023-12-03 15:33:16,312 [INFO] Argument:319 - Argument : ChannelIndexvalue: null
+2023-12-03 15:33:16,312 [INFO] Argument:329 - Argument : ChannelIndexvalue: null
+2023-12-03 15:33:16,312 [INFO] Argument:319 - Argument : pSyncConfigvalue: null
+2023-12-03 15:33:16,312 [INFO] Argument:321 - 	 sub Args: 
+2023-12-03 15:33:16,312 [INFO] Argument:319 - Argument : SyncSignalIDvalue: null
+2023-12-03 15:33:16,313 [INFO] Argument:329 - Argument : SyncSignalIDvalue: null
+2023-12-03 15:33:16,313 [INFO] Argument:319 - Argument : SyncPolarityvalue: null
+2023-12-03 15:33:16,313 [INFO] Argument:329 - Argument : SyncPolarityvalue: null
+2023-12-03 15:33:16,313 [INFO] Argument:319 - Argument : SyncEnablevalue: null
+2023-12-03 15:33:16,313 [INFO] Argument:329 - Argument : SyncEnablevalue: null
+2023-12-03 15:33:16,313 [INFO] Argument:319 - Argument : EventEnablevalue: null
+2023-12-03 15:33:16,313 [INFO] Argument:329 - Argument : EventEnablevalue: null
+2023-12-03 15:33:16,313 [INFO] Argument:319 - Argument : RequestNumbervalue: null
+2023-12-03 15:33:16,313 [INFO] Argument:329 - Argument : RequestNumbervalue: null
+2023-12-03 15:33:16,313 [INFO] Argument:319 - Argument : hdmavalue: null
+2023-12-03 15:33:16,313 [INFO] Argument:321 - 	 sub Args: 
+2023-12-03 15:33:16,313 [INFO] Argument:319 - Argument : Instancevalue: DMA1_Channel7
+2023-12-03 15:33:16,313 [INFO] Argument:329 - Argument : Instancevalue: DMA1_Channel7
+2023-12-03 15:33:16,313 [INFO] Argument:319 - Argument : Initvalue: null
+2023-12-03 15:33:16,313 [INFO] Argument:321 - 	 sub Args: 
+2023-12-03 15:33:16,313 [INFO] Argument:319 - Argument : Requestvalue: DMA_REQUEST_1
+2023-12-03 15:33:16,313 [INFO] Argument:329 - Argument : Requestvalue: DMA_REQUEST_1
+2023-12-03 15:33:16,313 [INFO] Argument:319 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2023-12-03 15:33:16,313 [INFO] Argument:329 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2023-12-03 15:33:16,313 [INFO] Argument:319 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2023-12-03 15:33:16,313 [INFO] Argument:329 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2023-12-03 15:33:16,313 [INFO] Argument:319 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2023-12-03 15:33:16,313 [INFO] Argument:329 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2023-12-03 15:33:16,313 [INFO] Argument:319 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_WORD
+2023-12-03 15:33:16,313 [INFO] Argument:329 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_WORD
+2023-12-03 15:33:16,313 [INFO] Argument:319 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_WORD
+2023-12-03 15:33:16,313 [INFO] Argument:329 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_WORD
+2023-12-03 15:33:16,313 [INFO] Argument:319 - Argument : Modevalue: DMA_CIRCULAR
+2023-12-03 15:33:16,313 [INFO] Argument:329 - Argument : Modevalue: DMA_CIRCULAR
+2023-12-03 15:33:16,313 [INFO] Argument:319 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2023-12-03 15:33:16,313 [INFO] Argument:329 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2023-12-03 15:33:16,313 [INFO] Argument:319 - Argument : Lockvalue: null
+2023-12-03 15:33:16,313 [INFO] Argument:329 - Argument : Lockvalue: null
+2023-12-03 15:33:16,313 [INFO] Argument:319 - Argument : Statevalue: null
+2023-12-03 15:33:16,313 [INFO] Argument:329 - Argument : Statevalue: null
+2023-12-03 15:33:16,313 [INFO] Argument:319 - Argument : Parentvalue: null
+2023-12-03 15:33:16,313 [INFO] Argument:329 - Argument : Parentvalue: null
+2023-12-03 15:33:16,313 [INFO] Argument:319 - Argument : XferCpltCallbackvalue: null
+2023-12-03 15:33:16,313 [INFO] Argument:329 - Argument : XferCpltCallbackvalue: null
+2023-12-03 15:33:16,313 [INFO] Argument:319 - Argument : XferHalfCpltCallbackvalue: null
+2023-12-03 15:33:16,313 [INFO] Argument:329 - Argument : XferHalfCpltCallbackvalue: null
+2023-12-03 15:33:16,313 [INFO] Argument:319 - Argument : XferErrorCallbackvalue: null
+2023-12-03 15:33:16,313 [INFO] Argument:329 - Argument : XferErrorCallbackvalue: null
+2023-12-03 15:33:16,313 [INFO] Argument:319 - Argument : XferAbortCallbackvalue: null
+2023-12-03 15:33:16,313 [INFO] Argument:329 - Argument : XferAbortCallbackvalue: null
+2023-12-03 15:33:16,313 [INFO] Argument:319 - Argument : ErrorCodevalue: null
+2023-12-03 15:33:16,313 [INFO] Argument:329 - Argument : ErrorCodevalue: null
+2023-12-03 15:33:16,313 [INFO] Argument:319 - Argument : DmaBaseAddressvalue: null
+2023-12-03 15:33:16,313 [INFO] Argument:329 - Argument : DmaBaseAddressvalue: null
+2023-12-03 15:33:16,313 [INFO] Argument:319 - Argument : ChannelIndexvalue: null
+2023-12-03 15:33:16,313 [INFO] Argument:329 - Argument : ChannelIndexvalue: null
+2023-12-03 15:33:16,313 [INFO] Argument:319 - Argument : hdmavalue: null
+2023-12-03 15:33:16,313 [INFO] Argument:321 - 	 sub Args: 
+2023-12-03 15:33:16,313 [INFO] Argument:319 - Argument : Instancevalue: DMA1_Channel7
+2023-12-03 15:33:16,313 [INFO] Argument:329 - Argument : Instancevalue: DMA1_Channel7
+2023-12-03 15:33:16,313 [INFO] Argument:319 - Argument : Initvalue: null
+2023-12-03 15:33:16,313 [INFO] Argument:321 - 	 sub Args: 
+2023-12-03 15:33:16,313 [INFO] Argument:319 - Argument : Requestvalue: DMA_REQUEST_1
+2023-12-03 15:33:16,313 [INFO] Argument:329 - Argument : Requestvalue: DMA_REQUEST_1
+2023-12-03 15:33:16,313 [INFO] Argument:319 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2023-12-03 15:33:16,313 [INFO] Argument:329 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2023-12-03 15:33:16,313 [INFO] Argument:319 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2023-12-03 15:33:16,313 [INFO] Argument:329 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2023-12-03 15:33:16,313 [INFO] Argument:319 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2023-12-03 15:33:16,313 [INFO] Argument:329 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2023-12-03 15:33:16,313 [INFO] Argument:319 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_WORD
+2023-12-03 15:33:16,313 [INFO] Argument:329 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_WORD
+2023-12-03 15:33:16,313 [INFO] Argument:319 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_WORD
+2023-12-03 15:33:16,313 [INFO] Argument:329 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_WORD
+2023-12-03 15:33:16,313 [INFO] Argument:319 - Argument : Modevalue: DMA_CIRCULAR
+2023-12-03 15:33:16,313 [INFO] Argument:329 - Argument : Modevalue: DMA_CIRCULAR
+2023-12-03 15:33:16,314 [INFO] Argument:319 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2023-12-03 15:33:16,314 [INFO] Argument:329 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2023-12-03 15:33:16,314 [INFO] Argument:319 - Argument : Lockvalue: null
+2023-12-03 15:33:16,314 [INFO] Argument:329 - Argument : Lockvalue: null
+2023-12-03 15:33:16,314 [INFO] Argument:319 - Argument : Statevalue: null
+2023-12-03 15:33:16,314 [INFO] Argument:329 - Argument : Statevalue: null
+2023-12-03 15:33:16,314 [INFO] Argument:319 - Argument : Parentvalue: null
+2023-12-03 15:33:16,314 [INFO] Argument:329 - Argument : Parentvalue: null
+2023-12-03 15:33:16,314 [INFO] Argument:319 - Argument : XferCpltCallbackvalue: null
+2023-12-03 15:33:16,314 [INFO] Argument:329 - Argument : XferCpltCallbackvalue: null
+2023-12-03 15:33:16,314 [INFO] Argument:319 - Argument : XferHalfCpltCallbackvalue: null
+2023-12-03 15:33:16,314 [INFO] Argument:329 - Argument : XferHalfCpltCallbackvalue: null
+2023-12-03 15:33:16,314 [INFO] Argument:319 - Argument : XferErrorCallbackvalue: null
+2023-12-03 15:33:16,314 [INFO] Argument:329 - Argument : XferErrorCallbackvalue: null
+2023-12-03 15:33:16,314 [INFO] Argument:319 - Argument : XferAbortCallbackvalue: null
+2023-12-03 15:33:16,314 [INFO] Argument:329 - Argument : XferAbortCallbackvalue: null
+2023-12-03 15:33:16,314 [INFO] Argument:319 - Argument : ErrorCodevalue: null
+2023-12-03 15:33:16,314 [INFO] Argument:329 - Argument : ErrorCodevalue: null
+2023-12-03 15:33:16,314 [INFO] Argument:319 - Argument : DmaBaseAddressvalue: null
+2023-12-03 15:33:16,314 [INFO] Argument:329 - Argument : DmaBaseAddressvalue: null
+2023-12-03 15:33:16,314 [INFO] Argument:319 - Argument : ChannelIndexvalue: null
+2023-12-03 15:33:16,314 [INFO] Argument:329 - Argument : ChannelIndexvalue: null
+2023-12-03 15:33:16,314 [INFO] Argument:319 - Argument : pSyncConfigvalue: null
+2023-12-03 15:33:16,314 [INFO] Argument:321 - 	 sub Args: 
+2023-12-03 15:33:16,314 [INFO] Argument:319 - Argument : SyncSignalIDvalue: null
+2023-12-03 15:33:16,314 [INFO] Argument:329 - Argument : SyncSignalIDvalue: null
+2023-12-03 15:33:16,314 [INFO] Argument:319 - Argument : SyncPolarityvalue: null
+2023-12-03 15:33:16,314 [INFO] Argument:329 - Argument : SyncPolarityvalue: null
+2023-12-03 15:33:16,314 [INFO] Argument:319 - Argument : SyncEnablevalue: null
+2023-12-03 15:33:16,314 [INFO] Argument:329 - Argument : SyncEnablevalue: null
+2023-12-03 15:33:16,314 [INFO] Argument:319 - Argument : EventEnablevalue: null
+2023-12-03 15:33:16,314 [INFO] Argument:329 - Argument : EventEnablevalue: null
+2023-12-03 15:33:16,314 [INFO] Argument:319 - Argument : RequestNumbervalue: null
+2023-12-03 15:33:16,314 [INFO] Argument:329 - Argument : RequestNumbervalue: null
+2023-12-03 15:33:16,395 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\license.tmp_save
+2023-12-03 15:33:16,465 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\license.tmp
+2023-12-03 15:33:16,495 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\gpio.tmp_save
+2023-12-03 15:33:16,582 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\gpio.tmp
+2023-12-03 15:33:16,687 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\dma.tmp_save
+2023-12-03 15:33:16,762 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\dma.tmp
+2023-12-03 15:33:16,765 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\dma_GV.tmp_save
+2023-12-03 15:33:16,818 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\dma_GV.tmp
+2023-12-03 15:33:16,824 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\sai_init.tmp_save
+2023-12-03 15:33:16,901 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\sai_init.tmp
+2023-12-03 15:33:16,904 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\sai_GV.tmp_save
+2023-12-03 15:33:16,951 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\sai_GV.tmp
+2023-12-03 15:33:16,954 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\sai_msp.tmp_save
+2023-12-03 15:33:17,015 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\sai_msp.tmp
+2023-12-03 15:33:17,030 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\Core\Src\stm32l4xx_it.c_save
+2023-12-03 15:33:17,172 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\Core\Src\stm32l4xx_it.c
+2023-12-03 15:33:17,183 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\Core\Inc\stm32l4xx_it.h_save
+2023-12-03 15:33:17,247 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\Core\Inc\stm32l4xx_it.h
+2023-12-03 15:33:17,264 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\sai_init.tmp_save
+2023-12-03 15:33:17,318 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\sai_init.tmp
+2023-12-03 15:33:17,323 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\sai_GV.tmp_save
+2023-12-03 15:33:17,369 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\sai_GV.tmp
+2023-12-03 15:33:17,390 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\sai_msp.tmp_save
+2023-12-03 15:33:17,454 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\sai_msp.tmp
+2023-12-03 15:33:17,469 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\Core\Src\stm32l4xx_hal_msp.c_save
+2023-12-03 15:33:17,550 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\Core\Src\stm32l4xx_hal_msp.c
+2023-12-03 15:33:17,557 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\system.tmp_save
+2023-12-03 15:33:17,605 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\system.tmp
+2023-12-03 15:33:17,617 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\Core\Inc\stm32l4xx_hal_conf.h_save
+2023-12-03 15:33:17,690 [INFO] CodeEngine:335 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\Core\Inc\stm32l4xx_hal_conf.h
+2023-12-03 15:33:17,728 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\Core\Inc\main.h_save
+2023-12-03 15:33:17,799 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\Core\Inc\main.h
+2023-12-03 15:33:17,808 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\Core\Src\main.c_save
+2023-12-03 15:33:17,893 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\Core\Src\main.c
+2023-12-03 15:33:18,300 [INFO] ProjectBuilder:3064 - Time for Copy HAL[1] : 172mS.
+2023-12-03 15:33:18,302 [INFO] ProjectBuilder:4404 - Project Generator version: 4.1.0
+2023-12-03 15:33:18,447 [INFO] ConfigFileManager:1457 - The Die is : DIE415
+2023-12-03 15:33:19,237 [INFO] ProjectBuilder:4626 - Time for Generating toolchain IDE Files: 934mS.
+2023-12-03 15:33:19,237 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 0mS.
+2023-12-03 15:33:19,239 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 0mS.
+2023-12-03 17:31:36,167 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-12-03 17:31:46,490 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-12-03 17:31:46,548 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-12-03 17:31:53,810 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-12-03 17:31:53,869 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-12-03 17:32:01,078 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-12-03 17:32:01,143 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-12-03 17:32:03,495 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-12-03 17:32:03,563 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-12-03 17:34:21,548 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 879908968 Bytes (1073741824)
+2023-12-03 17:34:23,746 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 910844008 Bytes (1073741824)
+2023-12-03 17:34:23,887 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 941774952 Bytes (1073741824)
+2023-12-03 17:34:24,021 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SPI
+2023-12-03 17:34:24,021 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-12-03 17:34:24,021 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-12-03 17:34:24,021 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-12-03 17:34:24,021 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2023-12-03 17:34:24,021 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: DMA
+2023-12-03 17:34:24,021 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-12-03 17:34:24,021 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SAI
+2023-12-03 17:34:24,022 [INFO] CodeGenerator:799 - code generatio: config db path: C:\ST\STM32CubeIDE_1.13.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.2.202309101412\\db\
+2023-12-03 17:34:24,032 [INFO] Argument:319 - Argument : hdmavalue: null
+2023-12-03 17:34:24,032 [INFO] Argument:321 - 	 sub Args: 
+2023-12-03 17:34:24,032 [INFO] Argument:319 - Argument : Instancevalue: DMA1_Channel6
+2023-12-03 17:34:24,032 [INFO] Argument:329 - Argument : Instancevalue: DMA1_Channel6
+2023-12-03 17:34:24,032 [INFO] Argument:319 - Argument : Initvalue: null
+2023-12-03 17:34:24,032 [INFO] Argument:321 - 	 sub Args: 
+2023-12-03 17:34:24,032 [INFO] Argument:319 - Argument : Requestvalue: DMA_REQUEST_1
+2023-12-03 17:34:24,032 [INFO] Argument:329 - Argument : Requestvalue: DMA_REQUEST_1
+2023-12-03 17:34:24,032 [INFO] Argument:319 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2023-12-03 17:34:24,032 [INFO] Argument:329 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2023-12-03 17:34:24,032 [INFO] Argument:319 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2023-12-03 17:34:24,032 [INFO] Argument:329 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2023-12-03 17:34:24,032 [INFO] Argument:319 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2023-12-03 17:34:24,032 [INFO] Argument:329 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2023-12-03 17:34:24,033 [INFO] Argument:319 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_WORD
+2023-12-03 17:34:24,033 [INFO] Argument:329 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_WORD
+2023-12-03 17:34:24,033 [INFO] Argument:319 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_WORD
+2023-12-03 17:34:24,033 [INFO] Argument:329 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_WORD
+2023-12-03 17:34:24,033 [INFO] Argument:319 - Argument : Modevalue: DMA_CIRCULAR
+2023-12-03 17:34:24,033 [INFO] Argument:329 - Argument : Modevalue: DMA_CIRCULAR
+2023-12-03 17:34:24,033 [INFO] Argument:319 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2023-12-03 17:34:24,033 [INFO] Argument:329 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2023-12-03 17:34:24,033 [INFO] Argument:319 - Argument : Lockvalue: null
+2023-12-03 17:34:24,033 [INFO] Argument:329 - Argument : Lockvalue: null
+2023-12-03 17:34:24,033 [INFO] Argument:319 - Argument : Statevalue: null
+2023-12-03 17:34:24,033 [INFO] Argument:329 - Argument : Statevalue: null
+2023-12-03 17:34:24,033 [INFO] Argument:319 - Argument : Parentvalue: null
+2023-12-03 17:34:24,033 [INFO] Argument:329 - Argument : Parentvalue: null
+2023-12-03 17:34:24,033 [INFO] Argument:319 - Argument : XferCpltCallbackvalue: null
+2023-12-03 17:34:24,033 [INFO] Argument:329 - Argument : XferCpltCallbackvalue: null
+2023-12-03 17:34:24,033 [INFO] Argument:319 - Argument : XferHalfCpltCallbackvalue: null
+2023-12-03 17:34:24,033 [INFO] Argument:329 - Argument : XferHalfCpltCallbackvalue: null
+2023-12-03 17:34:24,033 [INFO] Argument:319 - Argument : XferErrorCallbackvalue: null
+2023-12-03 17:34:24,033 [INFO] Argument:329 - Argument : XferErrorCallbackvalue: null
+2023-12-03 17:34:24,033 [INFO] Argument:319 - Argument : XferAbortCallbackvalue: null
+2023-12-03 17:34:24,033 [INFO] Argument:329 - Argument : XferAbortCallbackvalue: null
+2023-12-03 17:34:24,033 [INFO] Argument:319 - Argument : ErrorCodevalue: null
+2023-12-03 17:34:24,033 [INFO] Argument:329 - Argument : ErrorCodevalue: null
+2023-12-03 17:34:24,033 [INFO] Argument:319 - Argument : DmaBaseAddressvalue: null
+2023-12-03 17:34:24,033 [INFO] Argument:329 - Argument : DmaBaseAddressvalue: null
+2023-12-03 17:34:24,033 [INFO] Argument:319 - Argument : ChannelIndexvalue: null
+2023-12-03 17:34:24,033 [INFO] Argument:329 - Argument : ChannelIndexvalue: null
+2023-12-03 17:34:24,033 [INFO] Argument:319 - Argument : hdmavalue: null
+2023-12-03 17:34:24,033 [INFO] Argument:321 - 	 sub Args: 
+2023-12-03 17:34:24,033 [INFO] Argument:319 - Argument : Instancevalue: DMA1_Channel6
+2023-12-03 17:34:24,033 [INFO] Argument:329 - Argument : Instancevalue: DMA1_Channel6
+2023-12-03 17:34:24,033 [INFO] Argument:319 - Argument : Initvalue: null
+2023-12-03 17:34:24,033 [INFO] Argument:321 - 	 sub Args: 
+2023-12-03 17:34:24,033 [INFO] Argument:319 - Argument : Requestvalue: DMA_REQUEST_1
+2023-12-03 17:34:24,033 [INFO] Argument:329 - Argument : Requestvalue: DMA_REQUEST_1
+2023-12-03 17:34:24,033 [INFO] Argument:319 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2023-12-03 17:34:24,033 [INFO] Argument:329 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2023-12-03 17:34:24,033 [INFO] Argument:319 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2023-12-03 17:34:24,033 [INFO] Argument:329 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2023-12-03 17:34:24,033 [INFO] Argument:319 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2023-12-03 17:34:24,033 [INFO] Argument:329 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2023-12-03 17:34:24,033 [INFO] Argument:319 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_WORD
+2023-12-03 17:34:24,033 [INFO] Argument:329 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_WORD
+2023-12-03 17:34:24,033 [INFO] Argument:319 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_WORD
+2023-12-03 17:34:24,033 [INFO] Argument:329 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_WORD
+2023-12-03 17:34:24,033 [INFO] Argument:319 - Argument : Modevalue: DMA_CIRCULAR
+2023-12-03 17:34:24,033 [INFO] Argument:329 - Argument : Modevalue: DMA_CIRCULAR
+2023-12-03 17:34:24,033 [INFO] Argument:319 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2023-12-03 17:34:24,033 [INFO] Argument:329 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2023-12-03 17:34:24,033 [INFO] Argument:319 - Argument : Lockvalue: null
+2023-12-03 17:34:24,033 [INFO] Argument:329 - Argument : Lockvalue: null
+2023-12-03 17:34:24,033 [INFO] Argument:319 - Argument : Statevalue: null
+2023-12-03 17:34:24,033 [INFO] Argument:329 - Argument : Statevalue: null
+2023-12-03 17:34:24,033 [INFO] Argument:319 - Argument : Parentvalue: null
+2023-12-03 17:34:24,033 [INFO] Argument:329 - Argument : Parentvalue: null
+2023-12-03 17:34:24,034 [INFO] Argument:319 - Argument : XferCpltCallbackvalue: null
+2023-12-03 17:34:24,034 [INFO] Argument:329 - Argument : XferCpltCallbackvalue: null
+2023-12-03 17:34:24,034 [INFO] Argument:319 - Argument : XferHalfCpltCallbackvalue: null
+2023-12-03 17:34:24,034 [INFO] Argument:329 - Argument : XferHalfCpltCallbackvalue: null
+2023-12-03 17:34:24,034 [INFO] Argument:319 - Argument : XferErrorCallbackvalue: null
+2023-12-03 17:34:24,034 [INFO] Argument:329 - Argument : XferErrorCallbackvalue: null
+2023-12-03 17:34:24,034 [INFO] Argument:319 - Argument : XferAbortCallbackvalue: null
+2023-12-03 17:34:24,034 [INFO] Argument:329 - Argument : XferAbortCallbackvalue: null
+2023-12-03 17:34:24,034 [INFO] Argument:319 - Argument : ErrorCodevalue: null
+2023-12-03 17:34:24,034 [INFO] Argument:329 - Argument : ErrorCodevalue: null
+2023-12-03 17:34:24,034 [INFO] Argument:319 - Argument : DmaBaseAddressvalue: null
+2023-12-03 17:34:24,034 [INFO] Argument:329 - Argument : DmaBaseAddressvalue: null
+2023-12-03 17:34:24,034 [INFO] Argument:319 - Argument : ChannelIndexvalue: null
+2023-12-03 17:34:24,034 [INFO] Argument:329 - Argument : ChannelIndexvalue: null
+2023-12-03 17:34:24,034 [INFO] Argument:319 - Argument : pSyncConfigvalue: null
+2023-12-03 17:34:24,034 [INFO] Argument:321 - 	 sub Args: 
+2023-12-03 17:34:24,034 [INFO] Argument:319 - Argument : SyncSignalIDvalue: null
+2023-12-03 17:34:24,034 [INFO] Argument:329 - Argument : SyncSignalIDvalue: null
+2023-12-03 17:34:24,034 [INFO] Argument:319 - Argument : SyncPolarityvalue: null
+2023-12-03 17:34:24,034 [INFO] Argument:329 - Argument : SyncPolarityvalue: null
+2023-12-03 17:34:24,034 [INFO] Argument:319 - Argument : SyncEnablevalue: null
+2023-12-03 17:34:24,034 [INFO] Argument:329 - Argument : SyncEnablevalue: null
+2023-12-03 17:34:24,034 [INFO] Argument:319 - Argument : EventEnablevalue: null
+2023-12-03 17:34:24,034 [INFO] Argument:329 - Argument : EventEnablevalue: null
+2023-12-03 17:34:24,034 [INFO] Argument:319 - Argument : RequestNumbervalue: null
+2023-12-03 17:34:24,034 [INFO] Argument:329 - Argument : RequestNumbervalue: null
+2023-12-03 17:34:24,034 [INFO] Argument:319 - Argument : hdmavalue: null
+2023-12-03 17:34:24,034 [INFO] Argument:321 - 	 sub Args: 
+2023-12-03 17:34:24,034 [INFO] Argument:319 - Argument : Instancevalue: DMA1_Channel7
+2023-12-03 17:34:24,034 [INFO] Argument:329 - Argument : Instancevalue: DMA1_Channel7
+2023-12-03 17:34:24,034 [INFO] Argument:319 - Argument : Initvalue: null
+2023-12-03 17:34:24,034 [INFO] Argument:321 - 	 sub Args: 
+2023-12-03 17:34:24,034 [INFO] Argument:319 - Argument : Requestvalue: DMA_REQUEST_1
+2023-12-03 17:34:24,034 [INFO] Argument:329 - Argument : Requestvalue: DMA_REQUEST_1
+2023-12-03 17:34:24,034 [INFO] Argument:319 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2023-12-03 17:34:24,034 [INFO] Argument:329 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2023-12-03 17:34:24,034 [INFO] Argument:319 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2023-12-03 17:34:24,034 [INFO] Argument:329 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2023-12-03 17:34:24,034 [INFO] Argument:319 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2023-12-03 17:34:24,034 [INFO] Argument:329 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2023-12-03 17:34:24,034 [INFO] Argument:319 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_WORD
+2023-12-03 17:34:24,034 [INFO] Argument:329 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_WORD
+2023-12-03 17:34:24,034 [INFO] Argument:319 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_WORD
+2023-12-03 17:34:24,034 [INFO] Argument:329 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_WORD
+2023-12-03 17:34:24,034 [INFO] Argument:319 - Argument : Modevalue: DMA_CIRCULAR
+2023-12-03 17:34:24,034 [INFO] Argument:329 - Argument : Modevalue: DMA_CIRCULAR
+2023-12-03 17:34:24,035 [INFO] Argument:319 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2023-12-03 17:34:24,035 [INFO] Argument:329 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2023-12-03 17:34:24,035 [INFO] Argument:319 - Argument : Lockvalue: null
+2023-12-03 17:34:24,035 [INFO] Argument:329 - Argument : Lockvalue: null
+2023-12-03 17:34:24,035 [INFO] Argument:319 - Argument : Statevalue: null
+2023-12-03 17:34:24,035 [INFO] Argument:329 - Argument : Statevalue: null
+2023-12-03 17:34:24,035 [INFO] Argument:319 - Argument : Parentvalue: null
+2023-12-03 17:34:24,035 [INFO] Argument:329 - Argument : Parentvalue: null
+2023-12-03 17:34:24,035 [INFO] Argument:319 - Argument : XferCpltCallbackvalue: null
+2023-12-03 17:34:24,035 [INFO] Argument:329 - Argument : XferCpltCallbackvalue: null
+2023-12-03 17:34:24,035 [INFO] Argument:319 - Argument : XferHalfCpltCallbackvalue: null
+2023-12-03 17:34:24,035 [INFO] Argument:329 - Argument : XferHalfCpltCallbackvalue: null
+2023-12-03 17:34:24,035 [INFO] Argument:319 - Argument : XferErrorCallbackvalue: null
+2023-12-03 17:34:24,035 [INFO] Argument:329 - Argument : XferErrorCallbackvalue: null
+2023-12-03 17:34:24,035 [INFO] Argument:319 - Argument : XferAbortCallbackvalue: null
+2023-12-03 17:34:24,035 [INFO] Argument:329 - Argument : XferAbortCallbackvalue: null
+2023-12-03 17:34:24,035 [INFO] Argument:319 - Argument : ErrorCodevalue: null
+2023-12-03 17:34:24,035 [INFO] Argument:329 - Argument : ErrorCodevalue: null
+2023-12-03 17:34:24,035 [INFO] Argument:319 - Argument : DmaBaseAddressvalue: null
+2023-12-03 17:34:24,035 [INFO] Argument:329 - Argument : DmaBaseAddressvalue: null
+2023-12-03 17:34:24,035 [INFO] Argument:319 - Argument : ChannelIndexvalue: null
+2023-12-03 17:34:24,035 [INFO] Argument:329 - Argument : ChannelIndexvalue: null
+2023-12-03 17:34:24,035 [INFO] Argument:319 - Argument : hdmavalue: null
+2023-12-03 17:34:24,035 [INFO] Argument:321 - 	 sub Args: 
+2023-12-03 17:34:24,035 [INFO] Argument:319 - Argument : Instancevalue: DMA1_Channel7
+2023-12-03 17:34:24,035 [INFO] Argument:329 - Argument : Instancevalue: DMA1_Channel7
+2023-12-03 17:34:24,035 [INFO] Argument:319 - Argument : Initvalue: null
+2023-12-03 17:34:24,035 [INFO] Argument:321 - 	 sub Args: 
+2023-12-03 17:34:24,035 [INFO] Argument:319 - Argument : Requestvalue: DMA_REQUEST_1
+2023-12-03 17:34:24,035 [INFO] Argument:329 - Argument : Requestvalue: DMA_REQUEST_1
+2023-12-03 17:34:24,035 [INFO] Argument:319 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2023-12-03 17:34:24,035 [INFO] Argument:329 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2023-12-03 17:34:24,035 [INFO] Argument:319 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2023-12-03 17:34:24,035 [INFO] Argument:329 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2023-12-03 17:34:24,035 [INFO] Argument:319 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2023-12-03 17:34:24,035 [INFO] Argument:329 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2023-12-03 17:34:24,035 [INFO] Argument:319 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_WORD
+2023-12-03 17:34:24,035 [INFO] Argument:329 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_WORD
+2023-12-03 17:34:24,035 [INFO] Argument:319 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_WORD
+2023-12-03 17:34:24,035 [INFO] Argument:329 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_WORD
+2023-12-03 17:34:24,035 [INFO] Argument:319 - Argument : Modevalue: DMA_CIRCULAR
+2023-12-03 17:34:24,035 [INFO] Argument:329 - Argument : Modevalue: DMA_CIRCULAR
+2023-12-03 17:34:24,035 [INFO] Argument:319 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2023-12-03 17:34:24,035 [INFO] Argument:329 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2023-12-03 17:34:24,035 [INFO] Argument:319 - Argument : Lockvalue: null
+2023-12-03 17:34:24,035 [INFO] Argument:329 - Argument : Lockvalue: null
+2023-12-03 17:34:24,035 [INFO] Argument:319 - Argument : Statevalue: null
+2023-12-03 17:34:24,035 [INFO] Argument:329 - Argument : Statevalue: null
+2023-12-03 17:34:24,035 [INFO] Argument:319 - Argument : Parentvalue: null
+2023-12-03 17:34:24,035 [INFO] Argument:329 - Argument : Parentvalue: null
+2023-12-03 17:34:24,035 [INFO] Argument:319 - Argument : XferCpltCallbackvalue: null
+2023-12-03 17:34:24,035 [INFO] Argument:329 - Argument : XferCpltCallbackvalue: null
+2023-12-03 17:34:24,035 [INFO] Argument:319 - Argument : XferHalfCpltCallbackvalue: null
+2023-12-03 17:34:24,035 [INFO] Argument:329 - Argument : XferHalfCpltCallbackvalue: null
+2023-12-03 17:34:24,035 [INFO] Argument:319 - Argument : XferErrorCallbackvalue: null
+2023-12-03 17:34:24,035 [INFO] Argument:329 - Argument : XferErrorCallbackvalue: null
+2023-12-03 17:34:24,035 [INFO] Argument:319 - Argument : XferAbortCallbackvalue: null
+2023-12-03 17:34:24,035 [INFO] Argument:329 - Argument : XferAbortCallbackvalue: null
+2023-12-03 17:34:24,035 [INFO] Argument:319 - Argument : ErrorCodevalue: null
+2023-12-03 17:34:24,036 [INFO] Argument:329 - Argument : ErrorCodevalue: null
+2023-12-03 17:34:24,036 [INFO] Argument:319 - Argument : DmaBaseAddressvalue: null
+2023-12-03 17:34:24,036 [INFO] Argument:329 - Argument : DmaBaseAddressvalue: null
+2023-12-03 17:34:24,036 [INFO] Argument:319 - Argument : ChannelIndexvalue: null
+2023-12-03 17:34:24,036 [INFO] Argument:329 - Argument : ChannelIndexvalue: null
+2023-12-03 17:34:24,036 [INFO] Argument:319 - Argument : pSyncConfigvalue: null
+2023-12-03 17:34:24,036 [INFO] Argument:321 - 	 sub Args: 
+2023-12-03 17:34:24,036 [INFO] Argument:319 - Argument : SyncSignalIDvalue: null
+2023-12-03 17:34:24,036 [INFO] Argument:329 - Argument : SyncSignalIDvalue: null
+2023-12-03 17:34:24,036 [INFO] Argument:319 - Argument : SyncPolarityvalue: null
+2023-12-03 17:34:24,036 [INFO] Argument:329 - Argument : SyncPolarityvalue: null
+2023-12-03 17:34:24,036 [INFO] Argument:319 - Argument : SyncEnablevalue: null
+2023-12-03 17:34:24,036 [INFO] Argument:329 - Argument : SyncEnablevalue: null
+2023-12-03 17:34:24,036 [INFO] Argument:319 - Argument : EventEnablevalue: null
+2023-12-03 17:34:24,036 [INFO] Argument:329 - Argument : EventEnablevalue: null
+2023-12-03 17:34:24,036 [INFO] Argument:319 - Argument : RequestNumbervalue: null
+2023-12-03 17:34:24,036 [INFO] Argument:329 - Argument : RequestNumbervalue: null
+2023-12-03 17:34:24,104 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\license.tmp_save
+2023-12-03 17:34:24,195 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\license.tmp
+2023-12-03 17:34:24,222 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\gpio.tmp_save
+2023-12-03 17:34:24,289 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\gpio.tmp
+2023-12-03 17:34:24,461 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\dma.tmp_save
+2023-12-03 17:34:24,524 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\dma.tmp
+2023-12-03 17:34:24,528 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\dma_GV.tmp_save
+2023-12-03 17:34:24,575 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\dma_GV.tmp
+2023-12-03 17:34:24,582 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\sai_init.tmp_save
+2023-12-03 17:34:24,643 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\sai_init.tmp
+2023-12-03 17:34:24,646 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\sai_GV.tmp_save
+2023-12-03 17:34:24,687 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\sai_GV.tmp
+2023-12-03 17:34:24,690 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\sai_msp.tmp_save
+2023-12-03 17:34:24,749 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\sai_msp.tmp
+2023-12-03 17:34:24,763 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\Core\Src\stm32l4xx_it.c_save
+2023-12-03 17:34:24,884 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\Core\Src\stm32l4xx_it.c
+2023-12-03 17:34:24,895 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\Core\Inc\stm32l4xx_it.h_save
+2023-12-03 17:34:24,947 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\Core\Inc\stm32l4xx_it.h
+2023-12-03 17:34:25,002 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\sai_init.tmp_save
+2023-12-03 17:34:25,043 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\sai_init.tmp
+2023-12-03 17:34:25,047 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\sai_GV.tmp_save
+2023-12-03 17:34:25,089 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\sai_GV.tmp
+2023-12-03 17:34:25,101 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\sai_msp.tmp_save
+2023-12-03 17:34:25,151 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\sai_msp.tmp
+2023-12-03 17:34:25,165 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\Core\Src\stm32l4xx_hal_msp.c_save
+2023-12-03 17:34:25,242 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\Core\Src\stm32l4xx_hal_msp.c
+2023-12-03 17:34:25,249 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\system.tmp_save
+2023-12-03 17:34:25,296 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\system.tmp
+2023-12-03 17:34:25,308 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\Core\Inc\stm32l4xx_hal_conf.h_save
+2023-12-03 17:34:25,379 [INFO] CodeEngine:335 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\Core\Inc\stm32l4xx_hal_conf.h
+2023-12-03 17:34:25,413 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\Core\Inc\main.h_save
+2023-12-03 17:34:25,487 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\Core\Inc\main.h
+2023-12-03 17:34:25,497 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\Core\Src\main.c_save
+2023-12-03 17:34:25,585 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\Core\Src\main.c
+2023-12-03 17:34:26,042 [INFO] ProjectBuilder:3064 - Time for Copy HAL[1] : 156mS.
+2023-12-03 17:34:26,045 [INFO] ProjectBuilder:4404 - Project Generator version: 4.1.0
+2023-12-03 17:34:26,183 [INFO] ConfigFileManager:1457 - The Die is : DIE415
+2023-12-03 17:34:26,981 [INFO] ProjectBuilder:4626 - Time for Generating toolchain IDE Files: 936mS.
+2023-12-03 17:34:26,982 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 1mS.
+2023-12-03 17:34:26,984 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 1mS.
+2023-12-03 17:38:21,686 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-12-03 17:38:24,406 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-12-03 17:38:37,270 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 726518760 Bytes (1073741824)
+2023-12-03 17:38:38,983 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 753930560 Bytes (1073741824)
+2023-12-03 17:38:39,125 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 758033928 Bytes (1073741824)
+2023-12-03 17:38:39,254 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SPI
+2023-12-03 17:38:39,254 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-12-03 17:38:39,254 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-12-03 17:38:39,254 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-12-03 17:38:39,254 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2023-12-03 17:38:39,254 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: DMA
+2023-12-03 17:38:39,255 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-12-03 17:38:39,255 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SAI
+2023-12-03 17:38:39,256 [INFO] CodeGenerator:799 - code generatio: config db path: C:\ST\STM32CubeIDE_1.13.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.2.202309101412\\db\
+2023-12-03 17:38:39,267 [INFO] Argument:319 - Argument : hdmavalue: null
+2023-12-03 17:38:39,267 [INFO] Argument:321 - 	 sub Args: 
+2023-12-03 17:38:39,267 [INFO] Argument:319 - Argument : Instancevalue: DMA1_Channel6
+2023-12-03 17:38:39,267 [INFO] Argument:329 - Argument : Instancevalue: DMA1_Channel6
+2023-12-03 17:38:39,267 [INFO] Argument:319 - Argument : Initvalue: null
+2023-12-03 17:38:39,267 [INFO] Argument:321 - 	 sub Args: 
+2023-12-03 17:38:39,267 [INFO] Argument:319 - Argument : Requestvalue: DMA_REQUEST_1
+2023-12-03 17:38:39,267 [INFO] Argument:329 - Argument : Requestvalue: DMA_REQUEST_1
+2023-12-03 17:38:39,267 [INFO] Argument:319 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2023-12-03 17:38:39,267 [INFO] Argument:329 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2023-12-03 17:38:39,267 [INFO] Argument:319 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2023-12-03 17:38:39,267 [INFO] Argument:329 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2023-12-03 17:38:39,267 [INFO] Argument:319 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2023-12-03 17:38:39,267 [INFO] Argument:329 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2023-12-03 17:38:39,267 [INFO] Argument:319 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_WORD
+2023-12-03 17:38:39,267 [INFO] Argument:329 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_WORD
+2023-12-03 17:38:39,267 [INFO] Argument:319 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_WORD
+2023-12-03 17:38:39,267 [INFO] Argument:329 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_WORD
+2023-12-03 17:38:39,267 [INFO] Argument:319 - Argument : Modevalue: DMA_CIRCULAR
+2023-12-03 17:38:39,267 [INFO] Argument:329 - Argument : Modevalue: DMA_CIRCULAR
+2023-12-03 17:38:39,267 [INFO] Argument:319 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2023-12-03 17:38:39,267 [INFO] Argument:329 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2023-12-03 17:38:39,267 [INFO] Argument:319 - Argument : Lockvalue: null
+2023-12-03 17:38:39,267 [INFO] Argument:329 - Argument : Lockvalue: null
+2023-12-03 17:38:39,267 [INFO] Argument:319 - Argument : Statevalue: null
+2023-12-03 17:38:39,267 [INFO] Argument:329 - Argument : Statevalue: null
+2023-12-03 17:38:39,267 [INFO] Argument:319 - Argument : Parentvalue: null
+2023-12-03 17:38:39,267 [INFO] Argument:329 - Argument : Parentvalue: null
+2023-12-03 17:38:39,267 [INFO] Argument:319 - Argument : XferCpltCallbackvalue: null
+2023-12-03 17:38:39,267 [INFO] Argument:329 - Argument : XferCpltCallbackvalue: null
+2023-12-03 17:38:39,267 [INFO] Argument:319 - Argument : XferHalfCpltCallbackvalue: null
+2023-12-03 17:38:39,267 [INFO] Argument:329 - Argument : XferHalfCpltCallbackvalue: null
+2023-12-03 17:38:39,267 [INFO] Argument:319 - Argument : XferErrorCallbackvalue: null
+2023-12-03 17:38:39,267 [INFO] Argument:329 - Argument : XferErrorCallbackvalue: null
+2023-12-03 17:38:39,267 [INFO] Argument:319 - Argument : XferAbortCallbackvalue: null
+2023-12-03 17:38:39,267 [INFO] Argument:329 - Argument : XferAbortCallbackvalue: null
+2023-12-03 17:38:39,267 [INFO] Argument:319 - Argument : ErrorCodevalue: null
+2023-12-03 17:38:39,267 [INFO] Argument:329 - Argument : ErrorCodevalue: null
+2023-12-03 17:38:39,268 [INFO] Argument:319 - Argument : DmaBaseAddressvalue: null
+2023-12-03 17:38:39,268 [INFO] Argument:329 - Argument : DmaBaseAddressvalue: null
+2023-12-03 17:38:39,268 [INFO] Argument:319 - Argument : ChannelIndexvalue: null
+2023-12-03 17:38:39,268 [INFO] Argument:329 - Argument : ChannelIndexvalue: null
+2023-12-03 17:38:39,268 [INFO] Argument:319 - Argument : hdmavalue: null
+2023-12-03 17:38:39,268 [INFO] Argument:321 - 	 sub Args: 
+2023-12-03 17:38:39,268 [INFO] Argument:319 - Argument : Instancevalue: DMA1_Channel6
+2023-12-03 17:38:39,268 [INFO] Argument:329 - Argument : Instancevalue: DMA1_Channel6
+2023-12-03 17:38:39,268 [INFO] Argument:319 - Argument : Initvalue: null
+2023-12-03 17:38:39,268 [INFO] Argument:321 - 	 sub Args: 
+2023-12-03 17:38:39,268 [INFO] Argument:319 - Argument : Requestvalue: DMA_REQUEST_1
+2023-12-03 17:38:39,268 [INFO] Argument:329 - Argument : Requestvalue: DMA_REQUEST_1
+2023-12-03 17:38:39,268 [INFO] Argument:319 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2023-12-03 17:38:39,268 [INFO] Argument:329 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2023-12-03 17:38:39,268 [INFO] Argument:319 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2023-12-03 17:38:39,268 [INFO] Argument:329 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2023-12-03 17:38:39,268 [INFO] Argument:319 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2023-12-03 17:38:39,268 [INFO] Argument:329 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2023-12-03 17:38:39,268 [INFO] Argument:319 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_WORD
+2023-12-03 17:38:39,268 [INFO] Argument:329 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_WORD
+2023-12-03 17:38:39,268 [INFO] Argument:319 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_WORD
+2023-12-03 17:38:39,268 [INFO] Argument:329 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_WORD
+2023-12-03 17:38:39,268 [INFO] Argument:319 - Argument : Modevalue: DMA_CIRCULAR
+2023-12-03 17:38:39,268 [INFO] Argument:329 - Argument : Modevalue: DMA_CIRCULAR
+2023-12-03 17:38:39,268 [INFO] Argument:319 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2023-12-03 17:38:39,268 [INFO] Argument:329 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2023-12-03 17:38:39,268 [INFO] Argument:319 - Argument : Lockvalue: null
+2023-12-03 17:38:39,268 [INFO] Argument:329 - Argument : Lockvalue: null
+2023-12-03 17:38:39,268 [INFO] Argument:319 - Argument : Statevalue: null
+2023-12-03 17:38:39,268 [INFO] Argument:329 - Argument : Statevalue: null
+2023-12-03 17:38:39,268 [INFO] Argument:319 - Argument : Parentvalue: null
+2023-12-03 17:38:39,268 [INFO] Argument:329 - Argument : Parentvalue: null
+2023-12-03 17:38:39,268 [INFO] Argument:319 - Argument : XferCpltCallbackvalue: null
+2023-12-03 17:38:39,268 [INFO] Argument:329 - Argument : XferCpltCallbackvalue: null
+2023-12-03 17:38:39,268 [INFO] Argument:319 - Argument : XferHalfCpltCallbackvalue: null
+2023-12-03 17:38:39,268 [INFO] Argument:329 - Argument : XferHalfCpltCallbackvalue: null
+2023-12-03 17:38:39,268 [INFO] Argument:319 - Argument : XferErrorCallbackvalue: null
+2023-12-03 17:38:39,268 [INFO] Argument:329 - Argument : XferErrorCallbackvalue: null
+2023-12-03 17:38:39,268 [INFO] Argument:319 - Argument : XferAbortCallbackvalue: null
+2023-12-03 17:38:39,268 [INFO] Argument:329 - Argument : XferAbortCallbackvalue: null
+2023-12-03 17:38:39,268 [INFO] Argument:319 - Argument : ErrorCodevalue: null
+2023-12-03 17:38:39,268 [INFO] Argument:329 - Argument : ErrorCodevalue: null
+2023-12-03 17:38:39,268 [INFO] Argument:319 - Argument : DmaBaseAddressvalue: null
+2023-12-03 17:38:39,268 [INFO] Argument:329 - Argument : DmaBaseAddressvalue: null
+2023-12-03 17:38:39,268 [INFO] Argument:319 - Argument : ChannelIndexvalue: null
+2023-12-03 17:38:39,268 [INFO] Argument:329 - Argument : ChannelIndexvalue: null
+2023-12-03 17:38:39,268 [INFO] Argument:319 - Argument : pSyncConfigvalue: null
+2023-12-03 17:38:39,268 [INFO] Argument:321 - 	 sub Args: 
+2023-12-03 17:38:39,268 [INFO] Argument:319 - Argument : SyncSignalIDvalue: null
+2023-12-03 17:38:39,268 [INFO] Argument:329 - Argument : SyncSignalIDvalue: null
+2023-12-03 17:38:39,268 [INFO] Argument:319 - Argument : SyncPolarityvalue: null
+2023-12-03 17:38:39,268 [INFO] Argument:329 - Argument : SyncPolarityvalue: null
+2023-12-03 17:38:39,268 [INFO] Argument:319 - Argument : SyncEnablevalue: null
+2023-12-03 17:38:39,268 [INFO] Argument:329 - Argument : SyncEnablevalue: null
+2023-12-03 17:38:39,268 [INFO] Argument:319 - Argument : EventEnablevalue: null
+2023-12-03 17:38:39,268 [INFO] Argument:329 - Argument : EventEnablevalue: null
+2023-12-03 17:38:39,268 [INFO] Argument:319 - Argument : RequestNumbervalue: null
+2023-12-03 17:38:39,268 [INFO] Argument:329 - Argument : RequestNumbervalue: null
+2023-12-03 17:38:39,268 [INFO] Argument:319 - Argument : hdmavalue: null
+2023-12-03 17:38:39,268 [INFO] Argument:321 - 	 sub Args: 
+2023-12-03 17:38:39,268 [INFO] Argument:319 - Argument : Instancevalue: DMA1_Channel7
+2023-12-03 17:38:39,268 [INFO] Argument:329 - Argument : Instancevalue: DMA1_Channel7
+2023-12-03 17:38:39,268 [INFO] Argument:319 - Argument : Initvalue: null
+2023-12-03 17:38:39,268 [INFO] Argument:321 - 	 sub Args: 
+2023-12-03 17:38:39,268 [INFO] Argument:319 - Argument : Requestvalue: DMA_REQUEST_1
+2023-12-03 17:38:39,268 [INFO] Argument:329 - Argument : Requestvalue: DMA_REQUEST_1
+2023-12-03 17:38:39,268 [INFO] Argument:319 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2023-12-03 17:38:39,268 [INFO] Argument:329 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2023-12-03 17:38:39,268 [INFO] Argument:319 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2023-12-03 17:38:39,268 [INFO] Argument:329 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2023-12-03 17:38:39,268 [INFO] Argument:319 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2023-12-03 17:38:39,268 [INFO] Argument:329 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2023-12-03 17:38:39,268 [INFO] Argument:319 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_WORD
+2023-12-03 17:38:39,268 [INFO] Argument:329 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_WORD
+2023-12-03 17:38:39,269 [INFO] Argument:319 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_WORD
+2023-12-03 17:38:39,269 [INFO] Argument:329 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_WORD
+2023-12-03 17:38:39,269 [INFO] Argument:319 - Argument : Modevalue: DMA_CIRCULAR
+2023-12-03 17:38:39,269 [INFO] Argument:329 - Argument : Modevalue: DMA_CIRCULAR
+2023-12-03 17:38:39,269 [INFO] Argument:319 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2023-12-03 17:38:39,269 [INFO] Argument:329 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2023-12-03 17:38:39,269 [INFO] Argument:319 - Argument : Lockvalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:329 - Argument : Lockvalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:319 - Argument : Statevalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:329 - Argument : Statevalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:319 - Argument : Parentvalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:329 - Argument : Parentvalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:319 - Argument : XferCpltCallbackvalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:329 - Argument : XferCpltCallbackvalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:319 - Argument : XferHalfCpltCallbackvalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:329 - Argument : XferHalfCpltCallbackvalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:319 - Argument : XferErrorCallbackvalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:329 - Argument : XferErrorCallbackvalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:319 - Argument : XferAbortCallbackvalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:329 - Argument : XferAbortCallbackvalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:319 - Argument : ErrorCodevalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:329 - Argument : ErrorCodevalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:319 - Argument : DmaBaseAddressvalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:329 - Argument : DmaBaseAddressvalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:319 - Argument : ChannelIndexvalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:329 - Argument : ChannelIndexvalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:319 - Argument : hdmavalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:321 - 	 sub Args: 
+2023-12-03 17:38:39,269 [INFO] Argument:319 - Argument : Instancevalue: DMA1_Channel7
+2023-12-03 17:38:39,269 [INFO] Argument:329 - Argument : Instancevalue: DMA1_Channel7
+2023-12-03 17:38:39,269 [INFO] Argument:319 - Argument : Initvalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:321 - 	 sub Args: 
+2023-12-03 17:38:39,269 [INFO] Argument:319 - Argument : Requestvalue: DMA_REQUEST_1
+2023-12-03 17:38:39,269 [INFO] Argument:329 - Argument : Requestvalue: DMA_REQUEST_1
+2023-12-03 17:38:39,269 [INFO] Argument:319 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2023-12-03 17:38:39,269 [INFO] Argument:329 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2023-12-03 17:38:39,269 [INFO] Argument:319 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2023-12-03 17:38:39,269 [INFO] Argument:329 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2023-12-03 17:38:39,269 [INFO] Argument:319 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2023-12-03 17:38:39,269 [INFO] Argument:329 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2023-12-03 17:38:39,269 [INFO] Argument:319 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_WORD
+2023-12-03 17:38:39,269 [INFO] Argument:329 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_WORD
+2023-12-03 17:38:39,269 [INFO] Argument:319 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_WORD
+2023-12-03 17:38:39,269 [INFO] Argument:329 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_WORD
+2023-12-03 17:38:39,269 [INFO] Argument:319 - Argument : Modevalue: DMA_CIRCULAR
+2023-12-03 17:38:39,269 [INFO] Argument:329 - Argument : Modevalue: DMA_CIRCULAR
+2023-12-03 17:38:39,269 [INFO] Argument:319 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2023-12-03 17:38:39,269 [INFO] Argument:329 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2023-12-03 17:38:39,269 [INFO] Argument:319 - Argument : Lockvalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:329 - Argument : Lockvalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:319 - Argument : Statevalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:329 - Argument : Statevalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:319 - Argument : Parentvalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:329 - Argument : Parentvalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:319 - Argument : XferCpltCallbackvalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:329 - Argument : XferCpltCallbackvalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:319 - Argument : XferHalfCpltCallbackvalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:329 - Argument : XferHalfCpltCallbackvalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:319 - Argument : XferErrorCallbackvalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:329 - Argument : XferErrorCallbackvalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:319 - Argument : XferAbortCallbackvalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:329 - Argument : XferAbortCallbackvalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:319 - Argument : ErrorCodevalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:329 - Argument : ErrorCodevalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:319 - Argument : DmaBaseAddressvalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:329 - Argument : DmaBaseAddressvalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:319 - Argument : ChannelIndexvalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:329 - Argument : ChannelIndexvalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:319 - Argument : pSyncConfigvalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:321 - 	 sub Args: 
+2023-12-03 17:38:39,269 [INFO] Argument:319 - Argument : SyncSignalIDvalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:329 - Argument : SyncSignalIDvalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:319 - Argument : SyncPolarityvalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:329 - Argument : SyncPolarityvalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:319 - Argument : SyncEnablevalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:329 - Argument : SyncEnablevalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:319 - Argument : EventEnablevalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:329 - Argument : EventEnablevalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:319 - Argument : RequestNumbervalue: null
+2023-12-03 17:38:39,269 [INFO] Argument:329 - Argument : RequestNumbervalue: null
+2023-12-03 17:38:39,337 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\license.tmp_save
+2023-12-03 17:38:39,414 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\license.tmp
+2023-12-03 17:38:39,440 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\gpio.tmp_save
+2023-12-03 17:38:39,534 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\gpio.tmp
+2023-12-03 17:38:39,846 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\dma.tmp_save
+2023-12-03 17:38:39,933 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\dma.tmp
+2023-12-03 17:38:39,936 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\dma_GV.tmp_save
+2023-12-03 17:38:39,975 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\dma_GV.tmp
+2023-12-03 17:38:39,981 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\sai_init.tmp_save
+2023-12-03 17:38:40,041 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\sai_init.tmp
+2023-12-03 17:38:40,044 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\sai_GV.tmp_save
+2023-12-03 17:38:40,084 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\sai_GV.tmp
+2023-12-03 17:38:40,088 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\sai_msp.tmp_save
+2023-12-03 17:38:40,141 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\sai_msp.tmp
+2023-12-03 17:38:40,155 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\Core\Src\stm32l4xx_it.c_save
+2023-12-03 17:38:40,231 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\Core\Src\stm32l4xx_it.c
+2023-12-03 17:38:40,236 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\Core\Inc\stm32l4xx_it.h_save
+2023-12-03 17:38:40,287 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\Core\Inc\stm32l4xx_it.h
+2023-12-03 17:38:40,303 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\sai_init.tmp_save
+2023-12-03 17:38:40,350 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\sai_init.tmp
+2023-12-03 17:38:40,355 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\sai_GV.tmp_save
+2023-12-03 17:38:40,395 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\sai_GV.tmp
+2023-12-03 17:38:40,406 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\sai_msp.tmp_save
+2023-12-03 17:38:40,450 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\sai_msp.tmp
+2023-12-03 17:38:40,463 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\Core\Src\stm32l4xx_hal_msp.c_save
+2023-12-03 17:38:40,548 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\Core\Src\stm32l4xx_hal_msp.c
+2023-12-03 17:38:40,559 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\system.tmp_save
+2023-12-03 17:38:40,598 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\system.tmp
+2023-12-03 17:38:40,611 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\Core\Inc\stm32l4xx_hal_conf.h_save
+2023-12-03 17:38:40,680 [INFO] CodeEngine:335 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\Core\Inc\stm32l4xx_hal_conf.h
+2023-12-03 17:38:40,708 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\Core\Inc\main.h_save
+2023-12-03 17:38:40,760 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\Core\Inc\main.h
+2023-12-03 17:38:40,771 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\Core\Src\main.c_save
+2023-12-03 17:38:40,859 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\Core\Src\main.c
+2023-12-03 17:38:41,264 [INFO] ProjectBuilder:3064 - Time for Copy HAL[1] : 147mS.
+2023-12-03 17:38:41,267 [INFO] ProjectBuilder:4404 - Project Generator version: 4.1.0
+2023-12-03 17:38:41,408 [INFO] ConfigFileManager:1457 - The Die is : DIE415
+2023-12-03 17:38:42,201 [INFO] ProjectBuilder:4626 - Time for Generating toolchain IDE Files: 934mS.
+2023-12-03 17:38:42,202 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 1mS.
+2023-12-03 17:38:42,204 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 1mS.
+2023-12-03 17:44:58,545 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 707838184 Bytes (1073741824)
+2023-12-03 17:45:00,564 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 736149736 Bytes (1073741824)
+2023-12-03 17:45:00,697 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 763939048 Bytes (1073741824)
+2023-12-03 17:45:00,820 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SPI
+2023-12-03 17:45:00,820 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-12-03 17:45:00,820 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-12-03 17:45:00,820 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-12-03 17:45:00,820 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2023-12-03 17:45:00,820 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: DMA
+2023-12-03 17:45:00,820 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-12-03 17:45:00,820 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SAI
+2023-12-03 17:45:00,821 [INFO] CodeGenerator:799 - code generatio: config db path: C:\ST\STM32CubeIDE_1.13.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.2.202309101412\\db\
+2023-12-03 17:45:00,829 [INFO] Argument:319 - Argument : hdmavalue: null
+2023-12-03 17:45:00,829 [INFO] Argument:321 - 	 sub Args: 
+2023-12-03 17:45:00,829 [INFO] Argument:319 - Argument : Instancevalue: DMA1_Channel6
+2023-12-03 17:45:00,829 [INFO] Argument:329 - Argument : Instancevalue: DMA1_Channel6
+2023-12-03 17:45:00,829 [INFO] Argument:319 - Argument : Initvalue: null
+2023-12-03 17:45:00,829 [INFO] Argument:321 - 	 sub Args: 
+2023-12-03 17:45:00,829 [INFO] Argument:319 - Argument : Requestvalue: DMA_REQUEST_1
+2023-12-03 17:45:00,829 [INFO] Argument:329 - Argument : Requestvalue: DMA_REQUEST_1
+2023-12-03 17:45:00,829 [INFO] Argument:319 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2023-12-03 17:45:00,829 [INFO] Argument:329 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2023-12-03 17:45:00,829 [INFO] Argument:319 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2023-12-03 17:45:00,829 [INFO] Argument:329 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2023-12-03 17:45:00,829 [INFO] Argument:319 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2023-12-03 17:45:00,829 [INFO] Argument:329 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2023-12-03 17:45:00,829 [INFO] Argument:319 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_WORD
+2023-12-03 17:45:00,829 [INFO] Argument:329 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_WORD
+2023-12-03 17:45:00,829 [INFO] Argument:319 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_WORD
+2023-12-03 17:45:00,830 [INFO] Argument:329 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_WORD
+2023-12-03 17:45:00,830 [INFO] Argument:319 - Argument : Modevalue: DMA_CIRCULAR
+2023-12-03 17:45:00,830 [INFO] Argument:329 - Argument : Modevalue: DMA_CIRCULAR
+2023-12-03 17:45:00,830 [INFO] Argument:319 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2023-12-03 17:45:00,830 [INFO] Argument:329 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2023-12-03 17:45:00,830 [INFO] Argument:319 - Argument : Lockvalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:329 - Argument : Lockvalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:319 - Argument : Statevalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:329 - Argument : Statevalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:319 - Argument : Parentvalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:329 - Argument : Parentvalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:319 - Argument : XferCpltCallbackvalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:329 - Argument : XferCpltCallbackvalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:319 - Argument : XferHalfCpltCallbackvalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:329 - Argument : XferHalfCpltCallbackvalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:319 - Argument : XferErrorCallbackvalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:329 - Argument : XferErrorCallbackvalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:319 - Argument : XferAbortCallbackvalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:329 - Argument : XferAbortCallbackvalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:319 - Argument : ErrorCodevalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:329 - Argument : ErrorCodevalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:319 - Argument : DmaBaseAddressvalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:329 - Argument : DmaBaseAddressvalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:319 - Argument : ChannelIndexvalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:329 - Argument : ChannelIndexvalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:319 - Argument : hdmavalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:321 - 	 sub Args: 
+2023-12-03 17:45:00,830 [INFO] Argument:319 - Argument : Instancevalue: DMA1_Channel6
+2023-12-03 17:45:00,830 [INFO] Argument:329 - Argument : Instancevalue: DMA1_Channel6
+2023-12-03 17:45:00,830 [INFO] Argument:319 - Argument : Initvalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:321 - 	 sub Args: 
+2023-12-03 17:45:00,830 [INFO] Argument:319 - Argument : Requestvalue: DMA_REQUEST_1
+2023-12-03 17:45:00,830 [INFO] Argument:329 - Argument : Requestvalue: DMA_REQUEST_1
+2023-12-03 17:45:00,830 [INFO] Argument:319 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2023-12-03 17:45:00,830 [INFO] Argument:329 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2023-12-03 17:45:00,830 [INFO] Argument:319 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2023-12-03 17:45:00,830 [INFO] Argument:329 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2023-12-03 17:45:00,830 [INFO] Argument:319 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2023-12-03 17:45:00,830 [INFO] Argument:329 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2023-12-03 17:45:00,830 [INFO] Argument:319 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_WORD
+2023-12-03 17:45:00,830 [INFO] Argument:329 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_WORD
+2023-12-03 17:45:00,830 [INFO] Argument:319 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_WORD
+2023-12-03 17:45:00,830 [INFO] Argument:329 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_WORD
+2023-12-03 17:45:00,830 [INFO] Argument:319 - Argument : Modevalue: DMA_CIRCULAR
+2023-12-03 17:45:00,830 [INFO] Argument:329 - Argument : Modevalue: DMA_CIRCULAR
+2023-12-03 17:45:00,830 [INFO] Argument:319 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2023-12-03 17:45:00,830 [INFO] Argument:329 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2023-12-03 17:45:00,830 [INFO] Argument:319 - Argument : Lockvalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:329 - Argument : Lockvalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:319 - Argument : Statevalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:329 - Argument : Statevalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:319 - Argument : Parentvalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:329 - Argument : Parentvalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:319 - Argument : XferCpltCallbackvalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:329 - Argument : XferCpltCallbackvalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:319 - Argument : XferHalfCpltCallbackvalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:329 - Argument : XferHalfCpltCallbackvalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:319 - Argument : XferErrorCallbackvalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:329 - Argument : XferErrorCallbackvalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:319 - Argument : XferAbortCallbackvalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:329 - Argument : XferAbortCallbackvalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:319 - Argument : ErrorCodevalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:329 - Argument : ErrorCodevalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:319 - Argument : DmaBaseAddressvalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:329 - Argument : DmaBaseAddressvalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:319 - Argument : ChannelIndexvalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:329 - Argument : ChannelIndexvalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:319 - Argument : pSyncConfigvalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:321 - 	 sub Args: 
+2023-12-03 17:45:00,830 [INFO] Argument:319 - Argument : SyncSignalIDvalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:329 - Argument : SyncSignalIDvalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:319 - Argument : SyncPolarityvalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:329 - Argument : SyncPolarityvalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:319 - Argument : SyncEnablevalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:329 - Argument : SyncEnablevalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:319 - Argument : EventEnablevalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:329 - Argument : EventEnablevalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:319 - Argument : RequestNumbervalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:329 - Argument : RequestNumbervalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:319 - Argument : hdmavalue: null
+2023-12-03 17:45:00,830 [INFO] Argument:321 - 	 sub Args: 
+2023-12-03 17:45:00,830 [INFO] Argument:319 - Argument : Instancevalue: DMA1_Channel7
+2023-12-03 17:45:00,830 [INFO] Argument:329 - Argument : Instancevalue: DMA1_Channel7
+2023-12-03 17:45:00,831 [INFO] Argument:319 - Argument : Initvalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:321 - 	 sub Args: 
+2023-12-03 17:45:00,831 [INFO] Argument:319 - Argument : Requestvalue: DMA_REQUEST_1
+2023-12-03 17:45:00,831 [INFO] Argument:329 - Argument : Requestvalue: DMA_REQUEST_1
+2023-12-03 17:45:00,831 [INFO] Argument:319 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2023-12-03 17:45:00,831 [INFO] Argument:329 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2023-12-03 17:45:00,831 [INFO] Argument:319 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2023-12-03 17:45:00,831 [INFO] Argument:329 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2023-12-03 17:45:00,831 [INFO] Argument:319 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2023-12-03 17:45:00,831 [INFO] Argument:329 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2023-12-03 17:45:00,831 [INFO] Argument:319 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_WORD
+2023-12-03 17:45:00,831 [INFO] Argument:329 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_WORD
+2023-12-03 17:45:00,831 [INFO] Argument:319 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_WORD
+2023-12-03 17:45:00,831 [INFO] Argument:329 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_WORD
+2023-12-03 17:45:00,831 [INFO] Argument:319 - Argument : Modevalue: DMA_CIRCULAR
+2023-12-03 17:45:00,831 [INFO] Argument:329 - Argument : Modevalue: DMA_CIRCULAR
+2023-12-03 17:45:00,831 [INFO] Argument:319 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2023-12-03 17:45:00,831 [INFO] Argument:329 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2023-12-03 17:45:00,831 [INFO] Argument:319 - Argument : Lockvalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:329 - Argument : Lockvalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:319 - Argument : Statevalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:329 - Argument : Statevalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:319 - Argument : Parentvalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:329 - Argument : Parentvalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:319 - Argument : XferCpltCallbackvalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:329 - Argument : XferCpltCallbackvalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:319 - Argument : XferHalfCpltCallbackvalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:329 - Argument : XferHalfCpltCallbackvalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:319 - Argument : XferErrorCallbackvalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:329 - Argument : XferErrorCallbackvalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:319 - Argument : XferAbortCallbackvalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:329 - Argument : XferAbortCallbackvalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:319 - Argument : ErrorCodevalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:329 - Argument : ErrorCodevalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:319 - Argument : DmaBaseAddressvalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:329 - Argument : DmaBaseAddressvalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:319 - Argument : ChannelIndexvalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:329 - Argument : ChannelIndexvalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:319 - Argument : hdmavalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:321 - 	 sub Args: 
+2023-12-03 17:45:00,831 [INFO] Argument:319 - Argument : Instancevalue: DMA1_Channel7
+2023-12-03 17:45:00,831 [INFO] Argument:329 - Argument : Instancevalue: DMA1_Channel7
+2023-12-03 17:45:00,831 [INFO] Argument:319 - Argument : Initvalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:321 - 	 sub Args: 
+2023-12-03 17:45:00,831 [INFO] Argument:319 - Argument : Requestvalue: DMA_REQUEST_1
+2023-12-03 17:45:00,831 [INFO] Argument:329 - Argument : Requestvalue: DMA_REQUEST_1
+2023-12-03 17:45:00,831 [INFO] Argument:319 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2023-12-03 17:45:00,831 [INFO] Argument:329 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2023-12-03 17:45:00,831 [INFO] Argument:319 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2023-12-03 17:45:00,831 [INFO] Argument:329 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2023-12-03 17:45:00,831 [INFO] Argument:319 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2023-12-03 17:45:00,831 [INFO] Argument:329 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2023-12-03 17:45:00,831 [INFO] Argument:319 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_WORD
+2023-12-03 17:45:00,831 [INFO] Argument:329 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_WORD
+2023-12-03 17:45:00,831 [INFO] Argument:319 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_WORD
+2023-12-03 17:45:00,831 [INFO] Argument:329 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_WORD
+2023-12-03 17:45:00,831 [INFO] Argument:319 - Argument : Modevalue: DMA_CIRCULAR
+2023-12-03 17:45:00,831 [INFO] Argument:329 - Argument : Modevalue: DMA_CIRCULAR
+2023-12-03 17:45:00,831 [INFO] Argument:319 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2023-12-03 17:45:00,831 [INFO] Argument:329 - Argument : Priorityvalue: DMA_PRIORITY_VERY_HIGH
+2023-12-03 17:45:00,831 [INFO] Argument:319 - Argument : Lockvalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:329 - Argument : Lockvalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:319 - Argument : Statevalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:329 - Argument : Statevalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:319 - Argument : Parentvalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:329 - Argument : Parentvalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:319 - Argument : XferCpltCallbackvalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:329 - Argument : XferCpltCallbackvalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:319 - Argument : XferHalfCpltCallbackvalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:329 - Argument : XferHalfCpltCallbackvalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:319 - Argument : XferErrorCallbackvalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:329 - Argument : XferErrorCallbackvalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:319 - Argument : XferAbortCallbackvalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:329 - Argument : XferAbortCallbackvalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:319 - Argument : ErrorCodevalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:329 - Argument : ErrorCodevalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:319 - Argument : DmaBaseAddressvalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:329 - Argument : DmaBaseAddressvalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:319 - Argument : ChannelIndexvalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:329 - Argument : ChannelIndexvalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:319 - Argument : pSyncConfigvalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:321 - 	 sub Args: 
+2023-12-03 17:45:00,831 [INFO] Argument:319 - Argument : SyncSignalIDvalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:329 - Argument : SyncSignalIDvalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:319 - Argument : SyncPolarityvalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:329 - Argument : SyncPolarityvalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:319 - Argument : SyncEnablevalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:329 - Argument : SyncEnablevalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:319 - Argument : EventEnablevalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:329 - Argument : EventEnablevalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:319 - Argument : RequestNumbervalue: null
+2023-12-03 17:45:00,831 [INFO] Argument:329 - Argument : RequestNumbervalue: null
+2023-12-03 17:45:00,832 [INFO] Argument:319 - Argument : hdmavalue: null
+2023-12-03 17:45:00,832 [INFO] Argument:321 - 	 sub Args: 
+2023-12-03 17:45:00,832 [INFO] Argument:319 - Argument : Instancevalue: DMA1_Channel3
+2023-12-03 17:45:00,832 [INFO] Argument:329 - Argument : Instancevalue: DMA1_Channel3
+2023-12-03 17:45:00,832 [INFO] Argument:319 - Argument : Initvalue: null
+2023-12-03 17:45:00,832 [INFO] Argument:321 - 	 sub Args: 
+2023-12-03 17:45:00,832 [INFO] Argument:319 - Argument : Requestvalue: DMA_REQUEST_1
+2023-12-03 17:45:00,832 [INFO] Argument:329 - Argument : Requestvalue: DMA_REQUEST_1
+2023-12-03 17:45:00,833 [INFO] Argument:319 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2023-12-03 17:45:00,833 [INFO] Argument:329 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2023-12-03 17:45:00,833 [INFO] Argument:319 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2023-12-03 17:45:00,833 [INFO] Argument:329 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2023-12-03 17:45:00,833 [INFO] Argument:319 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2023-12-03 17:45:00,833 [INFO] Argument:329 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2023-12-03 17:45:00,833 [INFO] Argument:319 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2023-12-03 17:45:00,833 [INFO] Argument:329 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2023-12-03 17:45:00,833 [INFO] Argument:319 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2023-12-03 17:45:00,833 [INFO] Argument:329 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2023-12-03 17:45:00,833 [INFO] Argument:319 - Argument : Modevalue: DMA_CIRCULAR
+2023-12-03 17:45:00,833 [INFO] Argument:329 - Argument : Modevalue: DMA_CIRCULAR
+2023-12-03 17:45:00,833 [INFO] Argument:319 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2023-12-03 17:45:00,833 [INFO] Argument:329 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2023-12-03 17:45:00,833 [INFO] Argument:319 - Argument : Lockvalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:329 - Argument : Lockvalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:319 - Argument : Statevalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:329 - Argument : Statevalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:319 - Argument : Parentvalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:329 - Argument : Parentvalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:319 - Argument : XferCpltCallbackvalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:329 - Argument : XferCpltCallbackvalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:319 - Argument : XferHalfCpltCallbackvalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:329 - Argument : XferHalfCpltCallbackvalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:319 - Argument : XferErrorCallbackvalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:329 - Argument : XferErrorCallbackvalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:319 - Argument : XferAbortCallbackvalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:329 - Argument : XferAbortCallbackvalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:319 - Argument : ErrorCodevalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:329 - Argument : ErrorCodevalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:319 - Argument : DmaBaseAddressvalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:329 - Argument : DmaBaseAddressvalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:319 - Argument : ChannelIndexvalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:329 - Argument : ChannelIndexvalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:319 - Argument : hdmavalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:321 - 	 sub Args: 
+2023-12-03 17:45:00,833 [INFO] Argument:319 - Argument : Instancevalue: DMA1_Channel3
+2023-12-03 17:45:00,833 [INFO] Argument:329 - Argument : Instancevalue: DMA1_Channel3
+2023-12-03 17:45:00,833 [INFO] Argument:319 - Argument : Initvalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:321 - 	 sub Args: 
+2023-12-03 17:45:00,833 [INFO] Argument:319 - Argument : Requestvalue: DMA_REQUEST_1
+2023-12-03 17:45:00,833 [INFO] Argument:329 - Argument : Requestvalue: DMA_REQUEST_1
+2023-12-03 17:45:00,833 [INFO] Argument:319 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2023-12-03 17:45:00,833 [INFO] Argument:329 - Argument : Directionvalue: DMA_MEMORY_TO_PERIPH
+2023-12-03 17:45:00,833 [INFO] Argument:319 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2023-12-03 17:45:00,833 [INFO] Argument:329 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2023-12-03 17:45:00,833 [INFO] Argument:319 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2023-12-03 17:45:00,833 [INFO] Argument:329 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2023-12-03 17:45:00,833 [INFO] Argument:319 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2023-12-03 17:45:00,833 [INFO] Argument:329 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2023-12-03 17:45:00,833 [INFO] Argument:319 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2023-12-03 17:45:00,833 [INFO] Argument:329 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2023-12-03 17:45:00,833 [INFO] Argument:319 - Argument : Modevalue: DMA_CIRCULAR
+2023-12-03 17:45:00,833 [INFO] Argument:329 - Argument : Modevalue: DMA_CIRCULAR
+2023-12-03 17:45:00,833 [INFO] Argument:319 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2023-12-03 17:45:00,833 [INFO] Argument:329 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2023-12-03 17:45:00,833 [INFO] Argument:319 - Argument : Lockvalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:329 - Argument : Lockvalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:319 - Argument : Statevalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:329 - Argument : Statevalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:319 - Argument : Parentvalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:329 - Argument : Parentvalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:319 - Argument : XferCpltCallbackvalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:329 - Argument : XferCpltCallbackvalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:319 - Argument : XferHalfCpltCallbackvalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:329 - Argument : XferHalfCpltCallbackvalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:319 - Argument : XferErrorCallbackvalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:329 - Argument : XferErrorCallbackvalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:319 - Argument : XferAbortCallbackvalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:329 - Argument : XferAbortCallbackvalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:319 - Argument : ErrorCodevalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:329 - Argument : ErrorCodevalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:319 - Argument : DmaBaseAddressvalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:329 - Argument : DmaBaseAddressvalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:319 - Argument : ChannelIndexvalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:329 - Argument : ChannelIndexvalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:319 - Argument : pSyncConfigvalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:321 - 	 sub Args: 
+2023-12-03 17:45:00,833 [INFO] Argument:319 - Argument : SyncSignalIDvalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:329 - Argument : SyncSignalIDvalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:319 - Argument : SyncPolarityvalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:329 - Argument : SyncPolarityvalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:319 - Argument : SyncEnablevalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:329 - Argument : SyncEnablevalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:319 - Argument : EventEnablevalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:329 - Argument : EventEnablevalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:319 - Argument : RequestNumbervalue: null
+2023-12-03 17:45:00,833 [INFO] Argument:329 - Argument : RequestNumbervalue: null
+2023-12-03 17:45:00,897 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\license.tmp_save
+2023-12-03 17:45:00,960 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\license.tmp
+2023-12-03 17:45:00,993 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\gpio.tmp_save
+2023-12-03 17:45:01,093 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\gpio.tmp
+2023-12-03 17:45:01,409 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\dma.tmp_save
+2023-12-03 17:45:01,505 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\dma.tmp
+2023-12-03 17:45:01,508 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\dma_GV.tmp_save
+2023-12-03 17:45:01,547 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\dma_GV.tmp
+2023-12-03 17:45:01,554 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\sai_init.tmp_save
+2023-12-03 17:45:01,618 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\sai_init.tmp
+2023-12-03 17:45:01,621 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\sai_GV.tmp_save
+2023-12-03 17:45:01,662 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\sai_GV.tmp
+2023-12-03 17:45:01,665 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\sai_msp.tmp_save
+2023-12-03 17:45:01,721 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\sai_msp.tmp
+2023-12-03 17:45:01,736 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\Core\Src\stm32l4xx_it.c_save
+2023-12-03 17:45:01,829 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\Core\Src\stm32l4xx_it.c
+2023-12-03 17:45:01,833 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\Core\Inc\stm32l4xx_it.h_save
+2023-12-03 17:45:01,872 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\Core\Inc\stm32l4xx_it.h
+2023-12-03 17:45:01,887 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\sai_init.tmp_save
+2023-12-03 17:45:01,932 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\sai_init.tmp
+2023-12-03 17:45:01,936 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\sai_GV.tmp_save
+2023-12-03 17:45:01,976 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\sai_GV.tmp
+2023-12-03 17:45:01,988 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\sai_msp.tmp_save
+2023-12-03 17:45:02,034 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\sai_msp.tmp
+2023-12-03 17:45:02,047 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\Core\Src\stm32l4xx_hal_msp.c_save
+2023-12-03 17:45:02,134 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\Core\Src\stm32l4xx_hal_msp.c
+2023-12-03 17:45:02,141 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\system.tmp_save
+2023-12-03 17:45:02,179 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\MXTmpFiles\system.tmp
+2023-12-03 17:45:02,191 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\Core\Inc\stm32l4xx_hal_conf.h_save
+2023-12-03 17:45:02,258 [INFO] CodeEngine:335 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\Core\Inc\stm32l4xx_hal_conf.h
+2023-12-03 17:45:02,288 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\Core\Inc\main.h_save
+2023-12-03 17:45:02,351 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\Core\Inc\main.h
+2023-12-03 17:45:02,370 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\Core\Src\main.c_save
+2023-12-03 17:45:02,468 [INFO] CodeEngine:279 - Generated code: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\Core\Src\main.c
+2023-12-03 17:45:02,802 [INFO] ProjectBuilder:3064 - Time for Copy HAL[1] : 138mS.
+2023-12-03 17:45:02,805 [INFO] ProjectBuilder:4404 - Project Generator version: 4.1.0
+2023-12-03 17:45:02,958 [INFO] ConfigFileManager:1457 - The Die is : DIE415
+2023-12-03 17:45:03,773 [INFO] ProjectBuilder:4626 - Time for Generating toolchain IDE Files: 969mS.
+2023-12-03 17:45:03,774 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 1mS.
+2023-12-03 17:45:03,776 [INFO] ProjectBuilder:2935 - Time for Copy CMSIS : 0mS.

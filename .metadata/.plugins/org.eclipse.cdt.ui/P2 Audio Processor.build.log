@@ -1,67 +1,24 @@
-12:04:11 **** Incremental Build of configuration Debug for project P2 Audio Processor ****
+18:12:05 **** Incremental Build of configuration Debug for project P2 Audio Processor ****
 make -j24 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c:67:1: error: unknown type name 'TIM_HandleTypeDef'; did you mean 'SAI_HandleTypeDef'?
-   67 | TIM_HandleTypeDef htim2;
-      | ^~~~~~~~~~~~~~~~~
-      | SAI_HandleTypeDef
 ../Core/Src/main.c: In function 'ProcessAudioData':
-../Core/Src/main.c:117:63: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
-  117 |             snprintf(uartBuffer, sizeof(uartBuffer), "Sample %d: %ld\r\n", i, sample);
-      |                                                              ~^            ~
-      |                                                               |            |
-      |                                                               int          uint32_t {aka long unsigned int}
-      |                                                              %ld
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:192:3: warning: implicit declaration of function 'MX_TIM2_Init'; did you mean 'MX_SAI2_Init'? [-Wimplicit-function-declaration]
-  192 |   MX_TIM2_Init();
-      |   ^~~~~~~~~~~~
-      |   MX_SAI2_Init
-../Core/Src/main.c:194:3: warning: implicit declaration of function 'HAL_TIM_Base_Start'; did you mean 'HAL_DMA_Start'? [-Wimplicit-function-declaration]
-  194 |   HAL_TIM_Base_Start(&htim2);
-      |   ^~~~~~~~~~~~~~~~~~
-      |   HAL_DMA_Start
-../Core/Src/main.c: At top level:
-../Core/Src/main.c:492:6: warning: conflicting types for 'MX_TIM2_Init'; have 'void(void)'
-  492 | void MX_TIM2_Init(void) {
-      |      ^~~~~~~~~~~~
-../Core/Src/main.c:192:3: note: previous implicit declaration of 'MX_TIM2_Init' with type 'void(void)'
-  192 |   MX_TIM2_Init();
-      |   ^~~~~~~~~~~~
-../Core/Src/main.c: In function 'MX_TIM2_Init':
-../Core/Src/main.c:500:10: error: request for member 'Instance' in something not a structure or union
-  500 |     htim2.Instance = TIM2;
-      |          ^
-../Core/Src/main.c:501:10: error: request for member 'Init' in something not a structure or union
-  501 |     htim2.Init.Prescaler = prescaler;
-      |          ^
-../Core/Src/main.c:502:10: error: request for member 'Init' in something not a structure or union
-  502 |     htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
-      |          ^
-../Core/Src/main.c:502:30: error: 'TIM_COUNTERMODE_UP' undeclared (first use in this function)
-  502 |     htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
-      |                              ^~~~~~~~~~~~~~~~~~
-../Core/Src/main.c:502:30: note: each undeclared identifier is reported only once for each function it appears in
-../Core/Src/main.c:503:10: error: request for member 'Init' in something not a structure or union
-  503 |     htim2.Init.Period = period;
-      |          ^
-../Core/Src/main.c:504:10: error: request for member 'Init' in something not a structure or union
-  504 |     htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
-      |          ^
-../Core/Src/main.c:504:32: error: 'TIM_CLOCKDIVISION_DIV1' undeclared (first use in this function)
-  504 |     htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
-      |                                ^~~~~~~~~~~~~~~~~~~~~~
-../Core/Src/main.c:505:10: error: request for member 'Init' in something not a structure or union
-  505 |     htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
-      |          ^
-../Core/Src/main.c:505:36: error: 'TIM_AUTORELOAD_PRELOAD_DISABLE' undeclared (first use in this function)
-  505 |     htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
-      |                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../Core/Src/main.c:507:9: warning: implicit declaration of function 'HAL_TIM_Base_Init' [-Wimplicit-function-declaration]
-  507 |     if (HAL_TIM_Base_Init(&htim2) != HAL_OK) {
-      |         ^~~~~~~~~~~~~~~~~
-make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
-"make -j24 all" terminated with exit code 2. Build might be incomplete.
+../Core/Src/main.c:123:69: warning: format '%ld' expects argument of type 'long int', but argument 5 has type 'int' [-Wformat=]
+  123 |             snprintf(uartBuffer, sizeof(uartBuffer), "Sample %lu: %ld\r\n", (unsigned long)i, dacSample);
+      |                                                                   ~~^                         ~~~~~~~~~
+      |                                                                     |                         |
+      |                                                                     long int                  int
+      |                                                                   %d
+arm-none-eabi-gcc -o "P2 Audio Processor.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 Audio Processor\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="P2 Audio Processor.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: P2 Audio Processor.elf
+ 
+arm-none-eabi-size   P2\ Audio\ Processor.elf 
+arm-none-eabi-objdump -h -S  P2\ Audio\ Processor.elf  > "P2 Audio Processor.list"
+   text	   data	    bss	    dec	    hex	filename
+  25612	    100	   6724	  32436	   7eb4	P2 Audio Processor.elf
+Finished building: default.size.stdout
+ 
+Finished building: P2 Audio Processor.list
+ 
 
-12:04:12 Build Failed. 11 errors, 5 warnings. (took 456ms)
+18:12:05 Build Finished. 0 errors, 1 warnings. (took 776ms)
 

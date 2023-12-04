@@ -1,4 +1,4 @@
-18:17:14 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
+17:41:17 **** Incremental Build of configuration Debug for project CPE 316 P1 Function Generator ****
 make -j24 all 
 arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size   CPE\ 316\ P1\ Function\ Generator.elf
 Finished building: default.size.stdout
  
 
-18:17:14 Build Finished. 0 errors, 0 warnings. (took 252ms)
+17:41:17 Build Finished. 0 errors, 0 warnings. (took 245ms)
 

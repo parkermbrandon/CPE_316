@@ -61,7 +61,7 @@ int main(void)
 
 while (1)
   {
-/*	 for (int i = 0; i < 100; ++i)
+	 for (int i = 0; i < 100; ++i)
 	 {
 		if (i < 25)
 		{
@@ -71,7 +71,7 @@ while (1)
 			DAC_write(low_val);
 		}
 		HAL_Delay(1);
-	 }*/
-	 DAC_write(dac_value);
+	 }
+	 //DAC_write(dac_value);
   }
 }
