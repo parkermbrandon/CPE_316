@@ -1,0 +1,16 @@
+../Core/Src/main.c:84:6:MAX31865_WriteRegister	16	static
+../Core/Src/main.c:105:9:MAX31865_ReadRegister	24	static
+../Core/Src/main.c:172:6:MAX31865_Init	16	static
+../Core/Src/main.c:185:7:MAX31865_ReadTemperature	24	static
+../Core/Src/main.c:199:7:MAX31865_TemperatureConversion	56	static
+../Core/Src/main.c:229:9:MAX31865_ReadFault	8	static
+../Core/Src/main.c:233:6:PrintTemperature	72	static
+../Core/Src/main.c:239:6:HandleMAX31865Faults	16	static
+../Core/Src/main.c:269:6:SPI_Init	4	static
+../Core/Src/main.c:311:6:CS_Low	4	static
+../Core/Src/main.c:316:6:CS_High	4	static
+../Core/Src/main.c:329:5:main	16	static
+../Core/Src/main.c:379:6:SystemClock_Config	96	static
+../Core/Src/main.c:429:13:MX_USART2_UART_Init	8	static
+../Core/Src/main.c:464:13:MX_GPIO_Init	48	static
+../Core/Src/main.c:502:6:Error_Handler	4	static,ignoring_inline_asm

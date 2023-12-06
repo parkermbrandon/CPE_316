@@ -1,0 +1,14 @@
+../Core/Src/main.c:84:6:MAX31865_WriteRegister	0	static
+../Core/Src/main.c:105:9:MAX31865_ReadRegister	0	static
+../Core/Src/main.c:172:6:MAX31865_Init	8	static
+../Core/Src/main.c:199:7:MAX31865_TemperatureConversion	8	static
+../Core/Src/main.c:185:7:MAX31865_ReadTemperature	8	static
+../Core/Src/main.c:229:9:MAX31865_ReadFault	0	static
+../Core/Src/main.c:233:6:PrintTemperature	64	static
+../Core/Src/main.c:239:6:HandleMAX31865Faults	8	static
+../Core/Src/main.c:269:6:SPI_Init	0	static
+../Core/Src/main.c:311:6:CS_Low	0	static
+../Core/Src/main.c:316:6:CS_High	0	static
+../Core/Src/main.c:379:6:SystemClock_Config	96	static,ignoring_inline_asm
+../Core/Src/main.c:329:5:main	48	static,ignoring_inline_asm
+../Core/Src/main.c:502:6:Error_Handler	0	static,ignoring_inline_asm

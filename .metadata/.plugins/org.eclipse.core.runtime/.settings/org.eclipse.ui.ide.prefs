@@ -1,4 +1,6 @@
+IMPORT_FILES_AND_FOLDERS_MODE=MOVE_COPY
+IMPORT_FILES_AND_FOLDERS_VIRTUAL_FOLDER_MODE=LINK
 eclipse.preferences.version=1
-platformState=1695590222857
+platformState=1695585363261
 quickStart=false
 tipsAndTricks=true
