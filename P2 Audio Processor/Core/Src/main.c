@@ -227,7 +227,7 @@ int main(void)
   currentBuffer = audioBuffer1;
   //processingBuffer = audioBuffer2;
 
-  HAL_SAI_Receive_DMA(&hsai_BlockA2, (uint8_t*)audioBuffer1, AUDIO_BUFFER_SIZE);
+  //HAL_SAI_Receive_DMA(&hsai_BlockA2, (uint8_t*)audioBuffer1, AUDIO_BUFFER_SIZE);
 
   /* USER CODE END 2 */
 

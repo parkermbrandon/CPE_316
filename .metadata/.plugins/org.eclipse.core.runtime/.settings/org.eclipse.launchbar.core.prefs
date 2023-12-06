@@ -1,7 +1,7 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:CPE 316 A6 ADC Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:P2 Audio Processor Debug
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:CPE 316 A6 ADC Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:P2 Audio Processor Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:TemperatureRelay Debug
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:ADC\ HAL\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:ADC\ HAL\ Debug/activeLaunchTarget=null\:---
@@ -18,3 +18,4 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:CPE316\ A3\ Interrupt\ Debug/ac
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:GPO\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:GPO\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:P2\ Audio\ Processor\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:TemperatureRelay\ Debug/activeLaunchMode=debug

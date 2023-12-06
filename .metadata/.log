@@ -6179,3 +6179,69 @@ java.io.FileNotFoundException: C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\CPE 
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-12-04 11:58:30.965
 !MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2023-12-04 12:03:44.642 -----------------------------------------------
+eclipse.buildId=Version 1.13.2
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-12-04 12:03:57.829
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-12-04 12:03:57.832
+!MESSAGE Log4j2 initialized with config file C:\stm32\CPE_316\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-12-04 12:04:05.658
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2023-12-04 12:05:20.182 -----------------------------------------------
+eclipse.buildId=Version 1.13.2
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-12-04 12:05:42.474
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-12-04 12:05:42.474
+!MESSAGE Log4j2 initialized with config file C:\stm32\CPE_316\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-12-04 12:05:50.968
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2023-12-04 12:33:54.257 -----------------------------------------------
+eclipse.buildId=Version 1.13.2
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-12-04 12:34:40.863
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-12-04 12:34:40.871
+!MESSAGE Log4j2 initialized with config file C:\stm32\CPE_316\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-12-04 12:34:50.399
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-12-04 12:38:05.061
+!MESSAGE Indexed 'P2 Audio Processor' (27 sources, 90 headers) in 3.36 sec: 6,508 declarations; 38,750 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0044%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-12-05 10:11:06.816
+!MESSAGE Indexed 'TemperatureRelay' (23 sources, 82 headers) in 4.53 sec: 5,451 declarations; 29,338 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0057%)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-12-05 12:19:40.302
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 6 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-12-05 12:19:40.303
+!MESSAGE Existing sessions are:
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-12-05 12:19:40.303
+!MESSAGE Error - No active DSF-Session. tmpSessionId = 6 (contextManager row 121)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug 4 0 2023-12-05 12:19:40.303
+!MESSAGE Existing sessions are:
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-12-05 12:47:35.788
+!MESSAGE Indexed 'TemperatureRelay' (25 sources, 88 headers) in 1.25 sec: 6,632 declarations; 35,028 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0048%)
