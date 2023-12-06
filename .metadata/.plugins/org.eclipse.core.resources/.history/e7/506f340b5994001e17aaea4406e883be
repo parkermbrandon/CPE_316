@@ -271,15 +271,13 @@ void SPI_Init(void) {
     RCC->AHB2ENR |= RCC_AHB2ENR_GPIOAEN;
 
     // Configure GPIOA pins for SPI1 (SCK, MISO, MOSI) to alternate function mode
-    GPIOA->MODER &= ~(GPIO_MODER_MODE5 | GPIO_MODER_MODE6 | GPIO_MODER_MODE7);
-    GPIOA->MODER |= (GPIO_MODER_MODE5_1 | GPIO_MODER_MODE6_1 | GPIO_MODER_MODE7_1);
+    GPIOA->MODER &= ~(GPIO_MODER_MODE5 | GPIO_MODER_MODE6 | GPIO_MODER_MODE7 |GPIO_MODER_MODE4);
+    GPIOA->MODER |= (GPIO_MODER_MODE5_1 | GPIO_MODER_MODE6_1 | GPIO_MODER_MODE7_1 |GPIO_MODER_MODE4_0);
 
     // Set the alternate function for SPI1
     GPIOA->AFR[0] |= (5 << (4 * 5)) | (5 << (4 * 6)) | (5 << (4 * 7)); // AF5 for SPI1
 
     // Configure PA4 as output for CS (Chip Select)
-    GPIOA->MODER &= ~GPIO_MODER_MODE4; // Clear mode for PA4
-    GPIOA->MODER |= GPIO_MODER_MODE4_0; // Set PA4 as general purpose output mode
     GPIOA->OTYPER &= ~GPIO_OTYPER_OT4; // Set PA4 as push-pull
     GPIOA->OSPEEDR |= GPIO_OSPEEDR_OSPEED4; // High speed for PA4
     GPIOA->PUPDR &= ~GPIO_PUPDR_PUPD4; // No pull-up or pull-down
@@ -298,9 +296,7 @@ void SPI_Init(void) {
     SPI1->CR1 = 0; // Clear CR1
     SPI1->CR1 |= SPI_CR1_MSTR; // Master mode
     SPI1->CR1 |= SPI_CR1_SSM | SPI_CR1_SSI; // Software slave management & internal slave select
-    SPI1->CR1 &= ~(SPI_CR1_BR_2 | SPI_CR1_BR_1 | SPI_CR1_BR_0); // Clear BR[2:0] bits
-    SPI1->CR1 |= SPI_CR1_BR_1; // Set BR[2:0] to 011 (fPCLK/16)
-    SPI1->CR1 |= SPI_CR1_BR_0; // Baud rate control (modify as needed for your clock frequency)
+    SPI1->CR1 |= (SPI_CR1_BR_0 | SPI_CR1_BR_0); // Baud rate control (modify as needed for your clock frequency)
     SPI1->CR1 |= SPI_CR1_CPHA; // Clock phase, CPHA=1
 
     // Configure SPI1 data size and direction
@@ -321,6 +317,8 @@ void CS_High(void) {
     // Set PA4 high to deselect the slave
     GPIOA->BSRR = GPIO_PIN_4;
 }
+
+
 
 /* USER CODE END 0 */
 

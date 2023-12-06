@@ -72,7 +72,7 @@ float MAX31865_ReadTemperature(void);
 float MAX31865_TemperatureConversion(float resistance);
 void PrintTemperature(float temperature);
 void HandleMAX31865Faults(void);
-void SPI_Init(void);
+void SPI_init(void);
 void CS_Init(void);
 void CS_Low(void);
 void CS_High(void);
@@ -266,7 +266,7 @@ void HandleMAX31865Faults(void) {
     }
 }
 
-void SPI_Init(void) {
+void SPI1_Init(void) {
     // Enable clock for GPIOA (for SPI1 pins)
     RCC->AHB2ENR |= RCC_AHB2ENR_GPIOAEN;
 
@@ -298,8 +298,6 @@ void SPI_Init(void) {
     SPI1->CR1 = 0; // Clear CR1
     SPI1->CR1 |= SPI_CR1_MSTR; // Master mode
     SPI1->CR1 |= SPI_CR1_SSM | SPI_CR1_SSI; // Software slave management & internal slave select
-    SPI1->CR1 &= ~(SPI_CR1_BR_2 | SPI_CR1_BR_1 | SPI_CR1_BR_0); // Clear BR[2:0] bits
-    SPI1->CR1 |= SPI_CR1_BR_1; // Set BR[2:0] to 011 (fPCLK/16)
     SPI1->CR1 |= SPI_CR1_BR_0; // Baud rate control (modify as needed for your clock frequency)
     SPI1->CR1 |= SPI_CR1_CPHA; // Clock phase, CPHA=1
 
@@ -321,6 +319,8 @@ void CS_High(void) {
     // Set PA4 high to deselect the slave
     GPIOA->BSRR = GPIO_PIN_4;
 }
+
+
 
 /* USER CODE END 0 */
 

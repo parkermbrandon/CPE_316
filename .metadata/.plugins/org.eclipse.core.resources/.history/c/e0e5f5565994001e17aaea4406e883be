@@ -72,10 +72,7 @@ float MAX31865_ReadTemperature(void);
 float MAX31865_TemperatureConversion(float resistance);
 void PrintTemperature(float temperature);
 void HandleMAX31865Faults(void);
-void SPI_Init(void);
-void CS_Init(void);
-void CS_Low(void);
-void CS_High(void);
+void SPI_init(void);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -266,61 +263,48 @@ void HandleMAX31865Faults(void) {
     }
 }
 
-void SPI_Init(void) {
-    // Enable clock for GPIOA (for SPI1 pins)
+void SPI_init(void) {
+    // Enable clock for GPIOA (for SPI1 pins and PA4)
     RCC->AHB2ENR |= RCC_AHB2ENR_GPIOAEN;
 
-    // Configure GPIOA pins for SPI1 (SCK, MISO, MOSI) to alternate function mode
+    // Configure GPIOA pins 5 (SCK), 6 (MISO), 7 (MOSI) in Alternate Function mode
     GPIOA->MODER &= ~(GPIO_MODER_MODE5 | GPIO_MODER_MODE6 | GPIO_MODER_MODE7);
     GPIOA->MODER |= (GPIO_MODER_MODE5_1 | GPIO_MODER_MODE6_1 | GPIO_MODER_MODE7_1);
 
-    // Set the alternate function for SPI1
-    GPIOA->AFR[0] |= (5 << (4 * 5)) | (5 << (4 * 6)) | (5 << (4 * 7)); // AF5 for SPI1
+    // Set alternate function to AF5 (SPI1) for GPIOA pins 5, 6, and 7
+    GPIOA->AFR[0] &= ~(GPIO_AFRL_AFSEL5 | GPIO_AFRL_AFSEL6 | GPIO_AFRL_AFSEL7);
+    GPIOA->AFR[0] |= ((5 << GPIO_AFRL_AFSEL5_Pos) | (5 << GPIO_AFRL_AFSEL6_Pos) | (5 << GPIO_AFRL_AFSEL7_Pos));
 
-    // Configure PA4 as output for CS (Chip Select)
-    GPIOA->MODER &= ~GPIO_MODER_MODE4; // Clear mode for PA4
-    GPIOA->MODER |= GPIO_MODER_MODE4_0; // Set PA4 as general purpose output mode
-    GPIOA->OTYPER &= ~GPIO_OTYPER_OT4; // Set PA4 as push-pull
-    GPIOA->OSPEEDR |= GPIO_OSPEEDR_OSPEED4; // High speed for PA4
-    GPIOA->PUPDR &= ~GPIO_PUPDR_PUPD4; // No pull-up or pull-down
+    // Configure SPI1 pins as push-pull, no pull-up/pull-down
+    GPIOA->OTYPER &= ~(GPIO_OTYPER_OT5 | GPIO_OTYPER_OT6 | GPIO_OTYPER_OT7);
+    GPIOA->PUPDR &= ~(GPIO_PUPDR_PUPD5 | GPIO_PUPDR_PUPD6 | GPIO_PUPDR_PUPD7);
 
-    // Set PA4 high (inactive CS)
+    // Now configure PA4 as a general-purpose output pin for manual CS control
+    GPIOA->MODER &= ~GPIO_MODER_MODE4;  // Clear mode for PA4
+    GPIOA->MODER |= GPIO_MODER_MODE4_0; // Set PA4 to output mode
+    GPIOA->OTYPER &= ~GPIO_OTYPER_OT4;  // Set PA4 as push-pull
+    GPIOA->PUPDR &= ~GPIO_PUPDR_PUPD4;  // No pull-up, pull-down for PA4
+
+    // Set PA4 high initially (inactive state of CS)
     GPIOA->BSRR = GPIO_PIN_4;
 
-    // Enable the SPI1 clock
+    // Enable clock for SPI1
     RCC->APB2ENR |= RCC_APB2ENR_SPI1EN;
 
     // Reset SPI1
     RCC->APB2RSTR |= RCC_APB2RSTR_SPI1RST;
     RCC->APB2RSTR &= ~RCC_APB2RSTR_SPI1RST;
 
-    // Configure SPI1
-    SPI1->CR1 = 0; // Clear CR1
-    SPI1->CR1 |= SPI_CR1_MSTR; // Master mode
-    SPI1->CR1 |= SPI_CR1_SSM | SPI_CR1_SSI; // Software slave management & internal slave select
-    SPI1->CR1 &= ~(SPI_CR1_BR_2 | SPI_CR1_BR_1 | SPI_CR1_BR_0); // Clear BR[2:0] bits
-    SPI1->CR1 |= SPI_CR1_BR_1; // Set BR[2:0] to 011 (fPCLK/16)
-    SPI1->CR1 |= SPI_CR1_BR_0; // Baud rate control (modify as needed for your clock frequency)
-    SPI1->CR1 |= SPI_CR1_CPHA; // Clock phase, CPHA=1
+    // Configure SPI1: Master mode, CPOL=0, CPHA=1 (SPI mode 1), baud rate = fPCLK/16
+    SPI1->CR1 = SPI_CR1_MSTR | SPI_CR1_CPHA | SPI_CR1_BR_1 | SPI_CR1_BR_0 | SPI_CR1_SSM;
 
-    // Configure SPI1 data size and direction
-    SPI1->CR2 = 0; // Clear CR2
-    SPI1->CR2 |= (7 << SPI_CR2_DS_Pos); // 8-bit data size
-    SPI1->CR2 |= SPI_CR2_FRXTH; // 8-bit threshold for RXNE event
+    // Enable software slave management, set data size to 8 bits
+    SPI1->CR2 = SPI_CR2_NSSP | (7 << SPI_CR2_DS_Pos);
 
     // Enable SPI1
     SPI1->CR1 |= SPI_CR1_SPE;
 }
 
-void CS_Low(void) {
-    // Set PA4 low to select the slave
-    GPIOA->BSRR = (uint32_t)GPIO_PIN_4 << 16U;
-}
-
-void CS_High(void) {
-    // Set PA4 high to deselect the slave
-    GPIOA->BSRR = GPIO_PIN_4;
-}
 
 /* USER CODE END 0 */
 
@@ -360,7 +344,7 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  SPI_Init();
+  SPI_init();
   MAX31865_Init();
   //HandleMAX31865Faults();
   while (1)

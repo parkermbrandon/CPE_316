@@ -68,3 +68,75 @@ Finished building: default.size.stdout
  
 Finished building: P2 TemperatureRelay.list
  
+09:01:05 **** Incremental Build of configuration Debug for project P2 TemperatureRelay ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "P2 TemperatureRelay.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 TemperatureRelay\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="P2 TemperatureRelay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: P2 TemperatureRelay.elf
+ 
+arm-none-eabi-size   P2\ TemperatureRelay.elf 
+arm-none-eabi-objdump -h -S  P2\ TemperatureRelay.elf  > "P2 TemperatureRelay.list"
+   text	   data	    bss	    dec	    hex	filename
+  29520	    496	   2040	  32056	   7d38	P2 TemperatureRelay.elf
+Finished building: default.size.stdout
+ 
+Finished building: P2 TemperatureRelay.list
+ 
+09:03:12 **** Incremental Build of configuration Debug for project P2 TemperatureRelay ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:363:3: warning: implicit declaration of function 'SPI_Init'; did you mean 'SPI_init'? [-Wimplicit-function-declaration]
+  363 |   SPI_Init();
+      |   ^~~~~~~~
+      |   SPI_init
+arm-none-eabi-gcc -o "P2 TemperatureRelay.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 TemperatureRelay\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="P2 TemperatureRelay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `main':
+C:/Users/goneb/STM32CubeIDE/workspace_1.13.2/P2 TemperatureRelay/Debug/../Core/Src/main.c:363: undefined reference to `SPI_Init'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: P2 TemperatureRelay.elf] Error 1
+"make -j24 all" terminated with exit code 2. Build might be incomplete.
+09:03:29 **** Incremental Build of configuration Debug for project P2 TemperatureRelay ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "P2 TemperatureRelay.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 TemperatureRelay\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="P2 TemperatureRelay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_1.13.2/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `main':
+C:/Users/goneb/STM32CubeIDE/workspace_1.13.2/P2 TemperatureRelay/Debug/../Core/Src/main.c:363: undefined reference to `SPI_Init'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: P2 TemperatureRelay.elf] Error 1
+"make -j24 all" terminated with exit code 2. Build might be incomplete.
+09:03:45 **** Incremental Build of configuration Debug for project P2 TemperatureRelay ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "P2 TemperatureRelay.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 TemperatureRelay\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="P2 TemperatureRelay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: P2 TemperatureRelay.elf
+ 
+arm-none-eabi-size   P2\ TemperatureRelay.elf 
+arm-none-eabi-objdump -h -S  P2\ TemperatureRelay.elf  > "P2 TemperatureRelay.list"
+   text	   data	    bss	    dec	    hex	filename
+  29560	    496	   2040	  32096	   7d60	P2 TemperatureRelay.elf
+Finished building: default.size.stdout
+ 
+Finished building: P2 TemperatureRelay.list
+ 
+09:09:23 **** Incremental Build of configuration Debug for project P2 TemperatureRelay ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "P2 TemperatureRelay.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\goneb\STM32CubeIDE\workspace_1.13.2\P2 TemperatureRelay\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="P2 TemperatureRelay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: P2 TemperatureRelay.elf
+ 
+arm-none-eabi-size   P2\ TemperatureRelay.elf 
+arm-none-eabi-objdump -h -S  P2\ TemperatureRelay.elf  > "P2 TemperatureRelay.list"
+   text	   data	    bss	    dec	    hex	filename
+  29584	    496	   2040	  32120	   7d78	P2 TemperatureRelay.elf
+Finished building: default.size.stdout
+ 
+Finished building: P2 TemperatureRelay.list
+ 
+09:18:02 **** Incremental Build of configuration Debug for project CPE 316 A4 DAC ****
+make -j24 all 
+arm-none-eabi-size   CPE\ 316\ A4\ DAC.elf 
+   text	   data	    bss	    dec	    hex	filename
+   2024	     20	   1572	   3616	    e20	CPE 316 A4 DAC.elf
+Finished building: default.size.stdout
+ 
