@@ -177,13 +177,13 @@ void MAX31865_WriteRegister(uint8_t reg, uint8_t value) {
     uint8_t data[2];
     data[0] = reg | 0x80; // Write operation
     data[1] = value;
-    HAL_SPI_Transmit(&hspi1, data, 2, 100);
+    HAL_SPI_Transmit(&hspi2, data, 2, 100);
 }
 
 uint8_t MAX31865_ReadRegister(uint8_t reg) {
     uint8_t value, address = reg & 0x7F; // Read operation
-    HAL_SPI_Transmit(&hspi1, &address, 1, 100);
-    HAL_SPI_Receive(&hspi1, &value, 1, 100);
+    HAL_SPI_Transmit(&hspi2, &address, 1, 100);
+    HAL_SPI_Receive(&hspi2, &value, 1, 100);
     return value;
 }
 void MAX31865_Init(void) {
